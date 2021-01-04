@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Christopher Burr - Personal Portfolio</title>
+    <link>https://chrisdburr.github.io/blog/</link>
+    <description>Recent content in Blogs on Christopher Burr - Personal Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 Jan 2021 09:52:49 +0000</lastBuildDate><atom:link href="https://chrisdburr.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ethical Data Science - A Plan for 2021</title>
+      <link>https://chrisdburr.github.io/blog/ethical-data-science/eds-resolution/</link>
+      <pubDate>Fri, 01 Jan 2021 09:52:49 +0000</pubDate>
+      
+      <guid>https://chrisdburr.github.io/blog/ethical-data-science/eds-resolution/</guid>
+      <description>New Year&amp;rsquo;s Resolution A new year, a new website, and an opportunity to finally get round to this blogging thing I keep hearing about!
+While my intention is (first and foremost) to use this blog to enhance my writing, by forcing me into a more regular routine, there is another personal goal for 2021 that I hope this blog can support.
+Like most areas of applied philosophy and ethics, having practical experience of the target domain (e.</description>
+    </item>
+    
+  </channel>
+</rss>
