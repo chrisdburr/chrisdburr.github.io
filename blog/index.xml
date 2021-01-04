@@ -6,16 +6,7 @@
     <description>Recent content in Blogs on Christopher Burr - Personal Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 04 Jan 2021 10:50:48 +0000</lastBuildDate><atom:link href="https://chrisdburr.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test</title>
-      <link>https://chrisdburr.github.io/blog/test/</link>
-      <pubDate>Mon, 04 Jan 2021 10:50:48 +0000</pubDate>
-      
-      <guid>https://chrisdburr.github.io/blog/test/</guid>
-      <description>Testing a deploy script for pushing to GitHub pages.</description>
-    </item>
-    
+    <lastBuildDate>Fri, 01 Jan 2021 09:52:49 +0000</lastBuildDate><atom:link href="https://chrisdburr.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ethical Data Science - A Plan for 2021</title>
       <link>https://chrisdburr.github.io/blog/ethical-data-science/eds-resolution/</link>
