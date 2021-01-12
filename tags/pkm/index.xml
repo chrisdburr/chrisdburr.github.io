@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PKM on Christopher Burr - Personal Portfolio</title>
+    <link>https://chrisdburr.github.io/tags/pkm/</link>
+    <description>Recent content in PKM on Christopher Burr - Personal Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 12 Jan 2021 09:53:13 +0000</lastBuildDate><atom:link href="https://chrisdburr.github.io/tags/pkm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Curated Bibliography</title>
+      <link>https://chrisdburr.github.io/blog/ethical-data-science/curated-bibliography/</link>
+      <pubDate>Tue, 12 Jan 2021 09:53:13 +0000</pubDate>
+      
+      <guid>https://chrisdburr.github.io/blog/ethical-data-science/curated-bibliography/</guid>
+      <description>The process of personal knowledge management (PKM) is a particular interest of mine, and has been ever since I started seriously pursuing a career in academic research. Like many so-called &amp;ldquo;knowledge workers&amp;rdquo;, a significant part of my working week is dedicated to the curation of my &amp;ldquo;extended mind&amp;rdquo;1, which includes notes, tentative ideas for projects, an incessantly growing list of items to-read, preliminary plans for articles (or blog posts), and more.</description>
+    </item>
+    
+  </channel>
+</rss>

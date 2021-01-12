@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dr Christopher Burr - Personal Website on Christopher Burr - Personal Portfolio</title>
-    <link>https://chrisdburr.github.io/</link>
-    <description>Recent content in Dr Christopher Burr - Personal Website on Christopher Burr - Personal Portfolio</description>
+    <title>personal development on Christopher Burr - Personal Portfolio</title>
+    <link>https://chrisdburr.github.io/categories/personal-development/</link>
+    <description>Recent content in personal development on Christopher Burr - Personal Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 Jan 2021 11:19:34 +0000</lastBuildDate><atom:link href="https://chrisdburr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Jan 2021 09:53:13 +0000</lastBuildDate><atom:link href="https://chrisdburr.github.io/categories/personal-development/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Curated Bibliography</title>
       <link>https://chrisdburr.github.io/blog/ethical-data-science/curated-bibliography/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://chrisdburr.github.io/blog/ethical-data-science/curated-bibliography/</guid>
       <description>The process of personal knowledge management (PKM) is a particular interest of mine, and has been ever since I started seriously pursuing a career in academic research. Like many so-called &amp;ldquo;knowledge workers&amp;rdquo;, a significant part of my working week is dedicated to the curation of my &amp;ldquo;extended mind&amp;rdquo;1, which includes notes, tentative ideas for projects, an incessantly growing list of items to-read, preliminary plans for articles (or blog posts), and more.</description>
-    </item>
-    
-    <item>
-      <title>CV</title>
-      <link>https://chrisdburr.github.io/cv/</link>
-      <pubDate>Fri, 01 Jan 2021 11:20:45 +0000</pubDate>
-      
-      <guid>https://chrisdburr.github.io/cv/</guid>
-      <description>Publications Journal Articles  Dewhurst, J., and Burr, C. (Online First). Normative Folk Psychology and Decision Theory. Mind and Language.  Published Version (Open Access)   Burr, C., Morley, J., Taddeo, M., &amp;amp; Floridi, L. (2020). Digital Psychiatry: Risks and Opportunities for Public Health and Wellbeing. IEEE Transactions on Technology and Society, 1(1), pp. 21–33.  Preprint Published Version (£)   Burr, C., Taddeo, M., &amp;amp; Floridi, L. (2020).</description>
     </item>
     
     <item>

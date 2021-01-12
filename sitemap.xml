@@ -3,6 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://chrisdburr.github.io/tags/bibliography/</loc>
+    <lastmod>2021-01-12T09:53:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chrisdburr.github.io/blog/</loc>
+    <lastmod>2021-01-12T09:53:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chrisdburr.github.io/categories/</loc>
+    <lastmod>2021-01-12T09:53:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chrisdburr.github.io/blog/ethical-data-science/curated-bibliography/</loc>
+    <lastmod>2021-01-12T09:53:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chrisdburr.github.io/categories/ethical-data-science/</loc>
+    <lastmod>2021-01-12T09:53:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chrisdburr.github.io/tags/extended-mind/</loc>
+    <lastmod>2021-01-12T09:53:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chrisdburr.github.io/tags/obsidian/</loc>
+    <lastmod>2021-01-12T09:53:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chrisdburr.github.io/categories/personal-development/</loc>
+    <lastmod>2021-01-12T09:53:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chrisdburr.github.io/tags/pkm/</loc>
+    <lastmod>2021-01-12T09:53:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chrisdburr.github.io/categories/resources/</loc>
+    <lastmod>2021-01-12T09:53:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chrisdburr.github.io/tags/</loc>
+    <lastmod>2021-01-12T09:53:13+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://chrisdburr.github.io/cv/</loc>
     <lastmod>2021-01-01T11:20:45+00:00</lastmod>
   </url>
@@ -13,7 +68,12 @@
   </url>
   
   <url>
-    <loc>https://chrisdburr.github.io/blog/</loc>
+    <loc>https://chrisdburr.github.io/tags/2021/</loc>
+    <lastmod>2021-01-01T09:52:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chrisdburr.github.io/tags/data-science/</loc>
     <lastmod>2021-01-01T09:52:49+00:00</lastmod>
   </url>
   
@@ -23,11 +83,18 @@
   </url>
   
   <url>
-    <loc>https://chrisdburr.github.io/categories/</loc>
+    <loc>https://chrisdburr.github.io/tags/new-year/</loc>
+    <lastmod>2021-01-01T09:52:49+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chrisdburr.github.io/tags/</loc>
+    <loc>https://chrisdburr.github.io/tags/resolution/</loc>
+    <lastmod>2021-01-01T09:52:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chrisdburr.github.io/tags/upskilling/</loc>
+    <lastmod>2021-01-01T09:52:49+00:00</lastmod>
   </url>
   
 </urlset>
