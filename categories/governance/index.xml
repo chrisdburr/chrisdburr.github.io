@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>governance on Christopher Burr - Personal Portfolio</title>
+    <link>https://chrisdburr.github.io/categories/governance/</link>
+    <description>Recent content in governance on Christopher Burr - Personal Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 18 Jan 2021 09:48:10 +0000</lastBuildDate><atom:link href="https://chrisdburr.github.io/categories/governance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automating Ethics</title>
+      <link>https://chrisdburr.github.io/blog/automating-ethics/automating-ethics/</link>
+      <pubDate>Mon, 18 Jan 2021 09:48:10 +0000</pubDate>
+      
+      <guid>https://chrisdburr.github.io/blog/automating-ethics/automating-ethics/</guid>
+      <description>This is the first post in a series on the topic of automating ethical deliberation in data science and AI.
+ The philosophy and ethics of technology has a long tradition. In tracing this history, we could go all the way back to the Ancient Greek philosophers and the concept technê. Alternatively, we could explore Martin Heidegger&amp;rsquo;s account of the relationship between technology and human existence (Dasein) as a starting point for modern phenomenological approaches to information and communication technologies.</description>
+    </item>
+    
+  </channel>
+</rss>

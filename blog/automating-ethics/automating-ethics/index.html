@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Christopher Burr | Automating Ethics </title>
+
+    
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.79.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="Ethics Fellow, Alan Turing Institute">
+    
+    <link rel="stylesheet"
+          href="https://chrisdburr.github.io/css/style.min.28b1ee64753ae7e3e46327acb742498816170bd217640dd4bf69240697a4d5e4.css"
+          integrity="sha256-KLHuZHU65&#43;PkYyest0JJiBYXC9IXZA3Uv2kkBpek1eQ="
+          crossorigin="anonymous"
+          type="text/css">
+    
+    <link rel="stylesheet"
+        href="https://chrisdburr.github.io/css/markupHighlight.min.9755453ffb7bc4cd220f86ebb5922107b49f193cc62fc17e9785d27b33a8bf5b.css"
+        integrity="sha256-l1VFP/t7xM0iD4brtZIhB7SfGTzGL8F&#43;l4XSezOov1s="
+        crossorigin="anonymous"
+        type="text/css">
+    
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" />
+
+    
+    <link rel="shortcut icon" href="https://chrisdburr.github.iofavicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://chrisdburr.github.ioapple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://chrisdburr.github.iofavicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://chrisdburr.github.iofavicon-16x16.png">
+
+    <link rel="canonical" href="https://chrisdburr.github.io/blog/automating-ethics/automating-ethics/">
+
+    
+    
+    
+    
+    <script type="text/javascript"
+            src="https://chrisdburr.github.io/js/anatole-header.min.e782db136ec18d105a4552702eac49f4620d6867da3fbf808bd53e806c96be6e.js"
+            integrity="sha256-54LbE27BjRBaRVJwLqxJ9GINaGfaP7&#43;Ai9U&#43;gGyWvm4="
+            crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Automating Ethics"/>
+<meta name="twitter:description" content="This is the first post in a series on the topic of automating ethical deliberation in data science and AI.
+ The philosophy and ethics of technology has a long tradition. In tracing this history, we could go all the way back to the Ancient Greek philosophers and the concept technê. Alternatively, we could explore Martin Heidegger&rsquo;s account of the relationship between technology and human existence (Dasein) as a starting point for modern phenomenological approaches to information and communication technologies."/>
+
+</head>
+<body><div class="sidebar animated fadeInDown ">
+    <div class="logo-title">
+        <div class="title">
+            <img src="https://chrisdburr.github.io/images/profile.png" alt="profile picture">
+            <h3 title=""><a href="/">Dr Christopher Burr</a></h3>
+            <div class="description">
+                <p>Ethics Fellow, Alan Turing Institute</p>
+            </div>
+        </div>
+    </div>
+    <ul class="social-links">
+        
+            <li>
+                <a href="https://twitter.com/chrisdburr" rel="me" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://www.linkedin.com/in/christopherdburr" rel="me" aria-label="Linkedin">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://github.com/chrisdburr" rel="me" aria-label="GitHub">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="https://scholar.google.com/citations?user=dEkERv4AAAAJ&amp;hl=en" rel="me" aria-label="Google Scholar">
+                    <i class="fab fa-google fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            <li>
+                <a href="mailto:cburr@turing.ac.uk" rel="me" aria-label="e-mail">
+                    <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Christopher Burr 2021 </div>
+    </div>
+</div>
+<div class="main">
+    <div class="page-top  animated fadeInDown ">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+    <ul class="nav" id="navMenu">
+        
+        
+            
+            <li><a 
+                   href="/"
+                        
+                   title="">Home</a></li>
+        
+            
+            <li><a 
+                   href="/blog/"
+                        
+                   title="">Blog</a></li>
+        
+            
+            <li><a 
+                   href="/cv/"
+                        
+                   title="">CV</a></li>
+        
+        
+        <li class="theme-switch-item">
+            <a class="theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+    <div class="autopagerize_page_element">
+        <div class="content">
+    <div class="post  animated fadeInDown ">
+        <div class="post-content">
+            <div class="post-title">
+                <h3>Automating Ethics</h3>
+                
+            </div>
+
+            <p><em>This is the first post in a series on the topic of automating ethical deliberation in data science and AI.</em></p>
+<hr>
+<p>The philosophy and ethics of technology has a long tradition. In tracing this history, we could go all the way back to the Ancient Greek philosophers and the concept <em>technê</em>. Alternatively, we could explore Martin Heidegger&rsquo;s account of the relationship between technology and human existence (Dasein) as a starting point for modern phenomenological approaches to information and communication technologies. Or, we could begin with contemporary discussions and debates in science and technology studies that bridge the gap between philosophy, ethics, politics, law, sociology, and of course science.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<p>Regardless of our starting point, having some knowledge of this rich multi-disciplinary history is useful for identifying where current debates in the ethics of technology echo (or &ldquo;rhyme&rdquo;<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> with) previous debates. For instance, current research into FairML is grappling with and drawing upon longstanding debates in political philosophy<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, and Zuboff&rsquo;s idea of <em>surveillance capitalism</em><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> while novel in its elucidation and critique of contemporary business practices, nevertheless echoes well-trodden discussions about the normative significance of concepts such as privacy and autonomy. In spite of these similarities, however, the development of novel data-driven technologies, such as ML or AI, invariably create novel ethical challenges or dilemmas.</p>
+<p>This series will explore one such ethical challenge, which is the result of an emerging trend towards the <em>automation of governance processes</em> in data science and AI research and development. To be clear, technological automation itself is not new. There have been growing concerns about technological automation for centuries, including its impact on labour markets, environmental sustainability, or even the human condition itself. This kind of automation is not the focus of these posts. Instead, these posts will discuss a trend towards the automation of ethical decision-making that arises during a data science or AI project&rsquo;s workflow, and how this trend threatens to distance practitioners from challenging but vital forms of ethical reflection and deliberation.</p>
+<p>There are myriad drivers of this trend towards <strong>automating ethics</strong>. However, an obvious and significant driver is economic incentives. Unsurprisingly, an organisation (whether in the public or private sector) is motivated by economic goals, such as increased profits through scalability, being first to market, reduced overhead costs, and so on. If an organisation relies upon a ML model for business intelligence, customer analytics, or as a key component in a product (e.g., an automated decision-making system), then they are likely to want to get this model into production as efficiently as possible. To address this need, the last couple of years have seen a growing interest in the area of <strong>MLOps</strong>.</p>
+<p>MLOps stands for &lsquo;ML operations&rsquo;. It is defined as,</p>
+<blockquote>
+<p>&ldquo;the process of operationalizing data science by getting ML models into production—being able to monitor their performance and ensure they are fair and in compliance with applicable regulations.&rdquo; <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
+</blockquote>
+<p>As a practice, it derives from the application of DevOps practices to data science and ML workflows (i.e., combining the development (Dev) of ML systems with their operation (Ops)). This, in itself, may not be that interesting a change from an ethical perspective. However, consider the following quotation from one of <a href="https://cloud.google.com/solutions/machine-learning/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning">Google&rsquo;s</a> articles on MLOps :</p>
+<blockquote>
+<p>&ldquo;Practicing MLOps means that you <strong>advocate for automation and monitoring at all steps of ML system construction</strong>, including integration, testing, releasing, deployment and infrastructure management.&rdquo; (emphasis added)</p>
+</blockquote>
+<p>Here, we are able to drill in on a possible source of concern. While the automation of &ldquo;all steps&rdquo; in the ML workflow may bring with it many benefits (primarily economic and operational) it also creates a variety of ethical challenges. First, there is the possibility of a loss of oversight at critical junctures that demand reflective dialogue and human judgement, potentially leading to unintended harms being missed or moral deskilling emerging in teams, especially when the monitoring is itself also automated. Second, to automate monitoring there needs to be a prior decision about which metrics need to be monitored. This invariably creates a situation where properties of a system that are resistant to simple quantification are passed over in favour of simpler metrics (e.g. KPIs). Third, there is a problem that if an ML model is affected by missing data bias because of structural barriers for inclusion that disproportionately impact certain sub-groups, then the above concern about automation is moot due to the upstream issue. Finally, there is the problem of deciding which metrics are suitable as goals to be optimised, encapsulated in <a href="https://en.wikipedia.org/wiki/Goodhart%27s_law">Goodhart&rsquo;s Law</a>:</p>
+<blockquote>
+<p>&ldquo;When a measure becomes a target, it ceases to be a good measure.&rdquo;</p>
+</blockquote>
+<p>These challenges are just a selection, and also require further elaboration. The purpose of this series of blog posts will be to critically engage with them. However, identifying and evaluating these challenges first requires a way of mapping and delineating the key stages associated with the ML workflow. There are a variety of perspectives that we could take here. For example, the MLOps perspective adopted by Sweenor et al. (2020) gives rise to the following four steps, which they refer to as the Build, Manage, Deploy and Integrate, and Monitor process.<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
+<figure>
+    <img src="/images/ml-ops.png"
+         alt="Steps in the process of operationalising data science. Reprinted from (Sweenor et al. 2020)."/> <figcaption>
+            <p>Figure 1. Steps in the process of operationalising data science. Reprinted from (Sweenor et al. 2020).</p>
+        </figcaption>
+</figure>
+
+<p>This schema serves a number of purposes, but it is not ideal for identifying and evaluating the ethical challenges that this series is interested in exploring. Instead, we will be building on a different framework, which breaks the ML workflow into a circular (and iterative) process of design, development, and deployment, with various sub-stages contained within this over-arching perspective:</p>
+<figure>
+    <img src="/images/ml-workflow.png"
+         alt="A schematic of the ML workflow as a process of design, development, and deployment."/> <figcaption>
+            <p>Figure 2. The ML workflow as a process of design, development, and deployment.</p>
+        </figcaption>
+</figure>
+
+<p>As this series continues we will say a lot more about how this perspective helps to identify significant ethical issues in the design, development, and deployment of ML, as well as how it can help us to design better tools for the governance of data science and AI more generally. In doing so we will also uncover a variety of concerns about the automating of ethical deliberation, as well as the following topics and questions:</p>
+<ul>
+<li>What is the proper function of ethical principles? How do we operationalise them in the context of data science and AI?</li>
+<li>When, if at all, is it permissible to use computational systems to automate key stages of ethical decision-making?</li>
+<li>What is MLOps, and how is it reshaping research and development practices?</li>
+<li>How can we design governance processes that provide sufficient support for ethical deliberation, while maintaining an appropriate pace of innovation?</li>
+<li>Who are the main actors that are responsible for the increased automation of ethical deliberation in data science and AI?</li>
+<li>What can moral psychology tell us about the risks of distancing individuals or teams from ethical deliberation?</li>
+<li>Why is it important to ensure that ethical deliberation does not become fully automated?</li>
+</ul>
+<p>I hope this series will generate some interesting and thought-provoking discussion. It is closely related to an ongoing research project, as well as an article that is almost nearing completion. I will likely write a short piece on this once it&rsquo;s ready. As always, please feel free to get in touch if you have any thoughts!</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>If you&rsquo;re unsure about where to start, the Stanford Encyclopedia has many fantastic summaries [<a href="https://plato.stanford.edu/entries/ethics-it-phenomenology/">1</a>, <a href="https://plato.stanford.edu/entries/ethics-it-phenomenology/">2</a>], and the PhilPapers archive also has collections on both <a href="https://philpapers.org/browse/philosophy-of-computing-and-information/">Philosophy of Computing and Information</a> and <a href="https://philpapers.org/browse/technology-ethics">Technology Ethics</a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>This is in reference to the phrase, <a href="https://blogs.lse.ac.uk/internationaldevelopment/2020/04/16/history-may-not-repeat-itself-but-it-rhymes/">&ldquo;History may not repeat itself. But it rhymes.&quot;</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Binns, R. (2018). What Can Political Philosophy Teach Us about Algorithmic Fairness? IEEE Security &amp; Privacy, 16(3), 73–80. <a href="https://doi.org/10.1109/MSP.2018.2701147">https://doi.org/10.1109/MSP.2018.2701147</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>Zuboff, S. (2019). The age of surveillance capitalism: The fight for the future at the new frontier of power. Profile Books. <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>Sweenor, D., Hillion, S., Rope, D., Kannabiran, D., Hill, T., O’Connell, M., &amp; Safari,  an O. M. C. (2020). ML Ops: Operationalizing Data Science. <a href="https://go.oreilly.com/queensland-university-of-technology/library/view/-/9781492074663/?ar">https://go.oreilly.com/queensland-university-of-technology/library/view/-/9781492074663/?ar</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</div>
+        <div class="post-footer">
+            <div class="info">
+                <span class="separator"><a class="category" href="/categories/automating-ethics/">automating ethics</a><a class="category" href="/categories/governance/">governance</a></span>
+
+                <span class="separator"><a class="tag" href="/tags/mlops/">MLOps</a><a class="tag" href="/tags/data-science/">data science</a></span>
+
+            </div>
+        </div>
+
+        
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript"
+        src="https://chrisdburr.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js"
+        integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw="
+        crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript"
+        src="https://chrisdburr.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js"
+        integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4="
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript"
+        src="https://chrisdburr.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js"
+        integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro="
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
