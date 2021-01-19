@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://chrisdburr.github.io/blog/automating-ethics/automating-ethics/</loc>
+    <loc>https://chrisdburr.github.io/categories/automating-ethics/</loc>
     <lastmod>2021-01-18T09:48:10+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://chrisdburr.github.io/categories/automating-ethics/</loc>
+    <loc>https://chrisdburr.github.io/blog/automating-ethics/automating-ethics/</loc>
     <lastmod>2021-01-18T09:48:10+00:00</lastmod>
   </url>
   
@@ -24,11 +24,6 @@
   
   <url>
     <loc>https://chrisdburr.github.io/tags/data-science/</loc>
-    <lastmod>2021-01-18T09:48:10+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chrisdburr.github.io/categories/governance/</loc>
     <lastmod>2021-01-18T09:48:10+00:00</lastmod>
   </url>
   
@@ -53,7 +48,7 @@
   </url>
   
   <url>
-    <loc>https://chrisdburr.github.io/categories/ethical-data-science/</loc>
+    <loc>https://chrisdburr.github.io/categories/ethical-data-science-journey/</loc>
     <lastmod>2021-01-12T09:53:13+00:00</lastmod>
   </url>
   
@@ -68,17 +63,12 @@
   </url>
   
   <url>
-    <loc>https://chrisdburr.github.io/categories/personal-development/</loc>
+    <loc>https://chrisdburr.github.io/categories/personal-knowledge-management/</loc>
     <lastmod>2021-01-12T09:53:13+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://chrisdburr.github.io/tags/pkm/</loc>
-    <lastmod>2021-01-12T09:53:13+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://chrisdburr.github.io/categories/resources/</loc>
     <lastmod>2021-01-12T09:53:13+00:00</lastmod>
   </url>
   
