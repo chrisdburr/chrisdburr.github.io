@@ -6,22 +6,49 @@
     <description>Recent content in Tags on Christopher Burr - Personal Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 18 Jan 2021 09:48:10 +0000</lastBuildDate><atom:link href="https://chrisdburr.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Feb 2021 12:31:39 +0000</lastBuildDate><atom:link href="https://chrisdburr.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>data science</title>
-      <link>https://chrisdburr.github.io/tags/data-science/</link>
-      <pubDate>Mon, 18 Jan 2021 09:48:10 +0000</pubDate>
+      <title>automation</title>
+      <link>https://chrisdburr.github.io/tags/automation/</link>
+      <pubDate>Fri, 19 Feb 2021 12:31:39 +0000</pubDate>
       
-      <guid>https://chrisdburr.github.io/tags/data-science/</guid>
+      <guid>https://chrisdburr.github.io/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fairness</title>
+      <link>https://chrisdburr.github.io/tags/fairness/</link>
+      <pubDate>Fri, 19 Feb 2021 12:31:39 +0000</pubDate>
+      
+      <guid>https://chrisdburr.github.io/tags/fairness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ML lifecycle</title>
+      <link>https://chrisdburr.github.io/tags/ml-lifecycle/</link>
+      <pubDate>Fri, 19 Feb 2021 12:31:39 +0000</pubDate>
+      
+      <guid>https://chrisdburr.github.io/tags/ml-lifecycle/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MLOps</title>
       <link>https://chrisdburr.github.io/tags/mlops/</link>
-      <pubDate>Mon, 18 Jan 2021 09:48:10 +0000</pubDate>
+      <pubDate>Fri, 19 Feb 2021 12:31:39 +0000</pubDate>
       
       <guid>https://chrisdburr.github.io/tags/mlops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data science</title>
+      <link>https://chrisdburr.github.io/tags/data-science/</link>
+      <pubDate>Mon, 18 Jan 2021 09:48:10 +0000</pubDate>
+      
+      <guid>https://chrisdburr.github.io/tags/data-science/</guid>
       <description></description>
     </item>
     

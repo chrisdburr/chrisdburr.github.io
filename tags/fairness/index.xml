@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fairness on Christopher Burr - Personal Portfolio</title>
+    <link>https://chrisdburr.github.io/tags/fairness/</link>
+    <description>Recent content in fairness on Christopher Burr - Personal Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 19 Feb 2021 12:31:39 +0000</lastBuildDate><atom:link href="https://chrisdburr.github.io/tags/fairness/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Widening the Sphere of Ethical Considerations for ML Operationss</title>
+      <link>https://chrisdburr.github.io/blog/automating-ethics/widening-the-sphere/</link>
+      <pubDate>Fri, 19 Feb 2021 12:31:39 +0000</pubDate>
+      
+      <guid>https://chrisdburr.github.io/blog/automating-ethics/widening-the-sphere/</guid>
+      <description>This is the second post in a series on the topic of automating ethical deliberation in data science and AI. For the first post, click here.
+Introduction  The Machine is stopping, I know it, I know the signs.&#39; She burst into a peal of laughter. He heard her and was angry, and they spoke no more. &amp;lsquo;Can you imagine anything more absurd?&amp;rsquo; she cried to a friend. &amp;lsquo;A man who was my son believes that the Machine is stopping.</description>
+    </item>
+    
+  </channel>
+</rss>

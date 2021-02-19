@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on Christopher Burr - Personal Portfolio</title>
+    <link>https://chrisdburr.github.io/categories/markdown/</link>
+    <description>Recent content in Markdown on Christopher Burr - Personal Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Jan 2021 13:10:51 +0000</lastBuildDate><atom:link href="https://chrisdburr.github.io/categories/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Research Management</title>
+      <link>https://chrisdburr.github.io/blog/rk-management/research-management/</link>
+      <pubDate>Sat, 30 Jan 2021 13:10:51 +0000</pubDate>
+      
+      <guid>https://chrisdburr.github.io/blog/rk-management/research-management/</guid>
+      <description>The Problem  Research waste, competing work/life pressures, impact and assesment metrics, we all know the drill. However, I got into professional and academic research because I found the process of discovering, researching, discussing, refining, and communicating ideas to be an intrinsically rewarding process. Research tools are supposed to support this process. Those who work in UX design recognise that such tools are interfaces for the transfer of information. Or, to take a more phenomenological perspective, tools for interacting with our physical environment.</description>
+    </item>
+    
+  </channel>
+</rss>
