@@ -13,7 +13,7 @@ My research expertise includes trustworthy AI systems 🤝, digital twinning �
 But my most important research is the constant learning involved with being a loving father and husband 👨‍👩‍👧! When I'm not figuring out how to do the above, you can find me at the bouldering gym figuring out how to ascend a bouldering problem 🧗
 
 > [!INFO] About this Site
-> This site is setup as a digital garden. If you are unfamiliar with this concept, I recommend reading [this article](https://maggieappleton.com/garden-history). Alternatively, just start having a click around to explore a partial region of my ~~second brain~~ extended mind.
+> This site is setup as a digital garden. If you are unfamiliar with this concept, I recommend reading [this article](https://maggieappleton.com/garden-history). Alternatively, just start having a click around to explore a partial region of my extended mind.
 
 Please see [here](https://chrisdburr.github.io/publications) for a full list of publications and links to articles (with and without paywalls 💰).
 
