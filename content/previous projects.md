@@ -1,3 +1,6 @@
+---
+title: Previous Projects
+---
 
 > [!INFO] Additional Resources
 > Details of current projects [[publications]]  are also available.
