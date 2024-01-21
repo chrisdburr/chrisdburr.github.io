@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Dr Christopher Burr</title>
+      <link>https://chrisdburr.github.io</link>
+      <description>Last 10 notes on Dr Christopher Burr</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Welcome</title>
+    <link>https://chrisdburr.github.io/</link>
+    <guid>https://chrisdburr.github.io/</guid>
+    <description>Hello, World 👋 I am an Senior Researcher in Trustworthy Systems at the Alan Turing Institute’s, in the Tools, Practices, and Systems programme. I also lead the Innovation and Impact Hub for the Turing’s Research and Innovation Cluster in Digital Twins (TRIC-DT).</description>
+    <pubDate>Sun, 21 Jan 2024 08:00:23 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
