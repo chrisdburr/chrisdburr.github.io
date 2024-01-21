@@ -8,7 +8,7 @@ Hello, World 👋
 
 I am an Senior Researcher in Trustworthy Systems at the [Alan Turing Institute's](https://www.turing.ac.uk/people/researchers/christopher-burr), in the Tools, Practices, and Systems programme. I also lead the Innovation and Impact Hub for the Turing's Research and Innovation Cluster in Digital Twins (TRIC-DT).
 
-My research expertise includes trustworthy AI systems 🤝, digital twinning 🔁, responsible research and innovation ⚖️, data and AI ethics 🤖, and philosophy of cognitive science 🧠. I currently lead the Trustworthy and Ethical Assurance of Digital Twins (TEA-DT) project, supported by a grant from the UKRI's BRAID programme. For other projects I am involved with, see [below](#current-projects)
+My research expertise includes trustworthy AI systems 🤝, digital twinning 🔁, responsible research and innovation ⚖️, data and AI ethics 🤖, and philosophy of cognitive science 🧠. I currently lead the Trustworthy and Ethical Assurance of Digital Twins (TEA-DT) project, supported by a grant from the UKRI's BRAID programme. For all other projects, see [below](#current-projects)
 
 But my most important research is the constant learning involved with being a loving father and husband 👨‍👩‍👧! When I'm not figuring out how to do the above, you can find me at the bouldering gym figuring out how to ascend a bouldering problem 🧗
 
