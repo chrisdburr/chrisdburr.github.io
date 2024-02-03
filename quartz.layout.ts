@@ -28,7 +28,18 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(
+      Component.Explorer({
+        // Other configuration options...
+
+        filterFn: (node) => {
+          const include = new Set(["about.md", "current projects.md", "publications.md"])
+          return include.has(node.name.toLowerCase())
+        },
+
+        // Other configuration options...
+      }),
+    ),
   ],
   right: [
     Component.Graph(),
