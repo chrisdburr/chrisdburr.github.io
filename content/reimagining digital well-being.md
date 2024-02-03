@@ -211,7 +211,7 @@ This is not a new risk, of course. All technological use—as understood by phil
 
 But the question is whether it is digital twins pose a _sui generis_ risk to our capacity for self-determination?
 
-!![](images/dwb-amsterdam-2024/slide-18.png)
+![](images/dwb-amsterdam-2024/slide-18.png)
 
 Or, returning, finally, to my original question, “do digital twins represent a paradigm shift in our understanding of digital well-being”?
 
@@ -223,4 +223,4 @@ However, that does not mean that I don't think there is still a hugely rich and 
 
 I hope I have encouraged some of you that such exploration is worthwhile. If not, then thank you at least for listening. 
 
-![[slide-19.png]]
+![](images/dwb-amsterdam-2024/slide-19.png)
