@@ -1,6 +1,8 @@
 ---
 title: Automated Reasoning
 status: 🔬
+tags:
+  - note
 ---
 > [!CAUTION] Consensus GPT
 > Currently, this note only contains text produced by the Consensus GPT agent. It has not yet been modified, except for highlighting areas of interest.

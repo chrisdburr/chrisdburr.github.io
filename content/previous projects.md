@@ -1,5 +1,7 @@
 ---
 title: Previous Projects
+tags:
+  - list
 ---
 
 > [!INFO] Additional Resources

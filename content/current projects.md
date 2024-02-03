@@ -1,5 +1,7 @@
 ---
 title: Current Projects
+tags:
+  - list
 ---
 On this page, you can find a list of my current projects. Details of my [[previous projects]] are also available.
 

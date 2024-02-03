@@ -1,6 +1,8 @@
 ---
 title: Using AI for Assurance
 status: 🔬
+tags:
+  - note
 ---
 > [!CAUTION] ChatGPT
 > Currently, this note only contains text produced by ChatGPT following a conversation about automated reasoning and argument-based assurance.

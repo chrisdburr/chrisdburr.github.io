@@ -1,6 +1,7 @@
 ---
 title: Reimagining Digital Well-Being in an Age of Digital Twins
-type: presentation
+tags:
+  - presentation
 url: https://doi.org/10.5281/zenodo.10605135
 ---
 

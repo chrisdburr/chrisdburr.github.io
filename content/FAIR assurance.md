@@ -1,5 +1,7 @@
 ---
 title: FAIR Assurance
+tags:
+  - note
 ---
 > [!CAUTION] ChatGPT
 > Currently, this note only contains text produced by ChatGPT following a conversation about automated reasoning and argument-based assurance.

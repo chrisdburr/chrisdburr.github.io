@@ -1,6 +1,7 @@
 ---
 title: Publications
-type: index
+tags:
+  - list
 ---
 ## Articles
 

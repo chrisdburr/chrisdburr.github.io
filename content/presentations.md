@@ -1,6 +1,7 @@
 ---
 title: Presentations
-type: index
+tags:
+  - list
 ---
 
 

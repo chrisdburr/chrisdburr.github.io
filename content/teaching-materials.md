@@ -1,6 +1,7 @@
 ---
 title: Teaching Materials
-type: index
+tags:
+  - list
 ---
 
 > [!INFO] About this Page
