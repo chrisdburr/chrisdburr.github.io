@@ -11,7 +11,7 @@ url: https://doi.org/10.5281/zenodo.10605135
 > Burr, C. (2024). Reimagining Digital Well-Being in an Age of Digital Twins. Future of Digital Well-Being Workshop and Conference, Amsterdam, NL. Zenodo. https://doi.org/10.5281/zenodo.10605135
 > 
 
-![[slide-1.png]]
+![](images/dwb-amsterdam-2024/slide-1.png)
 
 It's been almost 5 years since Matthew Dennis and I were in contact regarding digital well-being. So, I was delighted when he reached out towards the end of 2023 to ask me to participate in this workshop on the Future of Digital Well-Being.
 
@@ -21,11 +21,11 @@ I currently lead the [Innovation and Impact Hub for the Alan Turing Institute's 
 
 However, I didn't want to to turn Matthew's invitation down, so I took it as a challenge to spend some time considering the links between my present and past research. This is the entry-point for my presentation.
 
-![[slide-2.png]]
+![](images/dwb-amsterdam-2024/slide-2.png)
 
 More specifically, I would like to pose the following question as an anchoring point for reflection and discussion. I won’t be aiming at defending an argument or answer to this question, though I will offer a tentative conclusion towards the end of the presentation.
 
-![[slide-3.png]]
+![](images/dwb-amsterdam-2024/slide-3.png)
 
 The outline for this presentation is as follows:
 
@@ -33,7 +33,7 @@ The outline for this presentation is as follows:
 - I will then give a brief introduction to digital twins and digital twinning, for those who are unfamiliar with these concepts.
 - Finally, I will conclude with a more philosophical discussion on some important issues and open questions.
 
-![[slide-4.png]]
+![](images/dwb-amsterdam-2024/slide-4.png)
 
 Let’s begin with the some of the salient topics, as I recall them. 
 
@@ -67,7 +67,7 @@ Keeling, G., & Burr, C. (2022). Digital manipulation and mental integrity. In _T
 
 A lot changed in the intervening years.
 
-![[slide-5.png]]
+![](images/dwb-amsterdam-2024/slide-5.png)
 
 The Covid-19 pandemic and the rise of new forms of AI powered by large language models has undoubtedly changed how we consider, discuss, and understand topics such as digital well-being. I won’t have a lot to say about these events, except for a cursory reflection on multi-agent workflows later in the presentation.
 
@@ -75,7 +75,7 @@ I expect others, however, will have connected work on digital well-being to thes
 
 However, I’d like to try to bridge some of the topics explored in my previous work with the area of research that currently dominates my time and attention: digital twins.
 
-![[slide-6.png]]
+![](images/dwb-amsterdam-2024/slide-6.png)
 
 Following the pattern of all good philosophers, let’s start with a definition that we can pick at and unpack. As Zhuang et al. note, a digital twin is
 
@@ -89,7 +89,7 @@ First, it acknowledges two crucial components: a *virtual model* and the *physic
 
 Second, the *utility* of the virtual model lies in its ability to provide human users with a means for interacting with a proxy of the physical system, for a variety of purposes. In general, we can capture this utility as informing practical decisions or actions—in other words, interventions, to foreshadow a later critical remark.
 
-![[slide-7.png]]
+![](images/dwb-amsterdam-2024/slide-7.png)
 
 Definitions are helpful, but so are illustrative examples that provide us with an ostensive complement.
 
@@ -103,7 +103,7 @@ Digital twins for human health and healthcare are an exciting area of research a
 
 Needless to say, a digital twin of a bridge, while highly complex, is nowhere near as complex as a digital twin of a human.
 
-![[slide-8.png]]
+![](images/dwb-amsterdam-2024/slide-8.png)
 
 Let’s dig a little bit deeper into the concept of digital twins to help us determine what separates a digital twin from other concepts, such as models or simulations.
 
@@ -121,13 +121,13 @@ Moreover, the model may be dynamically reconstructed on the basis of the coupled
 
 The astute among you may now be wondering why I referred to the 3D printed bridge as a digital twin. After all, how much change can one expect in a largely fixed and unalterable structure?
 
-![[slide-9.png]]
+![](images/dwb-amsterdam-2024/slide-9.png)
 
 Let’s separate out the digital shadow and the digital twin for a moment and explore the main point of difference: the data flow from the digital object to the physical object.
 
 At present, a lot of so-called “digital twins” would be best thought of as digital shadows, if we adopt this taxonomy.
 
-![[slide-10.png]]
+![](images/dwb-amsterdam-2024/slide-10.png)
 
 However, there is no consensus on any taxonomy or conceptual framework for digital twins at present[^preprint]. Consensus is still emerging. 
 
@@ -137,11 +137,11 @@ As we extend and reduce the degree of coupling, we will invariably cross a vague
 
 [^preprint]: Though see a recent proposal from our programme and collaborators for some initial thoughts on the development of a philosophical framework for digital twins. Wagg, D., Burr, C., Shepherd, J., Conti, Z. X., Enzer, M., & Niederer, S. (2024). _The philosophical foundations of digital twinning_. Engineering Archive. [https://doi.org/10.31224/3500](https://doi.org/10.31224/3500)
 
-![[slide-11.png]]
+![](images/dwb-amsterdam-2024/slide-11.png)
 
 Within this vaguely defined region is where we shall return to our initial topic of digital well-being, and where I shall offer a critical remark about the concept of digital twins.
 
-![[slide-12.png]]
+![](images/dwb-amsterdam-2024/slide-12.png)
 
 At present, the idea of ‘digital twins’ and ‘digital twinning’ is largely aspirational.
 
@@ -159,7 +159,7 @@ Healthcare professionals could also access this assistant through secure APIs to
 
 Here we can ask, what are the associated issues with such a scenario, focusing primarily on digital well-being?
 
-![[slide-13.png]]
+![](images/dwb-amsterdam-2024/slide-13.png)
 
 The issue I would like to discuss pertains to self-knowledge and self-determination—a topic that has fascinated us for thousands of years, as evidenced by the famous maxim of “know thyself” that is frequently cited as hanging above the entrance to the famous temple at Delphi in Ancient Greece.
 
@@ -167,7 +167,7 @@ Self-knowledge is understood to have clear moral and prudential value. Without s
 
 But, the development and use of a digital twin, such as the one proposed in the hypothetical scenario, would disrupt many of the cognitive, behavioural, and interpersonal dynamics that underpin our capacity for self-determination.
 
-![[slide-14.png]]
+![](images/dwb-amsterdam-2024/slide-14.png)
 
 Let’s go back to this diagram again and peek inside the black box of the digital object. As you may recall, I noted that a digital twin is not “one thing”. It is a concept that envelops many constitutive components, processes, and techniques.
 
@@ -175,7 +175,7 @@ For instance, the digital object that would analyse and synthesise the data flow
 
 [^autogen]: See the Microsoft Research project, Autogen, for further details on this idea.
 
-![[slide-15.png]]
+![](images/dwb-amsterdam-2024/slide-15.png)
 
 I asked one of these sorts of agents, ChatGPT's DALL-E, to create an image  that captured the vast diversity of microbial life on this planet.
 
@@ -183,7 +183,7 @@ And, then, I asked ChatGPT to create a similar image but this time with the conc
 
 These images are fascinating to consider and ponder. And as someone who is not artistically very competent, I enjoy how such tools can expand my ability to communicate in a different medium. But despite the creative potential, they are still cartoons, and cartoons aren't typically detailed representations of reality.
 
-![[slide-16.png]]
+![](images/dwb-amsterdam-2024/slide-16.png)
 
 The following quote from Jaron Lanier articulates this concern well. 
 
@@ -197,7 +197,7 @@ In this paper he fears that such agents, by pretending to know our preferences a
 
 The observant among you will note that this paper was not published recently, but in 1995. Yet, it's still salient.
 
-![[slide-17.png]]
+![](images/dwb-amsterdam-2024/slide-17.png)
 
 Bringing us closer to the present day, Paulan Korenhof et al. write the following in an article that critically analyses the concept of digital twins:
 
@@ -211,7 +211,7 @@ This is not a new risk, of course. All technological use—as understood by phil
 
 But the question is whether it is digital twins pose a _sui generis_ risk to our capacity for self-determination?
 
-![[slide-18.png]]
+!![](images/dwb-amsterdam-2024/slide-18.png)
 
 Or, returning, finally, to my original question, “do digital twins represent a paradigm shift in our understanding of digital well-being”?
 
