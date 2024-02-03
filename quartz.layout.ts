@@ -33,7 +33,7 @@ export const defaultContentPageLayout: PageLayout = {
         // Other configuration options...
 
         filterFn: (node) => {
-          const include = new Set(["about.md", "current projects.md", "publications.md"])
+          const include = new Set(["about.md", "publications.md"])
           return include.has(node.name.toLowerCase())
         },
 
