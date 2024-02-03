@@ -3,7 +3,7 @@ title: Previous Projects
 ---
 
 > [!INFO] Additional Resources
-> Details of current projects [[publications]]  are also available.
+> Details of current projects [[archive/publications]]  are also available.
 
 
 ## Trustworthy and Ethical Assurance of Digital Health and Healthcare
