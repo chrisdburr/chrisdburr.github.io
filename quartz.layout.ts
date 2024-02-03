@@ -29,16 +29,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
     Component.DesktopOnly(
-      Component.Explorer({
-        // Other configuration options...
-
-        filterFn: (node) => {
-          const include = new Set(["about.md", "publications.md"])
-          return include.has(node.name.toLowerCase())
-        },
-
-        // Other configuration options...
-      }),
+      Component.Explorer(),
     ),
   ],
   right: [
