@@ -1,6 +1,6 @@
 ---
 title: Using AI for Assurance
-status: 🔬
+draft: true
 tags:
   - note
 ---

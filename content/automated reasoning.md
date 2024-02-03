@@ -1,6 +1,6 @@
 ---
 title: Automated Reasoning
-status: 🔬
+draft: true
 tags:
   - note
 ---

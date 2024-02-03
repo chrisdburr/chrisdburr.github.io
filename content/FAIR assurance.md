@@ -1,5 +1,6 @@
 ---
 title: FAIR Assurance
+draft: true
 tags:
   - note
 ---
