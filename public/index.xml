@@ -6,10 +6,52 @@
       <description>Last 10 notes on Dr Christopher Burr</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Teaching Materials</title>
+    <link>https://chrisdburr.github.io/teaching-materials</link>
+    <guid>https://chrisdburr.github.io/teaching-materials</guid>
+    <description> About this Page On this page you can find information and links to some of my teaching materials. Turing Commons § The Turing Commons is an online platform I created, in collaboration with others at the Alan Turing Institute, to support open dialogue and reflection about the responsible design, development, and deployment of data-driven technologies.</description>
+    <pubDate>Sat, 03 Feb 2024 17:24:57 GMT</pubDate>
+  </item><item>
+    <title>Publications</title>
+    <link>https://chrisdburr.github.io/publications</link>
+    <guid>https://chrisdburr.github.io/publications</guid>
+    <description>Articles § Wagg, D., Burr, C., Shepherd, J., Conti, Z. X., Enzer, M., &amp; Niederer, S. (2024). The philosophical foundations of digital twinning. Engineering Archive.</description>
+    <pubDate>Sat, 03 Feb 2024 17:08:21 GMT</pubDate>
+  </item><item>
+    <title>Presentations</title>
+    <link>https://chrisdburr.github.io/presentations</link>
+    <guid>https://chrisdburr.github.io/presentations</guid>
+    <description> Presentations On this page you will find a list of past presentations and (where available) a link to the transcript, slides, and other associated materials.</description>
+    <pubDate>Sat, 03 Feb 2024 17:04:05 GMT</pubDate>
+  </item><item>
+    <title>Reimagining Digital Well-Being in an Age of Digital Twins</title>
+    <link>https://chrisdburr.github.io/reimagining-digital-well-being</link>
+    <guid>https://chrisdburr.github.io/reimagining-digital-well-being</guid>
+    <description> Presentation This talk was first given at the Future of Digital Well-Being Workshop and Conference 2024, organised by Dr Matthew Dennis and held in Amsterdam.</description>
+    <pubDate>Thu, 01 Feb 2024 09:42:39 GMT</pubDate>
+  </item><item>
+    <title>About Me</title>
+    <link>https://chrisdburr.github.io/about</link>
+    <guid>https://chrisdburr.github.io/about</guid>
+    <description>I am a Senior Researcher in Trustworthy Systems at the Alan Turing Institute, in the Tools, Practices, and Systems programme. I lead the Innovation and Impact Hub for the Turing Research and Innovation Cluster in Digital Twins.</description>
+    <pubDate>Sun, 21 Jan 2024 13:35:04 GMT</pubDate>
+  </item><item>
+    <title>Previous Projects</title>
+    <link>https://chrisdburr.github.io/previous-projects</link>
+    <guid>https://chrisdburr.github.io/previous-projects</guid>
+    <description> Additional Resources Details of current projects publications are also available. Trustworthy and Ethical Assurance of Digital Health and Healthcare § Information coming soon.</description>
+    <pubDate>Sun, 21 Jan 2024 13:30:30 GMT</pubDate>
+  </item><item>
+    <title>Current Projects</title>
+    <link>https://chrisdburr.github.io/current-projects</link>
+    <guid>https://chrisdburr.github.io/current-projects</guid>
+    <description>On this page, you can find a list of my current projects. Details of my previous projects are also available. Trustworthy and Ethical Assurance § Coming soon.</description>
+    <pubDate>Sun, 21 Jan 2024 13:26:11 GMT</pubDate>
+  </item><item>
     <title>Welcome</title>
     <link>https://chrisdburr.github.io/</link>
     <guid>https://chrisdburr.github.io/</guid>
-    <description>Hello, World 👋 I am an Senior Researcher in Trustworthy Systems at the Alan Turing Institute’s, in the Tools, Practices, and Systems programme. I also lead the Innovation and Impact Hub for the Turing’s Research and Innovation Cluster in Digital Twins (TRIC-DT).</description>
+    <description>Hello, World 👋 I am an Senior Researcher in Trustworthy Systems at the Alan Turing Institute, in the Tools, Practices, and Systems programme. I also lead the Innovation and Impact Hub for the Turing’s Research and Innovation Cluster in Digital Twins (TRIC-DT).</description>
     <pubDate>Sun, 21 Jan 2024 08:00:23 GMT</pubDate>
   </item>
     </channel>
