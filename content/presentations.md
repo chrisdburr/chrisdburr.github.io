@@ -10,7 +10,7 @@ tags:
 
 ## 2024
 
-- [[reimagining digital well-being| Reimagining Digital Well-Being in an Age of Digital Twins]] (Future of Digital Well-Being Workshop and Conference, Amsterdam)
+- [[reimagining-digital-well-being| Reimagining Digital Well-Being in an Age of Digital Twins]] (Future of Digital Well-Being Workshop and Conference, Amsterdam)
 
 ## 2023
 
