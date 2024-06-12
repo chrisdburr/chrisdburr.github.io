@@ -5,7 +5,7 @@ title: Welcome
 Hello, World 👋
 ```
 
-I am an Senior Researcher in Trustworthy Systems at the [Alan Turing Institute](https://www.turing.ac.uk/people/researchers/christopher-burr), in the [Tools, Practices, and Systems](https://www.turing.ac.uk/research/research-programmes/tools-practices-and-systems) programme. I also lead the Innovation and Impact Hub for the [Turing's Research and Innovation Cluster in Digital Twins](https://www.turing.ac.uk/research/research-projects/tric-dt) (TRIC-DT).
+I am a Senior Researcher in Trustworthy Systems at the [Alan Turing Institute](https://www.turing.ac.uk/people/researchers/christopher-burr), in the [Tools, Practices, and Systems](https://www.turing.ac.uk/research/research-programmes/tools-practices-and-systems) programme. I also lead the Innovation and Impact Hub for the [Turing's Research and Innovation Cluster in Digital Twins](https://www.turing.ac.uk/research/research-projects/tric-dt) (TRIC-DT).
 
 My research expertise includes trustworthy AI systems 🤝, digital twinning 🔁, responsible research and innovation ⚖️, data and AI ethics 🤖, and philosophy of cognitive science 🧠. I currently lead the Trustworthy and Ethical Assurance of Digital Twins (TEA-DT) project, supported by a grant from the UKRI's BRAID programme. 
 
