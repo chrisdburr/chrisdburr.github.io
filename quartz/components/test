@@ -1,8 +1,0 @@
-<img src="https://github.com/chrisdburr.png" alt="Profile Picture">
-
-.profile-pic {
-  width: 100%; /* Makes the image responsive */
-  height: auto; /* Maintain the aspect ratio */
-  border-radius: 50%; /* Circular mask */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-}

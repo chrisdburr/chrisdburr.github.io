@@ -1,0 +1,1 @@
+- When critiquing the use of multi-agent worklfows to supplement governance and assurance tools (e.g. stakeholder engagement, bias asesment or auditing) we must remember that for some groups, the resources required to use such tools effectively presents too large a barrier. The benefit that would accrue is not proportional to the costs involved.

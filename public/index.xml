@@ -6,6 +6,12 @@
       <description>Last 10 notes on Dr Christopher Burr</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>automating-ethics</title>
+    <link>https://chrisdburr.github.io/automating-ethics</link>
+    <guid>https://chrisdburr.github.io/automating-ethics</guid>
+    <description> When critiquing the use of multi-agent worklfows to supplement governance and assurance tools (e.g. stakeholder engagement, bias asesment or auditing) we must remember that for some groups, the resources required to use such tools effectively presents too large a barrier.</description>
+    <pubDate>Sun, 11 Feb 2024 13:23:25 GMT</pubDate>
+  </item><item>
     <title>Teaching Materials</title>
     <link>https://chrisdburr.github.io/teaching-materials</link>
     <guid>https://chrisdburr.github.io/teaching-materials</guid>
@@ -39,19 +45,19 @@
     <title>Previous Projects</title>
     <link>https://chrisdburr.github.io/previous-projects</link>
     <guid>https://chrisdburr.github.io/previous-projects</guid>
-    <description> Additional Resources Details of current projects publications are also available. Trustworthy and Ethical Assurance of Digital Health and Healthcare § Information coming soon.</description>
+    <description> Additional Resources Details of current projects publications are also available. Trustworthy and Ethical Assurance of Digital Health and Healthcare § This collaborative project between the Assuring Autonomy International Programme (University of York) and The Alan Turing Institute sought to harmonise existing research in ethical assurance, which our respective teams had been engaged with.</description>
     <pubDate>Sun, 21 Jan 2024 13:30:30 GMT</pubDate>
   </item><item>
     <title>Current Projects</title>
     <link>https://chrisdburr.github.io/current-projects</link>
     <guid>https://chrisdburr.github.io/current-projects</guid>
-    <description>On this page, you can find a list of my current projects. Details of my previous projects are also available. Trustworthy and Ethical Assurance § Coming soon.</description>
+    <description>On this page, you can find a list of my current projects. Details of my previous-projects are also available. CVD-Net § From October 2024, I will be co-leading a work package—focused on Trustworthy Assurance and Patient Engagment—for the EPSRC-funded CVD-Net projeect.</description>
     <pubDate>Sun, 21 Jan 2024 13:26:11 GMT</pubDate>
   </item><item>
     <title>Welcome</title>
     <link>https://chrisdburr.github.io/</link>
     <guid>https://chrisdburr.github.io/</guid>
-    <description>Hello, World 👋 I am an Senior Researcher in Trustworthy Systems at the Alan Turing Institute, in the Tools, Practices, and Systems programme. I also lead the Innovation and Impact Hub for the Turing’s Research and Innovation Cluster in Digital Twins (TRIC-DT).</description>
+    <description>Hello, World 👋 I am a Senior Researcher in Trustworthy Systems at the Alan Turing Institute, in the Tools, Practices, and Systems programme. I also lead the Innovation and Impact Hub for the Turing’s Research and Innovation Cluster in Digital Twins (TRIC-DT).</description>
     <pubDate>Sun, 21 Jan 2024 08:00:23 GMT</pubDate>
   </item>
     </channel>
