@@ -3,7 +3,9 @@ title: Current Projects
 tags:
   - list
 ---
-On this page, you can find a list of my current projects. Details of my [[previous-projects]] are also available.
+
+> [!INFO] Additional Resources
+> Details of [[past-projects|past projects]] and [[publications]] are also available.
 
 ## CVD-Net
 From October 2024, I will be co-leading a work package—focused on Trustworthy Assurance and Patient Engagment—for the EPSRC-funded CVD-Net projeect. This project, led by Professor Steve Niederer will design and build fully accurate digital twins of participants’ hearts from health data, including medical records, hospital scans and information from wearable and implanted monitors. 
