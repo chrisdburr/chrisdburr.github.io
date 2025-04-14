@@ -1,0 +1,135 @@
+---
+import { highlightAuthor } from '@/lib/utils'
+import Icon from './Icon.astro';
+import Heading from './Heading.astro';
+
+interface Props {
+	publications: any[];
+	groupByType?: boolean;
+}
+
+const { publications, groupByType = false } = Astro.props;
+
+// Helper function to get appropriate icon for publication type
+function getPublicationIcon(itemType: string): string {
+  switch (itemType) {
+    case 'journalArticle':
+      return 'article';
+    case 'bookSection':
+    case 'book':
+      return 'book';
+    case 'report':
+      return 'report';
+    case 'conferencePaper':
+      return 'paper';
+    case 'webpage':
+      return 'webpage';
+    default:
+      return 'document';
+  }
+}
+
+// Function to get appropriate button text based on publication type
+function getButtonText(itemType: string): string {
+  switch (itemType) {
+    case 'journalArticle':
+      return 'Read Article';
+    case 'bookSection':
+      return 'Read Chapter';
+    case 'book':
+      return 'View Book';
+    case 'report':
+      return 'Read Report';
+    case 'conferencePaper':
+      return 'Read Paper';
+    case 'webpage':
+      return 'Visit Page';
+    default:
+      return 'Read Publication';
+  }
+}
+
+// Define the desired order of publication types
+const typeOrder = ['journalArticle', 'report', 'conferencePaper', 'bookSection', 'book', 'webpage', 'other'];
+
+// Group publications by type and sort by date (newest first)
+let groupedPublications: Record<string, any[]> = {};
+publications.forEach(pub => {
+  const type = pub.itemType || 'other';
+  if (!groupedPublications[type]) {
+    groupedPublications[type] = [];
+  }
+  groupedPublications[type].push(pub);
+});
+
+// Sort each group by date (newest first)
+Object.keys(groupedPublications).forEach(type => {
+  groupedPublications[type].sort((a, b) => {
+    // Extract years from date strings or default to 0 if not available
+    const yearA = a.date ? parseInt(a.date.toString().substring(0, 4)) : 0;
+    const yearB = b.date ? parseInt(b.date.toString().substring(0, 4)) : 0;
+    return yearB - yearA; // Sort descending (newest first)
+  });
+});
+
+// Sort the types according to the predefined order
+const sortedTypes = Object.keys(groupedPublications).sort((a, b) => {
+  const indexA = typeOrder.indexOf(a);
+  const indexB = typeOrder.indexOf(b);
+  return (indexA === -1 ? 999 : indexA) - (indexB === -1 ? 999 : indexB);
+});
+
+// Function to format publication type for display
+function formatPublicationType(type: string): string {
+  switch (type) {
+    case 'journalArticle': return 'Journal Articles';
+    case 'bookSection': return 'Book Chapters';
+    case 'book': return 'Books';
+    case 'report': return 'Reports';
+    case 'conferencePaper': return 'Conference Papers';
+    case 'webpage': return 'Web Publications';
+    default: return type.charAt(0).toUpperCase() + type.slice(1);
+  }
+}
+---
+
+{sortedTypes.map(type => (
+  <div class="mb-12">
+    <Heading level={2}>{formatPublicationType(type)}</Heading>
+    
+    <div class="space-y-8">
+      {groupedPublications[type].map((publication) => (
+        <div class="card bg-base-200 shadow-sm">
+          <div class="card-body p-6">
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-full bg-primary/30 flex items-center justify-center flex-shrink-0 mt-1">
+                <Icon name={getPublicationIcon(publication.itemType)} className="w-6 h-6 text-primary" />
+              </div>
+              <div class="flex-1">
+                <h3 class="card-title text-xl font-semibold leading-tight mt-1">
+                  {publication.title}
+                </h3>
+                <p class="text-base mt-2 mb-1">
+                  <span class="font-medium">Authors:</span>{' '}
+                  <span set:html={highlightAuthor(publication.creators.map((c: any) => `${c.firstName} ${c.lastName}`).join(', '))} />
+                </p>
+                <p class="text-sm mb-3">
+                  <span class="italic">{publication.publicationTitle || publication.proceedingsTitle || publication.bookTitle || publication.websiteTitle || publication.institution || ''}</span>
+                  {publication.date && <span> • {publication.date}</span>}
+                </p>
+                {publication.abstractNote && (
+                  <p class="text-sm text-base-content/80">{publication.abstractNote}</p>
+                )}
+                <div class="card-actions justify-end mt-4">
+                  <a href={publication.url} class="btn btn-sm btn-primary text-primary-content" target="_blank">
+                    {getButtonText(publication.itemType)}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+))}

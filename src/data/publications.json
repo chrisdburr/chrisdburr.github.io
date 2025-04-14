@@ -1,0 +1,1505 @@
+{
+  "config": {
+    "id": "36a3b0b5-bad0-4a04-b79b-441c7cef77db",
+    "label": "BetterBibTeX JSON",
+    "preferences": {
+      "ascii": "",
+      "asciiBibLaTeX": false,
+      "asciiBibTeX": true,
+      "autoAbbrev": false,
+      "autoExport": "immediate",
+      "autoExportDelay": 5,
+      "autoExportIdleWait": 10,
+      "autoExportPathReplaceDiacritics": false,
+      "autoExportPathReplaceDirSep": "-",
+      "autoExportPathReplaceSpace": " ",
+      "automaticTags": true,
+      "autoPinDelay": 0,
+      "auxImport": false,
+      "baseAttachmentPath": "",
+      "biblatexExtendedDateFormat": true,
+      "biblatexExtendedNameFormat": true,
+      "biblatexExtractEprint": true,
+      "bibtexEditionOrdinal": false,
+      "bibtexParticleNoOp": false,
+      "bibtexURL": "off",
+      "cache": true,
+      "cacheDelete": false,
+      "cacheRetain": false,
+      "charmap": "",
+      "chinese": false,
+      "chineseSplitName": true,
+      "citeCommand": "cite",
+      "citekeyCaseInsensitive": true,
+      "citekeyFold": true,
+      "citekeyFormat": "auth.lower + year",
+      "citekeySearch": true,
+      "citekeyUnsafeChars": "\\\"#%'(),={}~",
+      "csquotes": "",
+      "DOIandURL": "both",
+      "exportBibTeXStrings": "off",
+      "exportBraceProtection": true,
+      "exportSort": "citekey",
+      "exportTitleCase": true,
+      "extraMergeCitekeys": false,
+      "extraMergeCSL": false,
+      "extraMergeTeX": false,
+      "git": "config",
+      "import": true,
+      "importBibTeXStrings": true,
+      "importCaseProtection": "as-needed",
+      "importCitationKey": true,
+      "importDetectURLs": true,
+      "importExtra": true,
+      "importJabRefAbbreviations": true,
+      "importJabRefStrings": true,
+      "importNoteToExtra": "",
+      "importSentenceCase": "on+guess",
+      "importSentenceCaseQuoted": true,
+      "importUnknownTexCommand": "ignore",
+      "itemObserverDelay": 5,
+      "jabrefFormat": 0,
+      "japanese": false,
+      "keyConflictPolicy": "keep",
+      "keyScope": "library",
+      "language": "langid",
+      "mapMath": "",
+      "mapText": "",
+      "packages": "",
+      "parseParticles": true,
+      "patchDates": "dateadded=dateAdded, date-added=dateAdded, datemodified=dateModified, date-modified=dateModified",
+      "postscript": "",
+      "postscriptOverride": "",
+      "preferencesOverride": "",
+      "qualityReport": false,
+      "quickCopyEta": "",
+      "quickCopyMode": "latex",
+      "quickCopyOrgMode": "zotero",
+      "quickCopyPandocBrackets": false,
+      "quickCopySelectLink": "zotero",
+      "rawImports": false,
+      "rawLaTag": "#LaTeX",
+      "relativeFilePaths": false,
+      "separatorList": "and",
+      "separatorNames": "and",
+      "skipFields": "",
+      "skipWords": "a,ab,aboard,about,above,across,after,against,al,along,amid,among,an,and,anti,around,as,at,before,behind,below,beneath,beside,besides,between,beyond,but,by,d,da,das,de,del,dell,dello,dei,degli,della,dell,delle,dem,den,der,des,despite,die,do,down,du,during,ein,eine,einem,einen,einer,eines,el,en,et,except,for,from,gli,i,il,in,inside,into,is,l,la,las,le,les,like,lo,los,near,nor,of,off,on,onto,or,over,past,per,plus,round,save,since,so,some,sur,than,the,through,to,toward,towards,un,una,unas,under,underneath,une,unlike,uno,unos,until,up,upon,versus,via,von,while,with,within,without,yet,zu,zum",
+      "startupProgress": "popup",
+      "strings": "",
+      "stringsOverride": "",
+      "verbatimFields": "url,doi,file,pdf,ids,eprint,/^verb[a-z]$/,groups,/^citeulike-linkout-[0-9]+$/, /^bdsk-url-[0-9]+$/, keywords",
+      "warnBulkModify": 0,
+      "warnTitleCased": false
+    },
+    "options": {
+      "Items": true,
+      "Normalize": false,
+      "Preferences": true,
+      "biblatexAPA": false,
+      "biblatexChicago": false,
+      "exportDir": "/Users/cburr/Repositories/portfolio/src/data",
+      "exportFileData": false,
+      "exportNotes": true,
+      "exportPath": "/Users/cburr/Repositories/portfolio/src/data/publications.json",
+      "keepUpdated": false,
+      "worker": true
+    }
+  },
+  "version": {
+    "zotero": "7.0.15",
+    "bbt": "7.0.17"
+  },
+  "collections": {},
+  "items": [
+    {
+      "key": "EJYN9GUZ",
+      "version": 8948,
+      "itemType": "report",
+      "title": "Trustworthy and ethical assurance of digital health and healthcare",
+      "date": "2024",
+      "url": "https://doi.org/10.5281/zenodo.10532573",
+      "extra": "Citation Key: burr_2024_10532573\nDOI: 10.5281/zenodo.10532573",
+      "institution": "Alan Turing Institute",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Sophie",
+          "lastName": "Arana",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Cassandra",
+          "lastName": "Gould Van Praag",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Ibrahim",
+          "lastName": "Habli",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Marten",
+          "lastName": "Kaas",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Michael",
+          "lastName": "Katell",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Shakir",
+          "lastName": "Laher",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "David",
+          "lastName": "Leslie",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Steven",
+          "lastName": "Niederer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Berk",
+          "lastName": "Ozturk",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nuala",
+          "lastName": "Polo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zoe",
+          "lastName": "Porter",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Philippa",
+          "lastName": "Ryan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Malvika",
+          "lastName": "Sharan",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jose",
+          "lastName": "Solis Lemus",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Marina",
+          "lastName": "Strocchi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Kalle",
+          "lastName": "Westerling",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "inPublications": true,
+      "dateAdded": "2024-11-22T13:15:20Z",
+      "dateModified": "2025-01-25T08:48:13Z",
+      "uri": "http://zotero.org/users/5649184/items/EJYN9GUZ",
+      "itemID": 123,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-11-29T14:09:41Z",
+          "dateModified": "2024-11-29T14:09:41Z",
+          "uri": "http://zotero.org/users/5649184/items/4FNZHCV8",
+          "path": "/Users/cburr/Zotero/storage/4FNZHCV8/Burr et al. - 2024 - Trustworthy and ethical assurance of digital health and healthcare.pdf",
+          "select": "zotero://select/library/items/4FNZHCV8"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr_2024_10532573",
+      "itemKey": "EJYN9GUZ",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/EJYN9GUZ"
+    },
+    {
+      "key": "JHP5NX7M",
+      "version": 9530,
+      "itemType": "journalArticle",
+      "title": "The body as laboratory: Prediction-error minimization, embodiment, and representation",
+      "abstractNote": "In his (2014) paper, Jakob Hohwy outlines a theory of the brain as an organ for prediction-error minimization (PEM), which he claims has the potential to profoundly alter our understanding of mind and cognition. One manner in which our understanding of the mind is altered, according to PEM, stems from the neurocentric conception of the mind that falls out of the framework, which portrays the mind as“inferentially-secluded”from its environment. This in turn leads Hohwy to reject certain theses of embodied cognition. Focusing on this aspect of Hohwy’s argument, we first outline the key components of the PEM framework such as the “evidentiary boundary,” before looking at why this leads Hohwy to reject certain theses of embodied cognition. We will argue that although Hohwy may be correct to reject specific theses of embodied cognition, others are in fact implied by the PEM framework and may contribute to its development. We present the metaphor of the “body as a laboratory” in order to highlight what we believe is a more significant role for the body than Hohwy suggests. In detailing these claims, we will expose some of the challenges that PEM raises for providing an account of representation.",
+      "date": "2016",
+      "language": "en",
+      "shortTitle": "The body as laboratory",
+      "libraryCatalog": "Crossref",
+      "url": "http://www.tandfonline.com/doi/full/10.1080/09515089.2015.1135238",
+      "accessDate": "2019-02-22T09:34:03Z",
+      "volume": "29",
+      "pages": "586-600",
+      "publicationTitle": "Philosophical Psychology",
+      "DOI": "10.1080/09515089.2015.1135238",
+      "issue": "4",
+      "ISSN": "0951-5089, 1465-394X",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Max",
+          "lastName": "Jones",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/2686123/items/5GAYLQ2J"
+        ]
+      },
+      "inPublications": true,
+      "dateAdded": "2019-02-22T09:34:03Z",
+      "dateModified": "2025-01-25T08:49:06Z",
+      "uri": "http://zotero.org/users/5649184/items/JHP5NX7M",
+      "itemID": 113,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Burr and Jones - 2016 - The body as laboratory Prediction-error minimizat.pdf",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/2686123/items/CECGHSMG"
+            ]
+          },
+          "dateAdded": "2019-02-22T09:34:01Z",
+          "dateModified": "2019-02-22T09:34:04Z",
+          "uri": "http://zotero.org/users/5649184/items/PTBDAUTX",
+          "path": "/Users/cburr/Zotero/storage/PTBDAUTX/Burr and Jones - 2016 - The body as laboratory Prediction-error minimizat.pdf",
+          "select": "zotero://select/library/items/PTBDAUTX"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr2016",
+      "itemKey": "JHP5NX7M",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/JHP5NX7M"
+    },
+    {
+      "key": "W7B83L6Y",
+      "version": 9530,
+      "itemType": "journalArticle",
+      "title": "Unifying the mind: Cognitive representations as graphical models",
+      "date": "2016",
+      "language": "en",
+      "shortTitle": "<b>Unifying the mind",
+      "libraryCatalog": "Crossref",
+      "url": "http://www.tandfonline.com/doi/full/10.1080/09515089.2016.1146243",
+      "accessDate": "2019-02-22T09:35:38Z",
+      "volume": "29",
+      "pages": "789-791",
+      "publicationTitle": "Philosophical Psychology",
+      "DOI": "10.1080/09515089.2016.1146243",
+      "issue": "5",
+      "ISSN": "0951-5089, 1465-394X",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/2686123/items/DH5SVYDR"
+        ]
+      },
+      "inPublications": true,
+      "dateAdded": "2019-02-22T09:35:38Z",
+      "dateModified": "2025-01-25T08:49:09Z",
+      "uri": "http://zotero.org/users/5649184/items/W7B83L6Y",
+      "itemID": 112,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Burr - 2016 - bUnifying the mind Cognitive representations as.pdf",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/2686123/items/E7UGF9KB"
+            ]
+          },
+          "dateAdded": "2019-02-22T09:35:36Z",
+          "dateModified": "2019-02-22T09:35:38Z",
+          "uri": "http://zotero.org/users/5649184/items/UWBMHCBJ",
+          "path": "/Users/cburr/Zotero/storage/UWBMHCBJ/Burr - 2016 - bUnifying the mind Cognitive representations as.pdf",
+          "select": "zotero://select/library/items/UWBMHCBJ"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr2016a",
+      "itemKey": "W7B83L6Y",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/W7B83L6Y"
+    },
+    {
+      "key": "PYDCH3NV",
+      "version": 9530,
+      "itemType": "journalArticle",
+      "title": "Embodied Decisions and the Predictive Brain",
+      "abstractNote": "A cognitivist account of decision-making views choice behaviour as a serial process of deliberation and commitment, which is separate from perception and action. By contrast, recent work in embodied decision-making has argued that this account is incompatible with emerging neurophysiological data. We argue that this account has significant overlap with an embodied account of predictive processing, and that both can offer mutual development for the other. However, more importantly, by demonstrating this close connection we uncover an alternative perspective on the nature of decision-making, and the mechanisms that underlie our choice behaviour. This alternative perspective allows us to respond to a challenge for predictive processing, which claims that the satisfaction of distal goal-states is underspecified. Answering this challenge requires the adoption of an embodied perspective.",
+      "date": "2017",
+      "language": "en",
+      "libraryCatalog": "DataCite",
+      "url": "http://www.predictive-mind.net/DOI?isbn=9783958573086",
+      "accessDate": "2019-02-22T09:35:30Z",
+      "publicationTitle": "Philosophy and Predictive Processing",
+      "DOI": "10.15502/9783958573086",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/2322171/items/7K2IBAEP",
+          "http://zotero.org/groups/2686123/items/BU247QYZ"
+        ]
+      },
+      "inPublications": true,
+      "dateAdded": "2019-02-22T09:35:30Z",
+      "dateModified": "2025-01-25T09:36:36Z",
+      "uri": "http://zotero.org/users/5649184/items/PYDCH3NV",
+      "itemID": 111,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Burr - 2017 - Embodied Decisions and the Predictive Brain.pdf",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/2322171/items/9WKTDXVY",
+              "http://zotero.org/groups/2686123/items/HIJVA86T"
+            ]
+          },
+          "dateAdded": "2019-02-22T09:35:28Z",
+          "dateModified": "2019-02-22T09:35:30Z",
+          "uri": "http://zotero.org/users/5649184/items/VJI6J426",
+          "path": "/Users/cburr/Zotero/storage/VJI6J426/Burr - 2017 - Embodied Decisions and the Predictive Brain.pdf",
+          "select": "zotero://select/library/items/VJI6J426"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr2017",
+      "itemKey": "PYDCH3NV",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/PYDCH3NV"
+    },
+    {
+      "key": "8TUUBDCW",
+      "version": 9530,
+      "itemType": "journalArticle",
+      "title": "An Analysis of the Interaction Between Intelligent Software Agents and Human Users",
+      "abstractNote": "Interactions between an intelligent software agent (ISA) and a human user are ubiquitous in everyday situations such as access to information, entertainment, and purchases. In such interactions, the ISA mediates the user’s access to the content, or controls some other aspect of the user experience, and is not designed to be neutral about outcomes of user choices. Like human users, ISAs are driven by goals, make autonomous decisions, and can learn from experience. Using ideas from bounded rationality (and deploying concepts from artificial intelligence, behavioural economics, control theory, and game theory), we frame these interactions as instances of an ISA whose reward depends on actions performed by the user. Such agents benefit by steering the user’s behaviour towards outcomes that maximise the ISA’s utility, which may or may not be aligned with that of the user. Video games, news recommendation aggregation engines, and fitness trackers can all be instances of this general case. Our analysis facilitates distinguishing various subcases of interaction (i.e. deception, coercion, trading, and nudging), as well as second-order effects that might include the possibility for adaptive interfaces to induce behavioural addiction, and/or change in user belief. We present these types of interaction within a conceptual framework, and review current examples of persuasive technologies and the issues that arise from their use. We argue that the nature of the feedback commonly used by learning agents to update their models and subsequent decisions could steer the behaviour of human users away from what benefits them, and in a direction that can undermine autonomy and cause further disparity between actions and goals as exemplified by addictive and compulsive behaviour. We discuss some of the ethical, social and legal implications of this technology and argue that it can sometimes exploit and reinforce weaknesses in human beings.",
+      "date": "2018",
+      "language": "en",
+      "libraryCatalog": "Crossref",
+      "url": "http://link.springer.com/10.1007/s11023-018-9479-0",
+      "accessDate": "2019-02-22T09:35:24Z",
+      "volume": "28",
+      "pages": "735-774",
+      "publicationTitle": "Minds and Machines",
+      "DOI": "10.1007/s11023-018-9479-0",
+      "issue": "4",
+      "ISSN": "0924-6495, 1572-8641",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nello",
+          "lastName": "Cristianini",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "James",
+          "lastName": "Ladyman",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/2686123/items/7IIZZM3N"
+        ]
+      },
+      "inPublications": true,
+      "dateAdded": "2019-02-22T09:35:24Z",
+      "dateModified": "2025-01-25T08:49:01Z",
+      "uri": "http://zotero.org/users/5649184/items/8TUUBDCW",
+      "itemID": 114,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Burr et al. - 2018 - An Analysis of the Interaction Between Intelligent.pdf",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/2686123/items/EL7FKK5Y"
+            ]
+          },
+          "dateAdded": "2019-02-22T09:35:22Z",
+          "dateModified": "2019-02-22T09:35:24Z",
+          "uri": "http://zotero.org/users/5649184/items/EETHQ72T",
+          "path": "/Users/cburr/Zotero/storage/EETHQ72T/Burr et al. - 2018 - An Analysis of the Interaction Between Intelligent.pdf",
+          "select": "zotero://select/library/items/EETHQ72T"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr2018",
+      "itemKey": "8TUUBDCW",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/8TUUBDCW"
+    },
+    {
+      "key": "SEN7TKXS",
+      "version": 1885,
+      "itemType": "conferencePaper",
+      "title": "Building machines that learn and think about morality",
+      "abstractNote": "Lake et al. propose three criteria which, they argue, will bring artificial intelligence (AI) systems closer to human cogni- tive abilities. In this paper, we explore the application of these crite- ria to a particular domain of human cognition: our capacity for moral reasoning. In doing so, we explore a set of considerations relevant to the development of AI moral decision-making. Our main focus is on the relation between dual-process accounts of moral reasoning and model-free/model-based forms of machine learning. We also discuss how work in embodied and situated cognition could provide a valu- able perspective on future research.",
+      "date": "2018",
+      "proceedingsTitle": "Symposium on Philosophy after AI: Mind, Language and Action",
+      "conferenceName": "2018 Convention of the Society for the Study of Artificial Intelligence and Simulation of Behaviour (AISB 2018)",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Geoff",
+          "lastName": "Keeling",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/2686123/items/WJ2SSEZF"
+        ]
+      },
+      "inPublications": true,
+      "dateAdded": "2019-02-22T09:37:10Z",
+      "dateModified": "2019-02-22T09:39:33Z",
+      "uri": "http://zotero.org/users/5649184/items/SEN7TKXS",
+      "itemID": 931,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Building machines that learn and think about morality",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/2686123/items/QXR494S8"
+            ]
+          },
+          "dateAdded": "2019-02-22T09:35:42Z",
+          "dateModified": "2019-02-22T09:37:10Z",
+          "uri": "http://zotero.org/users/5649184/items/RQPG6HU3",
+          "path": "/Users/cburr/Zotero/storage/RQPG6HU3/Building machines that learn and think about morality.pdf",
+          "select": "zotero://select/library/items/RQPG6HU3"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr2018a",
+      "itemKey": "SEN7TKXS",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/SEN7TKXS"
+    },
+    {
+      "key": "KQ2VBDIG",
+      "version": 9530,
+      "itemType": "journalArticle",
+      "title": "Can Machines Read our Minds?",
+      "abstractNote": "We explore the question of whether machines can infer information about our psychological traits or mental states by observing samples of our behaviour gathered from our online activities. Ongoing technical advances across a range of research communities indicate that machines are now able to access this information, but the extent to which this is possible and the consequent implications have not been well explored. We begin by highlighting the urgency of asking this question, and then explore its conceptual underpinnings, in order to help emphasise the relevant issues. To answer the question, we review a large number of empirical studies, in which samples of behaviour are used to automatically infer a range of psychological constructs, including affect and emotions, aptitudes and skills, attitudes and orientations (e.g. values and sexual orientation), personality, and disorders and conditions (e.g. depression and addiction). We also present a general perspective that can bring these disparate studies together and allow us to think clearly about their philosophical and ethical implications, such as issues related to consent, privacy, and the use of persuasive technologies for controlling human behaviour.",
+      "date": "2019",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "http://link.springer.com/10.1007/s11023-019-09497-4",
+      "accessDate": "2020-03-27T13:11:47Z",
+      "rights": "All rights reserved",
+      "volume": "29",
+      "pages": "461-494",
+      "publicationTitle": "Minds and Machines",
+      "DOI": "10.1007/s11023-019-09497-4",
+      "issue": "3",
+      "journalAbbreviation": "Minds & Machines",
+      "ISSN": "0924-6495, 1572-8641",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Nello",
+          "lastName": "Cristianini",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "dc:replaces": [
+          "http://zotero.org/users/5649184/items/EL8476II"
+        ],
+        "owl:sameAs": [
+          "http://zotero.org/groups/2321901/items/Y5LZ3ZR4",
+          "http://zotero.org/groups/2686123/items/62H937Q8",
+          "http://zotero.org/groups/4441221/items/UWRPM87L"
+        ]
+      },
+      "inPublications": true,
+      "dateAdded": "2020-03-27T13:11:47Z",
+      "dateModified": "2025-01-25T08:48:54Z",
+      "uri": "http://zotero.org/users/5649184/items/KQ2VBDIG",
+      "itemID": 115,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Burr and Cristianini - 2019 - Can Machines Read our Minds.pdf",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/2321901/items/AQHHEI2R",
+              "http://zotero.org/groups/2686123/items/NCPDFBVJ",
+              "http://zotero.org/groups/4441221/items/E4IS9IWE"
+            ]
+          },
+          "dateAdded": "2020-04-17T08:30:57Z",
+          "dateModified": "2020-04-17T08:31:50Z",
+          "uri": "http://zotero.org/users/5649184/items/8I34FBWQ",
+          "path": "/Users/cburr/Zotero/storage/8I34FBWQ/Burr and Cristianini - 2019 - Can Machines Read our Minds.pdf",
+          "select": "zotero://select/library/items/8I34FBWQ"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Burr and Cristianini - 2019 - Can Machines Read our Minds.pdf",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/2686123/items/R2FG4TJB",
+              "http://zotero.org/groups/4441221/items/7929S8WK"
+            ]
+          },
+          "dateAdded": "2020-03-27T13:11:44Z",
+          "dateModified": "2020-03-27T13:11:47Z",
+          "uri": "http://zotero.org/users/5649184/items/4TG9IE8L",
+          "path": "/Users/cburr/Zotero/storage/4TG9IE8L/Burr and Cristianini - 2019 - Can Machines Read our Minds.pdf",
+          "select": "zotero://select/library/items/4TG9IE8L"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr2019",
+      "itemKey": "KQ2VBDIG",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/KQ2VBDIG"
+    },
+    {
+      "key": "HZ7MYEHA",
+      "version": 9530,
+      "itemType": "journalArticle",
+      "title": "Digital Psychiatry: Risks and Opportunities for Public Health and Wellbeing",
+      "abstractNote": "Common mental health disorders are rising globally, creating a strain on public healthcare systems. This has led to a renewed interest in the role that digital technologies may have for improving mental health outcomes. One result of this interest is the development and use of artificial intelligence for assessing, diagnosing, and treating mental health issues, which we refer to as “digital psychiatry.” This article focuses on the increasing use of digital psychiatry outside of clinical settings, in the following sectors: education, employment, financial services, social media, and the digital wellbeing industry. We analyze the ethical challenges of deploying digital psychiatry in these sectors, emphasizing key problems and opportunities for public health, and offer recommendations for protecting and promoting public health and wellbeing in information societies.",
+      "date": "2020",
+      "rights": "All rights reserved",
+      "volume": "1",
+      "pages": "21-33",
+      "publicationTitle": "IEEE Transactions on Technology and Society",
+      "DOI": "10.1109/TTS.2020.2977059",
+      "issue": "1",
+      "journalAbbreviation": "IEEE Transactions on Technology and Society",
+      "ISSN": "2637-6415",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jessica",
+          "lastName": "Morley",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mariarosaria",
+          "lastName": "Taddeo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Luciano",
+          "lastName": "Floridi",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Artificial intelligence"
+        },
+        {
+          "tag": "Artificial intelligence (AI)"
+        },
+        {
+          "tag": "digital ethics"
+        },
+        {
+          "tag": "digital psychiatry"
+        },
+        {
+          "tag": "digital wellbeing"
+        },
+        {
+          "tag": "Education"
+        },
+        {
+          "tag": "Ethics"
+        },
+        {
+          "tag": "mental health"
+        },
+        {
+          "tag": "Psychiatry"
+        },
+        {
+          "tag": "Public healthcare"
+        },
+        {
+          "tag": "Social network services"
+        }
+      ],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/2485996/items/HXLH5EUI",
+          "http://zotero.org/groups/2527824/items/S5I3GLEP",
+          "http://zotero.org/groups/2683604/items/4UQI5MXA",
+          "http://zotero.org/groups/2686123/items/5II82C9B",
+          "http://zotero.org/groups/2698564/items/YF2WQ6UW",
+          "http://zotero.org/groups/3710672/items/34XX283C",
+          "http://zotero.org/groups/4750679/items/2TJXJXXU"
+        ]
+      },
+      "inPublications": true,
+      "dateAdded": "2020-03-20T12:10:39Z",
+      "dateModified": "2025-01-25T09:41:08Z",
+      "uri": "http://zotero.org/users/5649184/items/HZ7MYEHA",
+      "itemID": 110,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Burr et al. - 2020 - Digital Psychiatry Risks and Opportunities for Pu.pdf",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/2485996/items/MFFY2CVD",
+              "http://zotero.org/groups/2527824/items/4WTHZ3EE",
+              "http://zotero.org/groups/2683604/items/XESTN46Z",
+              "http://zotero.org/groups/2686123/items/D4I33G28",
+              "http://zotero.org/groups/2698564/items/BJPDCGCT",
+              "http://zotero.org/groups/3710672/items/T2VUQW94"
+            ]
+          },
+          "dateAdded": "2020-03-30T09:35:21Z",
+          "dateModified": "2020-03-30T09:35:21Z",
+          "uri": "http://zotero.org/users/5649184/items/D78JJL95",
+          "path": "/Users/cburr/Zotero/storage/D78JJL95/Burr et al. - 2020 - Digital Psychiatry Risks and Opportunities for Pu.pdf",
+          "select": "zotero://select/library/items/D78JJL95"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr2020",
+      "itemKey": "HZ7MYEHA",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/HZ7MYEHA"
+    },
+    {
+      "key": "ECGXWZZ3",
+      "version": 2598,
+      "itemType": "bookSection",
+      "title": "Empowerment or Engagement? Digital Health Technologies for Mental Healthcare",
+      "abstractNote": "We argue that while digital health technologies (e.g. artificial intelligence, smartphones, and virtual reality) present significant opportunities for improving the delivery of healthcare, key concepts that are used to evaluate and understand their impact can obscure significant ethical issues related to patient engagement and experience. Specifically, we focus on the concept of empowerment and ask whether it is adequate for addressing some significant ethical concerns that relate to digital health technologies for mental healthcare. We frame these concerns using five key ethical principles for AI ethics (i.e. autonomy, beneficence, non-maleficence, justice, and explicability), which have their roots in the bioethical literature, in order to critically evaluate the role that digital health technologies will have in the future of digital healthcare.",
+      "date": "2020",
+      "url": "https://doi.org/10.1007/978-3-030-29145-7_5",
+      "rights": "All rights reserved",
+      "extra": "DOI: 10.1007/978-3-030-29145-7_5",
+      "place": "Cham",
+      "publisher": "Springer International Publishing",
+      "ISBN": "978-3-030-29145-7",
+      "pages": "67-88",
+      "bookTitle": "The 2019 Yearbook of the Digital Ethics Lab",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jessica",
+          "lastName": "Morley",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Silvia",
+          "lastName": "Milano",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/2686123/items/JGTMRE97",
+          "http://zotero.org/groups/4299839/items/FZ3329EJ"
+        ]
+      },
+      "inPublications": true,
+      "dateAdded": "2020-03-27T13:17:19Z",
+      "dateModified": "2020-03-27T13:17:19Z",
+      "uri": "http://zotero.org/users/5649184/items/ECGXWZZ3",
+      "itemID": 622,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Burr and Morley - 2020 - Empowerment or Engagement Digital Health Technolo.pdf",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/2686123/items/Y3ZXV2VH"
+            ]
+          },
+          "dateAdded": "2020-03-27T13:17:34Z",
+          "dateModified": "2020-03-27T13:17:34Z",
+          "uri": "http://zotero.org/users/5649184/items/XVU4UGSK",
+          "path": "/Users/cburr/Zotero/storage/XVU4UGSK/Burr and Morley - 2020 - Empowerment or Engagement Digital Health Technolo.pdf",
+          "select": "zotero://select/library/items/XVU4UGSK"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr2020a",
+      "itemKey": "ECGXWZZ3",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/ECGXWZZ3"
+    },
+    {
+      "key": "63ZMFK3C",
+      "version": 8205,
+      "itemType": "book",
+      "title": "Ethics of Digital Well-Being: A Multidisciplinary Approach",
+      "date": "2020",
+      "language": "en",
+      "shortTitle": "Ethics of Digital Well-Being",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "http://link.springer.com/10.1007/978-3-030-50585-1",
+      "accessDate": "2020-09-01T08:08:26Z",
+      "rights": "All rights reserved",
+      "extra": "DOI: 10.1007/978-3-030-50585-1",
+      "volume": "140",
+      "place": "Cham",
+      "publisher": "Springer International Publishing",
+      "ISBN": "978-3-030-50584-4 978-3-030-50585-1",
+      "series": "Philosophical Studies Series",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "editor"
+        },
+        {
+          "firstName": "Luciano",
+          "lastName": "Floridi",
+          "creatorType": "editor"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/2686123/items/ZBIWAC3W",
+          "http://zotero.org/groups/4299839/items/JGNX76XL"
+        ]
+      },
+      "inPublications": true,
+      "dateAdded": "2020-09-01T08:08:26Z",
+      "dateModified": "2020-09-01T08:08:26Z",
+      "uri": "http://zotero.org/users/5649184/items/63ZMFK3C",
+      "itemID": 1072,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Burr and Floridi - 2020 - Ethics of Digital Well-Being A Multidisciplinary .pdf",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/2686123/items/DQJPH83P"
+            ]
+          },
+          "dateAdded": "2020-09-01T08:08:23Z",
+          "dateModified": "2020-09-01T08:08:27Z",
+          "uri": "http://zotero.org/users/5649184/items/RVFGKRJF",
+          "path": "/Users/cburr/Zotero/storage/RVFGKRJF/Burr and Floridi - 2020 - Ethics of Digital Well-Being A Multidisciplinary .pdf",
+          "select": "zotero://select/library/items/RVFGKRJF"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr2020b",
+      "itemKey": "63ZMFK3C",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/63ZMFK3C"
+    },
+    {
+      "key": "V7B9H3X5",
+      "version": 9530,
+      "itemType": "journalArticle",
+      "title": "The Ethics of Digital Well-Being: A Thematic Review",
+      "abstractNote": "This article presents the first thematic review of the literature on the ethical issues concerning digital well-being. The term ‘digital well-being’ is used to refer to the impact of digital technologies on what it means to live a life that is good for a human being. The review explores the existing literature on the ethics of digital well-being, with the goal of mapping the current debate and identifying open questions for future research. The review identifies major issues related to several key social domains: healthcare, education, governance and social development, and media and entertainment. It also highlights three broader themes: positive computing, personalised human–computer interaction, and autonomy and self-determination. The review argues that three themes will be central to ongoing discussions and research by showing how they can be used to identify open questions related to the ethics of digital well-being.",
+      "date": "2020",
+      "language": "en",
+      "shortTitle": "The Ethics of Digital Well-Being",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "http://link.springer.com/10.1007/s11948-020-00175-8",
+      "accessDate": "2020-03-27T13:12:56Z",
+      "rights": "All rights reserved",
+      "publicationTitle": "Science and Engineering Ethics",
+      "DOI": "10.1007/s11948-020-00175-8",
+      "journalAbbreviation": "Sci Eng Ethics",
+      "ISSN": "1353-3452, 1471-5546",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mariarosaria",
+          "lastName": "Taddeo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Luciano",
+          "lastName": "Floridi",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/2527824/items/KJCZ53TY",
+          "http://zotero.org/groups/2686123/items/EM2X7KPD"
+        ]
+      },
+      "inPublications": true,
+      "dateAdded": "2020-03-27T13:12:56Z",
+      "dateModified": "2025-01-25T08:48:39Z",
+      "uri": "http://zotero.org/users/5649184/items/V7B9H3X5",
+      "itemID": 117,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Burr et al. - 2020 - The Ethics of Digital Well-Being A Thematic Revie.pdf",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/2527824/items/WZDMKTP2",
+              "http://zotero.org/groups/2686123/items/934HH79L"
+            ]
+          },
+          "dateAdded": "2020-03-27T13:12:54Z",
+          "dateModified": "2020-03-27T13:12:56Z",
+          "uri": "http://zotero.org/users/5649184/items/V27V7RSD",
+          "path": "/Users/cburr/Zotero/storage/V27V7RSD/Burr et al. - 2020 - The Ethics of Digital Well-Being A Thematic Revie.pdf",
+          "select": "zotero://select/library/items/V27V7RSD"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr2020c",
+      "itemKey": "V7B9H3X5",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/V7B9H3X5"
+    },
+    {
+      "key": "EGS3PLI9",
+      "version": 8951,
+      "itemType": "report",
+      "title": "A Citizen's Guide to Data: Ethical, Social, and Legal Issues",
+      "abstractNote": "This guide was produced to support specific activities associated with a Resident’s Panel, organised and run by Camden City Council, Involve. The content was designed to support the participants with understanding some of the ethical, legal, and social issues surrounding data use by local government. In its current version, this guide is not, officially, a public document but has been published online for reference. It will be revised and developed following the workshop for wider release.",
+      "date": "2021",
+      "language": "en",
+      "shortTitle": "A Citizen's Guide to Data",
+      "libraryCatalog": "DOI.org (Datacite)",
+      "url": "https://zenodo.org/record/5568861",
+      "accessDate": "2022-11-18T14:58:36Z",
+      "rights": "Creative Commons Attribution 4.0 International, Open Access",
+      "extra": "DOI: 10.5281/ZENODO.5568861",
+      "institution": "Zenodo",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "data protection",
+          "type": 1
+        },
+        {
+          "tag": "machine learning",
+          "type": 1
+        },
+        {
+          "tag": "Camden City Council",
+          "type": 1
+        },
+        {
+          "tag": "data ethics",
+          "type": 1
+        },
+        {
+          "tag": "public engagement",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "inPublications": true,
+      "dateAdded": "2022-11-18T14:58:36Z",
+      "dateModified": "2025-01-25T08:48:32Z",
+      "uri": "http://zotero.org/users/5649184/items/EGS3PLI9",
+      "itemID": 119,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Burr - 2021 - A Citizen's Guide to Data Ethical, Social, and Le.pdf",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2022-11-18T14:59:10Z",
+          "dateModified": "2022-11-18T14:59:10Z",
+          "uri": "http://zotero.org/users/5649184/items/89NQX4CJ",
+          "path": "/Users/cburr/Zotero/storage/89NQX4CJ/Burr - 2021 - A Citizen's Guide to Data Ethical, Social, and Le.pdf",
+          "select": "zotero://select/library/items/89NQX4CJ"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr2021",
+      "itemKey": "EGS3PLI9",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/EGS3PLI9"
+    },
+    {
+      "key": "RQEGD7HS",
+      "version": 8950,
+      "itemType": "webpage",
+      "title": "Charities are contributing to growing mistrust of mental-health text support — here's why",
+      "abstractNote": "Mental health charities that provide support via text message have come under fire for sharing users anonymised data.",
+      "date": "2022",
+      "language": "en",
+      "url": "http://theconversation.com/charities-are-contributing-to-growing-mistrust-of-mental-health-text-support-heres-why-179056",
+      "accessDate": "2022-07-29T13:21:53Z",
+      "rights": "All rights reserved",
+      "websiteTitle": "The Conversation",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "inPublications": true,
+      "dateAdded": "2022-07-29T13:21:53Z",
+      "dateModified": "2025-01-25T08:48:28Z",
+      "uri": "http://zotero.org/users/5649184/items/RQEGD7HS",
+      "itemID": 120,
+      "attachments": [],
+      "notes": [],
+      "citationKey": "burr2022",
+      "itemKey": "RQEGD7HS",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/RQEGD7HS"
+    },
+    {
+      "key": "HHMSHHPY",
+      "version": 8949,
+      "itemType": "journalArticle",
+      "title": "Ethical assurance: a practical approach to the responsible design, development, and deployment of data-driven technologies",
+      "date": "2022",
+      "language": "en",
+      "shortTitle": "Ethical assurance",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://link.springer.com/10.1007/s43681-022-00178-0",
+      "accessDate": "2022-08-01T08:26:26Z",
+      "rights": "All rights reserved",
+      "publicationTitle": "AI and Ethics",
+      "DOI": "10.1007/s43681-022-00178-0",
+      "journalAbbreviation": "AI Ethics",
+      "ISSN": "2730-5953, 2730-5961",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "David",
+          "lastName": "Leslie",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/4750679/items/EI9W63GY",
+          "http://zotero.org/groups/4880166/items/S6WWKHTP"
+        ]
+      },
+      "inPublications": true,
+      "dateAdded": "2022-08-01T08:26:26Z",
+      "dateModified": "2025-01-25T08:48:23Z",
+      "uri": "http://zotero.org/users/5649184/items/HHMSHHPY",
+      "itemID": 121,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2022-08-01T08:26:34Z",
+          "dateModified": "2022-08-01T08:26:34Z",
+          "uri": "http://zotero.org/users/5649184/items/I68RRC9D",
+          "path": "/Users/cburr/Zotero/storage/I68RRC9D/Burr and Leslie - 2022 - Ethical assurance a practical approach to the res.pdf",
+          "select": "zotero://select/library/items/I68RRC9D"
+        }
+      ],
+      "notes": [],
+      "citationKey": "burr2022a",
+      "itemKey": "HHMSHHPY",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/HHMSHHPY"
+    },
+    {
+      "key": "LQCK63Z3",
+      "version": 8949,
+      "itemType": "report",
+      "title": "Trustworthy Assurance of Digital Mental Healthcare",
+      "abstractNote": "There is a culture of distrust surrounding the development and use of digital mental health technologies. As many organisations continue to grapple with the long-term impacts on mental health and well-being from the COVID-19 pandemic, a growing number are turning to digital technologies to increase their capacity and try to meet the growing need for mental health services. In this report, we argue that clearer assurance for how ethical principles have been considered and implemented in the design, development, and deployment of digital mental health technologies is necessary to help build a more trustworthy and responsible ecosystem. To help address this need, we set out a positive proposal for a framework and methodology we call 'Trustworthy Assurance'. To support the development and evaluation of Trustworthy Assurance, we conducted a series of participatory stakeholder engagement events with students, University administrators, regulators and policy-makers, developers, researchers, and users of digital mental health technologies. Our objectives were a) to identify and explore how stakeholders understood and interpreted relevant ethical objectives for digital mental health technologies, b) to evaluate and co-design the trustworthy assurance framework and methodology, and c) solicit feedback on the possible reasons for distrust in digital mental health.",
+      "date": "2022",
+      "language": "eng",
+      "libraryCatalog": "Zenodo",
+      "url": "https://zenodo.org/record/7107200",
+      "accessDate": "2022-11-03T15:00:03Z",
+      "rights": "All rights reserved",
+      "extra": "DOI: 10.5281/zenodo.7107200",
+      "pages": "137",
+      "institution": "Alan Turing Institute",
+      "creators": [
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Rosamund",
+          "lastName": "Powell",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "data ethics",
+          "type": 1
+        },
+        {
+          "tag": "assurance",
+          "type": 1
+        },
+        {
+          "tag": "data-driven technology",
+          "type": 1
+        },
+        {
+          "tag": "digital mental health",
+          "type": 1
+        },
+        {
+          "tag": "participatory design",
+          "type": 1
+        },
+        {
+          "tag": "trustworthy AI",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "inPublications": true,
+      "dateAdded": "2022-11-03T15:00:03Z",
+      "dateModified": "2025-01-25T08:48:20Z",
+      "uri": "http://zotero.org/users/5649184/items/LQCK63Z3",
+      "itemID": 122,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Zenodo Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2022-11-03T15:00:11Z",
+          "dateModified": "2022-11-03T15:00:11Z",
+          "uri": "http://zotero.org/users/5649184/items/XNRPVMXU",
+          "path": "/Users/cburr/Zotero/storage/XNRPVMXU/Burr - 2022 - Trustworthy Assurance of Digital Mental Healthcare.pdf",
+          "select": "zotero://select/library/items/XNRPVMXU"
+        }
+      ],
+      "notes": [
+        {
+          "key": "5YYFJTEQ",
+          "version": 3900,
+          "itemType": "note",
+          "parentItem": "LQCK63Z3",
+          "note": "Research and production for this report was undertaken at the Alan Turing Institute and supported by funding from the UKRI's Trustworthy Autonomous Hub, which was awarded to Dr Christopher Burr (Grant number: TAS_PP_00040).",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2022-11-03T15:00:03Z",
+          "dateModified": "2022-11-03T15:00:03Z",
+          "uri": "http://zotero.org/users/5649184/items/5YYFJTEQ"
+        }
+      ],
+      "citationKey": "burr2022b",
+      "itemKey": "LQCK63Z3",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/LQCK63Z3"
+    },
+    {
+      "key": "W5XFDGT9",
+      "version": 9530,
+      "itemType": "journalArticle",
+      "title": "Normative folk psychology and decision theory",
+      "abstractNote": "Our aim in this paper is to explore two possible directions of interaction between normative folk psychology and decision theory. In one direction, folk psychology plays a regulative role that constrains practical decision-making. In the other direction, decision theory provides novel tools and norms that shape folk psychology. We argue that these interactions could lead to the emergence of an iterative “decision theoretic spiral,' where folk psychology influences decision-making, decision-making is studied by decision theory, and decision theory influences folk psychology. Understanding these interactions is important both for the theoretical study of social cognition and decision theory, and also for thinking about how to implement practical interventions into real-world decision-making.",
+      "date": "2022",
+      "language": "en",
+      "libraryCatalog": "Wiley Online Library",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/mila.12347",
+      "accessDate": "2024-02-03T17:12:29Z",
+      "rights": "© 2020 The Authors. Mind & Language published by John Wiley & Sons Ltd.",
+      "extra": "_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/mila.12347",
+      "volume": "37",
+      "pages": "525-542",
+      "publicationTitle": "Mind & Language",
+      "DOI": "10.1111/mila.12347",
+      "issue": "4",
+      "ISSN": "1468-0017",
+      "creators": [
+        {
+          "firstName": "Joe",
+          "lastName": "Dewhurst",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "decision theory",
+          "type": 1
+        },
+        {
+          "tag": "folk psychology",
+          "type": 1
+        },
+        {
+          "tag": "normative",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "inPublications": true,
+      "dateAdded": "2024-02-03T17:12:30Z",
+      "dateModified": "2024-02-03T17:12:30Z",
+      "uri": "http://zotero.org/users/5649184/items/W5XFDGT9",
+      "itemID": 90,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Full Text PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-02-03T17:12:31Z",
+          "dateModified": "2024-02-03T17:12:31Z",
+          "uri": "http://zotero.org/users/5649184/items/88SL36CA",
+          "path": "/Users/cburr/Zotero/storage/88SL36CA/Dewhurst and Burr - 2022 - Normative folk psychology and decision theory.pdf",
+          "select": "zotero://select/library/items/88SL36CA"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2024-02-03T17:12:37Z",
+          "dateModified": "2024-02-03T17:12:37Z",
+          "uri": "http://zotero.org/users/5649184/items/V3RPF6PI",
+          "path": "/Users/cburr/Zotero/storage/V3RPF6PI/mila.html",
+          "select": "zotero://select/library/items/V3RPF6PI"
+        }
+      ],
+      "notes": [],
+      "citationKey": "dewhurst2022",
+      "itemKey": "W5XFDGT9",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/W5XFDGT9"
+    },
+    {
+      "key": "HYJA92QE",
+      "version": 9530,
+      "itemType": "journalArticle",
+      "title": "The ethics of AI in health care: A mapping review",
+      "abstractNote": "This article presents a mapping review of the literature concerning the ethics of artificial intelligence (AI) in health care. The goal of this review is to summarise current debates and identify open questions for future research. Five literature databases were searched to support the following research question: how can the primary ethical risks presented by AI-health be categorised, and what issues must policymakers, regulators and developers consider in order to be ‘ethically mindful? A series of screening stages were carried out—for example, removing articles that focused on digital health in general (e.g. data sharing, data access, data privacy, surveillance/nudging, consent, ownership of health data, evidence of efficacy)—yielding a total of 156 papers that were included in the review.",
+      "date": "2020",
+      "language": "en",
+      "shortTitle": "The ethics of AI in health care",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://linkinghub.elsevier.com/retrieve/pii/S0277953620303919",
+      "accessDate": "2025-01-25T08:36:01Z",
+      "volume": "260",
+      "pages": "113172",
+      "publicationTitle": "Social Science & Medicine",
+      "DOI": "10.1016/j.socscimed.2020.113172",
+      "journalAbbreviation": "Social Science & Medicine",
+      "ISSN": "02779536",
+      "creators": [
+        {
+          "firstName": "Jessica",
+          "lastName": "Morley",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Caio C.V.",
+          "lastName": "Machado",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Josh",
+          "lastName": "Cowls",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Indra",
+          "lastName": "Joshi",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mariarosaria",
+          "lastName": "Taddeo",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Luciano",
+          "lastName": "Floridi",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "/unread",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "inPublications": true,
+      "dateAdded": "2025-01-25T08:36:01Z",
+      "dateModified": "2025-01-25T08:48:35Z",
+      "uri": "http://zotero.org/users/5649184/items/HYJA92QE",
+      "itemID": 118,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-01-25T08:35:57Z",
+          "dateModified": "2025-01-25T08:36:01Z",
+          "uri": "http://zotero.org/users/5649184/items/LB9GMGGD",
+          "path": "/Users/cburr/Zotero/storage/LB9GMGGD/Morley et al. - 2020 - The ethics of AI in health care A mapping review.pdf",
+          "select": "zotero://select/library/items/LB9GMGGD"
+        }
+      ],
+      "notes": [],
+      "citationKey": "morley2020",
+      "itemKey": "HYJA92QE",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/HYJA92QE"
+    },
+    {
+      "key": "YUA8YAGB",
+      "version": 9530,
+      "itemType": "journalArticle",
+      "title": "Bayesian Learning Models of Pain: A Call to Action",
+      "date": "2019",
+      "language": "en",
+      "shortTitle": "Bayesian Learning Models of Pain",
+      "libraryCatalog": "Crossref",
+      "url": "https://linkinghub.elsevier.com/retrieve/pii/S2352154618300810",
+      "accessDate": "2019-02-22T09:35:16Z",
+      "volume": "26",
+      "pages": "54-61",
+      "publicationTitle": "Current Opinion in Behavioral Sciences",
+      "DOI": "10.1016/j.cobeha.2018.10.006",
+      "ISSN": "23521546",
+      "creators": [
+        {
+          "firstName": "Abby",
+          "lastName": "Tabor",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {
+        "owl:sameAs": [
+          "http://zotero.org/groups/2686123/items/XZF6HF4W"
+        ]
+      },
+      "inPublications": true,
+      "dateAdded": "2019-02-22T09:35:16Z",
+      "dateModified": "2025-01-25T08:48:50Z",
+      "uri": "http://zotero.org/users/5649184/items/YUA8YAGB",
+      "itemID": 116,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Tabor and Burr - 2019 - Bayesian Learning Models of Pain A Call to Action.pdf",
+          "tags": [],
+          "relations": {
+            "owl:sameAs": [
+              "http://zotero.org/groups/2686123/items/V2PNBC23"
+            ]
+          },
+          "dateAdded": "2019-02-22T09:35:14Z",
+          "dateModified": "2019-02-22T09:35:16Z",
+          "uri": "http://zotero.org/users/5649184/items/QLXLHTIN",
+          "path": "/Users/cburr/Zotero/storage/QLXLHTIN/Tabor and Burr - 2019 - Bayesian Learning Models of Pain A Call to Action.pdf",
+          "select": "zotero://select/library/items/QLXLHTIN"
+        }
+      ],
+      "notes": [],
+      "citationKey": "tabor2019",
+      "itemKey": "YUA8YAGB",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/YUA8YAGB"
+    },
+    {
+      "key": "KTSKXYEV",
+      "version": 9406,
+      "itemType": "journalArticle",
+      "title": "The philosophical foundations of digital twinning",
+      "abstractNote": "Abstract\n            Digital twins are a new paradigm for our time, offering the possibility of interconnected virtual representations of the real world. The concept is very versatile and has been adopted by multiple communities of practice, policymakers, researchers, and innovators. A significant part of the digital twin paradigm is about interconnecting digital objects, many of which have previously not been combined. As a result, members of the newly forming digital twin community are often talking at cross-purposes, based on different starting points, assumptions, and cultural practices. These differences are due to the philosophical world-view adopted within specific communities. In this paper, we explore the philosophical context which underpins the digital twin concept. We offer the building blocks for a philosophical framework for digital twins, consisting of 21 principles that are intended to help facilitate their further development. Specifically, we argue that the philosophy of digital twins is fundamentally holistic and emergentist. We further argue that in order to enable emergent behaviors, digital twins should be designed to reconstruct the behavior of a physical twin by “dynamically assembling” multiple digital “components”. We also argue that digital twins naturally include aspects relating to the philosophy of artificial intelligence, including learning and exploitation of knowledge. We discuss the following four questions (i) What is the distinction between a model and a digital twin? (ii) What previously unseen results can we expect from a digital twin? (iii) How can emergent behaviours be predicted? (iv) How can we assess the existence and uniqueness of digital twin outputs?",
+      "date": "2025",
+      "language": "en",
+      "libraryCatalog": "DOI.org (Crossref)",
+      "url": "https://www.cambridge.org/core/product/identifier/S2632673625000048/type/journal_article",
+      "accessDate": "2025-03-20T17:29:00Z",
+      "volume": "6",
+      "pages": "e12",
+      "publicationTitle": "Data-Centric Engineering",
+      "DOI": "10.1017/dce.2025.4",
+      "journalAbbreviation": "DCE",
+      "ISSN": "2632-6736",
+      "creators": [
+        {
+          "firstName": "David J",
+          "lastName": "Wagg",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Jason",
+          "lastName": "Shepherd",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Zack",
+          "lastName": "Xuereb Conti",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Mark",
+          "lastName": "Enzer",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Steven",
+          "lastName": "Niederer",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [],
+      "relations": {},
+      "inPublications": true,
+      "dateAdded": "2025-03-20T17:29:00Z",
+      "dateModified": "2025-03-20T17:29:00Z",
+      "uri": "http://zotero.org/users/5649184/items/KTSKXYEV",
+      "itemID": 8840,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-03-20T17:28:56Z",
+          "dateModified": "2025-03-20T17:29:00Z",
+          "uri": "http://zotero.org/users/5649184/items/FVNJPM4N",
+          "path": "/Users/cburr/Zotero/storage/FVNJPM4N/Wagg et al. - 2025 - The philosophical foundations of digital twinning.pdf",
+          "select": "zotero://select/library/items/FVNJPM4N"
+        }
+      ],
+      "notes": [],
+      "citationKey": "wagg2025",
+      "itemKey": "KTSKXYEV",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/KTSKXYEV"
+    }
+  ]
+}

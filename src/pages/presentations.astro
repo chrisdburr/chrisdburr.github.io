@@ -1,0 +1,58 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { profile } from '@/settings';
+import { presentations } from '@/data/presentations'; 
+
+// Helper function to group presentations by year
+const groupPresentationsByYear = (presentations: any[]) => {
+  const grouped: { [year: string]: any[] } = {};
+  // Sort presentations newest first based on year
+  const sortedPresentations = [...presentations].sort((a, b) => parseInt(b.year) - parseInt(a.year));
+  sortedPresentations.forEach(p => {
+    if (!grouped[p.year]) {
+      grouped[p.year] = [];
+    }
+    grouped[p.year].push(p);
+  });
+  return grouped;
+};
+
+const presentationsByYear = groupPresentationsByYear(presentations);
+const years = Object.keys(presentationsByYear).sort((a, b) => parseInt(b) - parseInt(a)); // Sort years descending
+---
+
+<Layout title={`Presentations | ${profile.fullName}`}>
+  <div class="prose max-w-none">
+    <h1>Presentations</h1>
+
+    <blockquote>
+      The current list of presentations is incomplete and will be updated soon. For now, a representative set is provided.
+    </blockquote>
+
+    {years.map(year => (
+      <>
+        <h2>{year}</h2>
+        {presentationsByYear[year].length > 0 ? (
+          <ul>
+            {presentationsByYear[year].map(p => (
+              <li>
+                {p.link ? (
+                  <a href={p.link} class="link">{p.title}</a>
+                ) : (
+                  p.title
+                )}
+                {' (' + p.venue + ')'}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p><em>No presentations listed for this year.</em></p>
+        )}
+      </>
+    ))}
+    {/* Add placeholders for future years if needed */}
+    { !presentationsByYear['2023'] && <><h2>2023</h2><p><em>Coming Soon</em></p></> }
+    { !presentationsByYear['2022'] && <><h2>2022</h2><p><em>Coming Soon</em></p></> }
+    </ul>
+  </div>
+</Layout>

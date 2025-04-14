@@ -1,0 +1,18 @@
+---
+// Import Astro Icon for both local and package icons
+import { Icon as AstroIcon } from 'astro-icon/components';
+
+interface Props {
+  name: string; // The icon name (e.g., "brain" for local or "Menu" for lucide)
+  className?: string; // CSS classes for styling (size, color, etc.)
+  pack?: string; // Optional icon pack name (default is null for local SVGs)
+}
+
+const { name, className = "w-6 h-6", pack = null } = Astro.props;
+---
+
+{pack === "lucide" ? (
+  <AstroIcon name={`lucide:${name}`} class={className} />
+) : (
+  <AstroIcon name={name} class={className} />
+)}

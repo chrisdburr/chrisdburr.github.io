@@ -1,0 +1,103 @@
+---
+import {template} from '@/settings'
+interface Props {
+	title: string
+	description: string
+	image: string
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+
+const { title, description, image } = Astro.props
+---
+
+<meta charset='utf-8' />
+<meta name='viewport' content='width=device-width,initial-scale=1' />
+<link
+	rel='icon'
+	type='image/svg+xml'
+	href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>'
+/>
+<!-- Fallback favicons for various platforms -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+<meta name='generator' content={Astro.generator} />
+
+<!-- Sitemap -->
+<link rel="sitemap" href=`${template.base}/sitemap-index.xml` />
+
+<!-- Canonical URL -->
+<link rel='canonical' href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name='title' content={title} />
+<meta name='description' content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property='og:type' content='website' />
+<meta property='og:url' content={Astro.url} />
+<meta property='og:title' content={title} />
+<meta property='og:description' content={description} />
+<meta property='og:image' content={new URL(image, Astro.url)} />
+
+<!-- Twitter -->
+<meta property='twitter:card' content='summary_large_image' />
+<meta property='twitter:url' content={Astro.url} />
+<meta property='twitter:title' content={title} />
+<meta property='twitter:description' content={description} />
+<meta property='twitter:image' content={new URL(image, Astro.url)} />
+
+<!-- 
+  Theme Management System
+  
+  Two-part approach:
+  1. Inline script (runs immediately) - Prevents flash of unstyled content (FOUC)
+     - Gets stored theme or falls back to system preference
+     - Applies theme before page render
+     - Re-applies after Astro view transitions
+  
+  2. Module script (runs after page load) - Handles theme changes
+     - Initializes theme-change library for theme toggles
+     - Re-initializes after Astro view transitions
+     
+  This approach ensures consistent theming during initial load and navigation
+  while supporting user theme preferences and system defaults.
+-->
+<script is:inline define:vars={{lightTheme: template.lightTheme, darkTheme: template.darkTheme}}>
+  // Get stored theme or use system preference with custom themes
+  const getStoredTheme = () => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) return storedTheme;
+    
+    // Use preference based on system theme
+    return window.matchMedia('(prefers-color-scheme: dark)').matches 
+      ? darkTheme 
+      : lightTheme;
+  }
+
+  // Apply theme immediately to prevent flash
+  const theme = getStoredTheme();
+  document.documentElement.setAttribute('data-theme', theme);
+
+  // Re-apply theme after navigation
+  document.addEventListener('astro:after-swap', () => {
+    const currentTheme = getStoredTheme();
+    document.documentElement.setAttribute('data-theme', currentTheme);
+  });
+</script>
+<script>
+	// Import theme-change library for managing theme toggle buttons
+	import { themeChange } from 'theme-change'
+	
+	// Initialize theme change functionality
+	themeChange()
+
+  // Re-initialize after Astro view transitions
+  // This ensures theme toggles continue to work after navigation
+  document.addEventListener('astro:after-swap', () => {
+    themeChange(false); // false = don't persist to localStorage (already handled by inline script)
+  });
+</script>

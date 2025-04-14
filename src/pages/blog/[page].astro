@@ -1,0 +1,55 @@
+---
+import Pagination from '@/components/ui/Pagination.astro'
+import Layout from '@/layouts/Layout.astro'
+import { trimExcerpt } from '@/lib/utils'
+import { template } from '@/settings'
+import { getCollection } from 'astro:content'
+import Heading from '@/components/ui/Heading.astro'
+import BlogCard from '@/components/ui/BlogCard.astro'
+
+export async function getStaticPaths({ paginate }): Promise<Astro.getStaticPathsResult> {
+    const blogEntries = await getCollection("blog");
+
+    const posts = blogEntries
+        .map(post => {
+            return {
+                title: post.data.title,
+                date: post.data.date,
+                tags: post.data.tags || [],
+                excerpt: trimExcerpt(post.data.excerpt),
+                slug: `${template.base}/blog/${post.id}`,
+                image: post.data.image || '/images/dwb-amsterdam-2024/cover.jpg',
+            };
+        })
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+    return paginate(posts, {
+        pageSize: template.postPerPage,
+    });
+}
+const { page } = Astro.props
+---
+
+<Layout title='Blog'>
+    <div>
+		<Heading level={1}>Blog Posts</Heading>
+		<div class='grid gap-8'>
+			{
+				page.data.map(post => (
+					<BlogCard 
+						title={post.title}
+						date={post.date}
+						tags={post.tags}
+						excerpt={post.excerpt}
+						slug={post.slug}
+						image={post.image}
+					/>
+				))
+			}
+		</div>
+
+		<div class='flex justify-center mt-8'>
+			<Pagination page={page} showNumbers={true} />
+		</div>
+    </div>
+</Layout>

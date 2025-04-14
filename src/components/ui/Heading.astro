@@ -1,0 +1,29 @@
+---
+interface Props {
+  level: 1 | 2 | 3 | 4 | 5 | 6;
+  className?: string;
+  underlined?: boolean;
+}
+
+const { level = 2, className = "", underlined = false } = Astro.props;
+
+// Standard heading styles
+const headingStyles = {
+  1: "text-4xl font-bold mb-8",
+  2: "text-2xl font-bold mb-6",
+  3: "text-xl font-bold mb-4",
+  4: "text-lg font-semibold mb-3",
+  5: "text-base font-semibold mb-2",
+  6: "text-sm font-semibold mb-2"
+};
+
+const baseClass = headingStyles[level];
+const borderClass = underlined ? "border-b pb-2" : "";
+---
+
+{level === 1 && <h1 class={`${baseClass} ${borderClass} ${className}`}><slot /></h1>}
+{level === 2 && <h2 class={`${baseClass} ${borderClass} ${className}`}><slot /></h2>}
+{level === 3 && <h3 class={`${baseClass} ${borderClass} ${className}`}><slot /></h3>}
+{level === 4 && <h4 class={`${baseClass} ${borderClass} ${className}`}><slot /></h4>}
+{level === 5 && <h5 class={`${baseClass} ${borderClass} ${className}`}><slot /></h5>}
+{level === 6 && <h6 class={`${baseClass} ${borderClass} ${className}`}><slot /></h6>}

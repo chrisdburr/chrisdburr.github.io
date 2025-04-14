@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  date: string;
+  tags: string[];
+  excerpt: string;
+  slug: string;
+  image: string;
+}
+
+const { title, date, tags, excerpt, slug, image } = Astro.props;
+const postId = slug.split('/').pop();
+---
+
+<a href={slug} class="block hover:translate-y-[-4px] transition-all duration-300">
+  <article class="card bg-base-200 shadow-sm hover:shadow-md h-full transition-all overflow-hidden">
+    <div class="overflow-hidden bg-neutral-100">
+      {image ? (
+        <div class="h-52 overflow-hidden">
+          <img 
+            src={image} 
+            alt={title}
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            transition:name={`blog-image-${postId}`}
+            onerror="this.src='/images/dwb-amsterdam-2024/cover.jpg';"
+          />
+        </div>
+      ) : (
+        <div class="h-52 overflow-hidden">
+          <img 
+            src="/images/dwb-amsterdam-2024/cover.jpg" 
+            alt={title}
+            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            transition:name={`blog-image-${postId}`}
+          />
+        </div>
+      )}
+    </div>
+    <div class="card-body flex flex-col">
+      <h2 class="card-title text-xl" transition:name={`blog-title-${postId}`}>
+        {title}
+      </h2>
+      <time datetime={date} class="text-sm text-base-content/71 block mb-2">
+        {new Date(date).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}
+      </time>
+      <div class="flex flex-wrap gap-2 mb-4">
+        {tags && tags.map(tag => (
+          <span class="badge badge-sm badge-primary text-primary-content">#{tag}</span>
+        ))}
+      </div>
+      <p class="flex-grow">{excerpt}</p>
+    </div>
+  </article>
+</a>

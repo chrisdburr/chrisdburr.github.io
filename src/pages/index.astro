@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+import { profile } from '@/settings'
+import Hero from '@/components/ui/Hero.astro'
+import ResearchAreaCards from '@/components/ui/ResearchAreaCards.astro'
+import Heading from '@/components/ui/Heading.astro'
+
+const { fullName, title, role, institute } = profile
+---
+
+<Layout>
+	<!-- Hero Section -->
+	<section class='flex items-center gap-12 border-b border-base-content/20 pb-12'>
+		<Hero
+			title={title}
+			fullName={fullName}
+			role={role}
+			institute={institute}
+		/>
+	</section>
+
+	<!-- Research Areas -->
+	<section class='py-12 border-b border-base-content/20'>
+		<Heading level={2}>Research Areas</Heading>
+		<ResearchAreaCards columns={3} title="" />
+	</section>
+
+</Layout>

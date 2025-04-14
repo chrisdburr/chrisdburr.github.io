@@ -1,0 +1,71 @@
+---
+/**
+ * CvTimeline Component
+ * 
+ * Renders a vertical timeline of experiences or education items.
+ * Uses DaisyUI timeline component with custom styling and alternating layout.
+ * Supports both experience and education entries through polymorphic typing.
+ * 
+ * The component handles:
+ * - Alternating timeline entries (left/right in desktop view)
+ * - Colored timeline markers and separators when 'colored' prop is true
+ * - Different rendering based on item type (Experience vs Education)
+ * - Responsive layout that stacks vertically on mobile
+ */
+import { isExperience } from '@/types/cv';
+import type { Experience, Education } from '@/types/cv';
+import Icon from './Icon.astro';
+
+interface Props {
+	elements: (Experience | Education)[]  // Array of either Experience or Education items
+	colored: boolean                      // Whether to apply primary color to timeline elements
+}
+
+const { elements, colored } = Astro.props
+---
+
+{/* Timeline container with DaisyUI classes for vertical timeline layout */}
+<ul
+	class='timeline timeline-snap-icon max-md:timeline-compact timeline-vertical'
+>
+	{
+		elements.map((element, index) => (
+			<li>
+				{/* Timeline marker (circle) in the middle with conditional primary color */}
+				<div class='timeline-middle'>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						viewBox='0 0 20 20'
+						fill='currentColor'
+						class:list={[{ 'text-primary': colored }, 'h-5 w-5']}
+						aria-hidden="true" 
+					>
+						<path
+							fill-rule='evenodd'
+							d='M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z'
+							clip-rule='evenodd'
+						/>
+					</svg>
+				</div>
+				
+				{/* Timeline content - alternates sides on desktop using timeline-start/timeline-end */}
+				<div
+					class={`${index % 2 === 0 ? 'timeline-start md:text-end' : 'timeline-end md:text-start'} mb-10`}
+				>
+					{/* Timeline item details with semantic structure */}
+					<time class='font-mono italic text-sm'>{element.time}</time>
+					<div class='text-lg font-black mb-1'>{isExperience(element) ? element.title : element.degree}</div>
+					<p class="max-w-prose text-sm leading-relaxed mb-3">{element.description}</p>
+					<div class="text-base font-medium">{isExperience(element) ? element.company : element.school}</div>
+					<div class="text-sm inline-flex items-center gap-1 mt-1">
+						<Icon name="pin" className="w-3 h-3 stroke-current" />
+						<span>{element.location}</span>
+					</div>
+				</div>
+				
+				{/* Timeline separator line with conditional primary color */}
+        <hr class:list={[{ 'bg-primary': colored }]} />
+			</li>
+		))
+	}
+</ul>

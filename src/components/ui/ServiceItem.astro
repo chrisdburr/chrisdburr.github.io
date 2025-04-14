@@ -1,0 +1,26 @@
+---
+import type { ProfessionalService } from '../../types/cv';
+
+interface Props {
+  service: ProfessionalService;
+  colored?: boolean;
+}
+
+const { service, colored = false } = Astro.props;
+---
+
+<div class="mb-6">
+  <div class="flex justify-between items-start mb-2">
+    <div>
+      <h3 class="text-lg font-semibold">{service.title}</h3>
+      <p class="text-sm opacity-75">{service.organization}</p>
+    </div>
+    <div class="text-right">
+      <span class={`inline-block px-3 py-1 text-sm rounded-md ${colored ? 'bg-primary/30 text-primary font-medium' : 'bg-base-200 text-base-content'}`}>
+        {service.role}
+      </span>
+      <p class="text-sm opacity-75">{service.time}</p>
+    </div>
+  </div>
+  {service.description && <p class="text-base">{service.description}</p>}
+</div>

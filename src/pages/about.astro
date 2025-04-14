@@ -1,0 +1,188 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { profile } from "@/settings";
+import List from "@/components/ui/List.astro";
+import ResearchAreaCards from "@/components/ui/ResearchAreaCards.astro";
+import Heading from "@/components/ui/Heading.astro";
+---
+
+<Layout title={`About | ${profile.fullName}`}>
+	<div class="max-w-none">
+		<div class="prose max-w-none">
+			<Heading level={1}>About Me</Heading>
+
+			<div class="mb-12">
+				<p class="text-lg mb-6">
+					I am a Senior Researcher in Trustworthy Systems at the <a
+						href="https://www.turing.ac.uk/people/researchers/christopher-burr"
+						class="link">Alan Turing Institute</a
+					>, in the <a
+						href="https://www.turing.ac.uk/research/research-programmes/tools-practices-and-systems"
+						class="link">Tools, Practices, and Systems</a
+					> programme. I lead the Innovation and Impact Hub for the <a
+						href="https://www.turing.ac.uk/research/research-projects/tric-dt"
+						class="link"
+						>Turing Research and Innovation Cluster in Digital Twins</a
+					>.
+				</p>
+				<p class="text-lg mb-6">
+					In general, I think of myself as an interdisciplinary researcher
+					who is passionate about a wide variety of topics. This creates
+					complications in academic circles, as people typically want to
+					place others inside neat departmental boundaries. However, it
+					really doesn't do a good job of capturing my interest or
+					expertise.
+				</p>
+
+				<p class="text-lg mb-6">
+					For instance, I enjoy reading philosophy as much as writing
+					Python, and detailed data analysis as much as designing skills
+					workshops. My curiosity also ranges from empirical studies of
+					human decision-making to the complex networks of large language
+					models. In short, the following phrase resonates well with how I
+					see myself:
+				</p>
+
+				<blockquote class="mb-6">
+					A jack of all trades is a master of none, but oftentimes better
+					than a master of one.
+				</blockquote>
+			</div>
+		</div>
+
+		<!-- Taking the component out of the prose container -->
+		<div class="mb-12">
+			<Heading level={2}>Research Areas</Heading>
+			<ResearchAreaCards columns={3} title="" />
+		</div>
+
+		<div class="prose max-w-none">
+			<Heading level={2}>Research Impact</Heading>
+			<p class="text-lg mb-6">
+				I strongly believe that addressing major societal
+				challenges requires deep collaboration. As such, my research connects theory
+				with practice to achieve tangible and meaningful outcomes. This approach has led to
+				direct contributions to public policy, including work featured in the UK
+				Department for Science, Innovation, and Technology's (DSIT) <a
+					href="https://www.gov.uk/government/publications/introduction-to-ai-assurance/introduction-to-ai-assurance"
+					class="link"
+					target="_blank"
+					rel="noopener noreferrer"
+					>Introduction to AI Assurance framework</a
+				>.
+			</p>
+			<p class="text-lg mb-6">
+				This belief also drives the creation and application of free and open-source resources like
+				the <a
+					href="https://assuranceplatform.azurewebsites.net/"
+					class="link"
+					target="_blank"
+					rel="noopener noreferrer"
+					>Trustworthy and Ethical Assurance (TEA) Platform</a
+				>. This methodology is now integral to major initiatives such as the
+				£8.8M EPSRC-funded <a
+					href="https://cvdnet.org.uk/"
+					class="link"
+					target="_blank"
+					rel="noopener noreferrer">CVD-Net project</a
+				>, where I co-lead the work package focused on assurance,
+				engagement, and ethics.
+				Additionally, the <a
+					href="https://alan-turing-institute.github.io/turing-commons/"
+					class="link"
+					target="_blank"
+					rel="noopener noreferrer">Turing Commons</a
+				> project I co-founded, provides valuable educational resources for responsible
+				innovation as one of two strategic skills project for the Alan Turing Institute's Turing 2.0 strategy.
+			</p>
+			<p class="text-lg mb-6">
+				Furthermore, my work fosters consensus and shared practice within
+				key technology domains. This includes leading the Special Interest
+				Group on Uncertainty and Trust for the <a
+					href="https://dtnetplus.ac.uk/"
+					class="link"
+					target="_blank"
+					rel="noopener noreferrer">UKRI Digital Twin Network+</a
+				> and co-authoring influential papers, such as the <a
+					href="https://doi.org/10.5281/zenodo.14259252"
+					class="link"
+					target="_blank"
+					rel="noopener noreferrer"
+					>Trustworthy and Ethical Assurance of Digital Twins</a
+				> report, which was developed collaboratively with several partners and organisations to help operationalise assurance principles
+				within the UKs digital twinning community.
+			</p>
+			<List
+				listTitle="Current Projects"
+				listItems={[
+					{
+						title: "Networks of Cardiovascular Digital Twins (CVD-Net)",
+						link: "https://gtr.ukri.org/projects?ref=EP%2FZ531297%2F1",
+						description:
+							"Co-Investigator for work package 6 of the EPSRC-funded project, CVD-Net, building connected digital twins of patient's hearts.",
+					},
+					{
+						title: "Trustworthy and Ethical Assurance Platform",
+						link: "https://assuranceplatform.azurewebsites.net/",
+						description:
+							"Project Lead for the TEA Platform—an online, community-centred platform for enhancing skills and capabilities in AI assuranc.",
+					},
+					{
+						title: "Uncertainty and Trust Special Interest Group (DTNet+)",
+						link: "https://www.dtnetplus.ac.uk/",
+						description:
+							"Lead of the Uncertainty and Trust Special Interest Group (SIG) for the UKRI Digital Twin Network+.",
+					},
+					{
+						title: "Turing Commons",
+						link: "https://alan-turing-institute.github.io/turing-commons/",
+						description:
+							"Co-founder and co-lead of the online skills and training platform for responsible data-driven technology practices.",
+					},
+				]}
+			/>
+
+			<List
+				listTitle="Past Projects"
+				listItems={[
+					{
+						title: "Trustworthy and Ethical Assurance of Digital Twins (TEA-DT)",
+						link: "https://www.turing.ac.uk/research/research-projects/trustworthy-and-ethical-assurance-digital-twins-tea-dt",
+						description:
+							"Principal Investigator for the UKRI BRAID-funded project, developing and validating the open-source TEA Platform for trustworthy and ethical digital twin development.",
+					},
+					{
+						title: "Innovation and Impact Hub (TRIC-DT)",
+						link: "https://www.turing.ac.uk/research/research-projects/tric-dt",
+						description:
+							"Leading of the Innovation and Impact Hub, coordinating the scientific aims across natural environment, health, and infrastructure themes, and managing an interdisciplinary team of research infrastructure roles.",
+					},
+					{
+						title: "Trustworthy and Ethical Assurance of Digital Health and Healthcare",
+						link: "https://www.turing.ac.uk/research/research-projects/trustworthy-and-ethical-assurance-digital-healthcare",
+						description:
+							"PI for a collaborative project between the Assuring Autonomy International Programme (University of York) and the Alan Turing Institute, harmonising ethical assurance research. Primary focus was on fairness in digital healthcare using the TEA platform.",
+					},
+					{
+						title: "Human Rights, Democracy, and the Rule of Law Assurance Framework (HUDERAF)",
+						link: "https://www.turing.ac.uk/news/publications/human-rights-democracy-and-rule-law-assurance-framework-ai-systems",
+						description:
+							"Developed an end-to-end assurance framework for AI lifecycles, submitted to the Council of Europe, integrating risk analysis, stakeholder engagement, impact assessment, and transparent management.",
+					},
+					{
+						title: "Trustworthy Assurance of Digital Mental Healthcare",
+						link: "https://www.turing.ac.uk/research/research-projects/ethical-assurance-digital-mental-healthcare",
+						description:
+							"Principal Investigator for UKRI TAS Hub-funded project developing a method for assuring ethical goals in digital mental healthcare technologies.",
+					},
+					{
+						title: "Co-Developing a Data Charter (Camden Council)",
+						link: "https://www.turing.ac.uk/research/research-projects/developing-data-charter-camden-council",
+						description:
+							"Collaborated with Camden Council and Involve on resident panels to develop a data charter ensuring citizen data is used for the common good.",
+					},
+				]}
+			/>
+		</div>
+	</div>
+</Layout>
