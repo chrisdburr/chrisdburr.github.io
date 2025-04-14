@@ -1,5 +1,4 @@
 ---
-import Pagination from '@/components/ui/Pagination.astro'
 import Layout from '@/layouts/Layout.astro'
 import { trimExcerpt } from '@/lib/utils'
 import { template } from '@/settings'
@@ -48,8 +47,6 @@ const { page } = Astro.props
 			}
 		</div>
 
-		<div class='flex justify-center mt-8'>
-			<Pagination page={page} showNumbers={true} />
-		</div>
+        
     </div>
 </Layout>

@@ -45,6 +45,13 @@ export interface ProfessionalService {
   description?: string;
 }
 
+export interface Project {
+  title: string;
+  link: string;
+  description: string;
+  active: boolean;
+}
+
 export function isExperience(element: Experience | Education): element is Experience {
   return 'title' in element && 'company' in element;
 }
@@ -67,4 +74,8 @@ export function isAward(element: any): element is Award {
 
 export function isProfessionalService(element: any): element is ProfessionalService {
   return 'title' in element && 'role' in element && 'organization' in element;
+}
+
+export function isProject(element: any): element is Project {
+  return 'title' in element && 'link' in element && 'active' in element;
 }

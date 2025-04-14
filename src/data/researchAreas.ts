@@ -14,13 +14,13 @@ export const researchAreas = [
   },
   { 
     title: 'Participatory Design', 
-    description: 'Ensuring responsible research and innovation practices, including open science and public engagement, are kery parts of the scientific process.', 
+    description: 'Ensuring responsible research and innovation practices, such as open science and public engagement, are core parts of the scientific process.', 
     field: 'responsible-innovation',
     iconName: 'users'
   },
   { 
     title: 'AI and Data Ethics', 
-    description: 'Examining the ethical implications of data-drivenn technologies, such as machine learning and artificial intelligence.', 
+    description: 'Examining the ethical and societal implications of data-driven technologies, such as machine learning and artificial intelligence.', 
     field: 'ai-ethics',
     iconName: 'scale'
   },

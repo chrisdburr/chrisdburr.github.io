@@ -1,0 +1,53 @@
+---
+interface Presentation {
+  year: string;
+  title: string;
+  venue: string;
+  link?: string | null;
+}
+
+interface Props {
+  presentations: Presentation[];
+}
+
+const { presentations } = Astro.props;
+
+// Helper function to group presentations by year
+const groupPresentationsByYear = (presentations: Presentation[]) => {
+  const grouped: { [year: string]: Presentation[] } = {};
+  // Sort presentations newest first based on year
+  const sortedPresentations = [...presentations].sort((a, b) => parseInt(b.year) - parseInt(a.year));
+  sortedPresentations.forEach(p => {
+    if (!grouped[p.year]) {
+      grouped[p.year] = [];
+    }
+    grouped[p.year].push(p);
+  });
+  return grouped;
+};
+
+const presentationsByYear = groupPresentationsByYear(presentations);
+const years = Object.keys(presentationsByYear).sort((a, b) => parseInt(b) - parseInt(a)); // Sort years descending
+---
+
+<div class="grid gap-8 mb-12">
+  {years.map(year => (
+    <div>
+      <h2 class="text-2xl font-bold mb-4">{year}</h2>
+      <div class="relative pl-4 border-l-4 border-primary">
+        <ul class="list-disc ml-5 space-y-2">
+          {presentationsByYear[year].map(p => (
+            <li class="text-base-content">
+              {p.link ? (
+                <a href={p.link} class="link font-medium">{p.title}</a>
+              ) : (
+                <span class="font-medium">{p.title}</span>
+              )}
+              <span class="text-base-content/80"> ({p.venue})</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ))}
+</div>
