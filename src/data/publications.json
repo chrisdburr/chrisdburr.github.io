@@ -97,23 +97,23 @@
       "Preferences": true,
       "biblatexAPA": false,
       "biblatexChicago": false,
-      "exportDir": "/Users/cburr/Repositories/portfolio/src/data",
+      "exportDir": "/Users/cburr/Repositories/chrisdburr.github.io/src/data",
       "exportFileData": false,
       "exportNotes": true,
-      "exportPath": "/Users/cburr/Repositories/portfolio/src/data/publications.json",
+      "exportPath": "/Users/cburr/Repositories/chrisdburr.github.io/src/data/publications.json",
       "keepUpdated": false,
       "worker": true
     }
   },
   "version": {
     "zotero": "7.0.15",
-    "bbt": "7.0.17"
+    "bbt": "7.0.28"
   },
   "collections": {},
   "items": [
     {
       "key": "EJYN9GUZ",
-      "version": 8948,
+      "version": 9531,
       "itemType": "report",
       "title": "Trustworthy and ethical assurance of digital health and healthcare",
       "date": "2024",
@@ -481,7 +481,7 @@
     },
     {
       "key": "SEN7TKXS",
-      "version": 1885,
+      "version": 9531,
       "itemType": "conferencePaper",
       "title": "Building machines that learn and think about morality",
       "abstractNote": "Lake et al. propose three criteria which, they argue, will bring artificial intelligence (AI) systems closer to human cogni- tive abilities. In this paper, we explore the application of these crite- ria to a particular domain of human cognition: our capacity for moral reasoning. In doing so, we explore a set of considerations relevant to the development of AI moral decision-making. Our main focus is on the relation between dual-process accounts of moral reasoning and model-free/model-based forms of machine learning. We also discuss how work in embodied and situated cognition could provide a valu- able perspective on future research.",
@@ -567,13 +567,13 @@
       ],
       "tags": [],
       "relations": {
-        "dc:replaces": [
-          "http://zotero.org/users/5649184/items/EL8476II"
-        ],
         "owl:sameAs": [
           "http://zotero.org/groups/2321901/items/Y5LZ3ZR4",
           "http://zotero.org/groups/2686123/items/62H937Q8",
           "http://zotero.org/groups/4441221/items/UWRPM87L"
+        ],
+        "dc:replaces": [
+          "http://zotero.org/users/5649184/items/EL8476II"
         ]
       },
       "inPublications": true,
@@ -664,6 +664,9 @@
           "tag": "Artificial intelligence"
         },
         {
+          "tag": "Ethics"
+        },
+        {
           "tag": "Artificial intelligence (AI)"
         },
         {
@@ -677,9 +680,6 @@
         },
         {
           "tag": "Education"
-        },
-        {
-          "tag": "Ethics"
         },
         {
           "tag": "mental health"
@@ -740,7 +740,7 @@
     },
     {
       "key": "ECGXWZZ3",
-      "version": 2598,
+      "version": 9531,
       "itemType": "bookSection",
       "title": "Empowerment or Engagement? Digital Health Technologies for Mental Healthcare",
       "abstractNote": "We argue that while digital health technologies (e.g. artificial intelligence, smartphones, and virtual reality) present significant opportunities for improving the delivery of healthcare, key concepts that are used to evaluate and understand their impact can obscure significant ethical issues related to patient engagement and experience. Specifically, we focus on the concept of empowerment and ask whether it is adequate for addressing some significant ethical concerns that relate to digital health technologies for mental healthcare. We frame these concerns using five key ethical principles for AI ethics (i.e. autonomy, beneficence, non-maleficence, justice, and explicability), which have their roots in the bioethical literature, in order to critically evaluate the role that digital health technologies will have in the future of digital healthcare.",
@@ -812,7 +812,7 @@
     },
     {
       "key": "63ZMFK3C",
-      "version": 8205,
+      "version": 9531,
       "itemType": "book",
       "title": "Ethics of Digital Well-Being: A Multidisciplinary Approach",
       "date": "2020",
@@ -947,7 +947,7 @@
     },
     {
       "key": "EGS3PLI9",
-      "version": 8951,
+      "version": 9531,
       "itemType": "report",
       "title": "A Citizen's Guide to Data: Ethical, Social, and Legal Issues",
       "abstractNote": "This guide was produced to support specific activities associated with a Resident’s Panel, organised and run by Camden City Council, Involve. The content was designed to support the participants with understanding some of the ethical, legal, and social issues surrounding data use by local government. In its current version, this guide is not, officially, a public document but has been published online for reference. It will be revised and developed following the workshop for wider release.",
@@ -1016,7 +1016,7 @@
     },
     {
       "key": "RQEGD7HS",
-      "version": 8950,
+      "version": 9531,
       "itemType": "webpage",
       "title": "Charities are contributing to growing mistrust of mental-health text support — here's why",
       "abstractNote": "Mental health charities that provide support via text message have come under fire for sharing users anonymised data.",
@@ -1049,7 +1049,7 @@
     },
     {
       "key": "HHMSHHPY",
-      "version": 8949,
+      "version": 9531,
       "itemType": "journalArticle",
       "title": "Ethical assurance: a practical approach to the responsible design, development, and deployment of data-driven technologies",
       "date": "2022",
@@ -1108,7 +1108,7 @@
     },
     {
       "key": "LQCK63Z3",
-      "version": 8949,
+      "version": 9531,
       "itemType": "report",
       "title": "Trustworthy Assurance of Digital Mental Healthcare",
       "abstractNote": "There is a culture of distrust surrounding the development and use of digital mental health technologies. As many organisations continue to grapple with the long-term impacts on mental health and well-being from the COVID-19 pandemic, a growing number are turning to digital technologies to increase their capacity and try to meet the growing need for mental health services. In this report, we argue that clearer assurance for how ethical principles have been considered and implemented in the design, development, and deployment of digital mental health technologies is necessary to help build a more trustworthy and responsible ecosystem. To help address this need, we set out a positive proposal for a framework and methodology we call 'Trustworthy Assurance'. To support the development and evaluation of Trustworthy Assurance, we conducted a series of participatory stakeholder engagement events with students, University administrators, regulators and policy-makers, developers, researchers, and users of digital mental health technologies. Our objectives were a) to identify and explore how stakeholders understood and interpreted relevant ethical objectives for digital mental health technologies, b) to evaluate and co-design the trustworthy assurance framework and methodology, and c) solicit feedback on the possible reasons for distrust in digital mental health.",
@@ -1365,6 +1365,98 @@
       "select": "zotero://select/library/items/HYJA92QE"
     },
     {
+      "key": "N6FLA4DG",
+      "version": 9739,
+      "itemType": "preprint",
+      "title": "Justified Evidence Collection for Argument-based AI Fairness Assurance",
+      "abstractNote": "It is well recognised that ensuring fair AI systems is a complex sociotechnical challenge, which requires careful deliberation and continuous oversight across all stages of a system's lifecycle, from defining requirements to model deployment and deprovisioning. Dynamic argument-based assurance cases, which present structured arguments supported by evidence, have emerged as a systematic approach to evaluating and mitigating safety risks and hazards in AI-enabled system development and have also been extended to deal with broader normative goals such as fairness and explainability. This paper introduces a systems-engineering-driven framework, supported by software tooling, to operationalise a dynamic approach to argument-based assurance in two stages. In the first stage, during the requirements planning phase, a multi-disciplinary and multi-stakeholder team define goals and claims to be established (and evidenced) by conducting a comprehensive fairness governance process. In the second stage, a continuous monitoring interface gathers evidence from existing artefacts (e.g. metrics from automated tests), such as model, data, and use case documentation, to support these arguments dynamically. The framework's effectiveness is demonstrated through an illustrative case study in finance, with a focus on supporting fairness-related arguments.",
+      "date": "2025-05-12",
+      "libraryCatalog": "arXiv.org",
+      "url": "http://arxiv.org/abs/2505.08064",
+      "accessDate": "2025-05-27T08:23:49Z",
+      "extra": "arXiv:2505.08064 [cs]",
+      "DOI": "10.1145/3715275.3732003",
+      "creators": [
+        {
+          "firstName": "Alpay",
+          "lastName": "Sabuncuoglu",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Christopher",
+          "lastName": "Burr",
+          "creatorType": "author"
+        },
+        {
+          "firstName": "Carsten",
+          "lastName": "Maple",
+          "creatorType": "author"
+        }
+      ],
+      "tags": [
+        {
+          "tag": "Computer Science - Artificial Intelligence",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Computers and Society",
+          "type": 1
+        },
+        {
+          "tag": "Computer Science - Human-Computer Interaction",
+          "type": 1
+        }
+      ],
+      "relations": {},
+      "inPublications": true,
+      "dateAdded": "2025-05-27T08:23:49Z",
+      "dateModified": "2025-05-27T08:23:49Z",
+      "uri": "http://zotero.org/users/5649184/items/N6FLA4DG",
+      "itemID": 9022,
+      "attachments": [
+        {
+          "itemType": "attachment",
+          "title": "Preprint PDF",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-05-27T08:23:51Z",
+          "dateModified": "2025-05-27T08:23:51Z",
+          "uri": "http://zotero.org/users/5649184/items/H54XZXCZ",
+          "path": "/Users/cburr/Zotero/storage/H54XZXCZ/Sabuncuoglu et al. - 2025 - Justified Evidence Collection for Argument-based AI Fairness Assurance.pdf",
+          "select": "zotero://select/library/items/H54XZXCZ"
+        },
+        {
+          "itemType": "attachment",
+          "title": "Snapshot",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-05-27T08:23:56Z",
+          "dateModified": "2025-05-27T08:23:56Z",
+          "uri": "http://zotero.org/users/5649184/items/YLE8KXBV",
+          "path": "/Users/cburr/Zotero/storage/YLE8KXBV/2505.html",
+          "select": "zotero://select/library/items/YLE8KXBV"
+        }
+      ],
+      "notes": [
+        {
+          "key": "ZXM9DVEV",
+          "version": 9732,
+          "itemType": "note",
+          "parentItem": "N6FLA4DG",
+          "note": "Comment: The paper is accepted for ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT '25)",
+          "tags": [],
+          "relations": {},
+          "dateAdded": "2025-05-27T08:23:49Z",
+          "dateModified": "2025-05-27T08:23:49Z",
+          "uri": "http://zotero.org/users/5649184/items/ZXM9DVEV"
+        }
+      ],
+      "citationKey": "sabuncuoglu2025",
+      "itemKey": "N6FLA4DG",
+      "libraryID": 1,
+      "select": "zotero://select/library/items/N6FLA4DG"
+    },
+    {
       "key": "YUA8YAGB",
       "version": 9530,
       "itemType": "journalArticle",
@@ -1428,7 +1520,7 @@
     },
     {
       "key": "KTSKXYEV",
-      "version": 9406,
+      "version": 9531,
       "itemType": "journalArticle",
       "title": "The philosophical foundations of digital twinning",
       "abstractNote": "Abstract\n            Digital twins are a new paradigm for our time, offering the possibility of interconnected virtual representations of the real world. The concept is very versatile and has been adopted by multiple communities of practice, policymakers, researchers, and innovators. A significant part of the digital twin paradigm is about interconnecting digital objects, many of which have previously not been combined. As a result, members of the newly forming digital twin community are often talking at cross-purposes, based on different starting points, assumptions, and cultural practices. These differences are due to the philosophical world-view adopted within specific communities. In this paper, we explore the philosophical context which underpins the digital twin concept. We offer the building blocks for a philosophical framework for digital twins, consisting of 21 principles that are intended to help facilitate their further development. Specifically, we argue that the philosophy of digital twins is fundamentally holistic and emergentist. We further argue that in order to enable emergent behaviors, digital twins should be designed to reconstruct the behavior of a physical twin by “dynamically assembling” multiple digital “components”. We also argue that digital twins naturally include aspects relating to the philosophy of artificial intelligence, including learning and exploitation of knowledge. We discuss the following four questions (i) What is the distinction between a model and a digital twin? (ii) What previously unseen results can we expect from a digital twin? (iii) How can emergent behaviours be predicted? (iv) How can we assess the existence and uniqueness of digital twin outputs?",
