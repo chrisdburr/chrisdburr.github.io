@@ -1,5 +1,5 @@
 ---
-import { template } from "@/settings"
+import { template } from "@/settings";
 
 interface Props {
   page: {
@@ -25,7 +25,7 @@ const currentPage = page.currentPage;
 const generatePageUrl = (pageNum: number) => {
   // Implement base URL construction - this could be improved based on actual URL patterns
   if (pageNum === 1) {
-    return page.url.current.replace(/\/\d+\/?$/, '');
+    return page.url.current.replace(/\/\d+\/?$/, "");
   }
   return page.url.current.replace(/\/\d+\/?$/, `/${pageNum}`);
 };
@@ -38,27 +38,27 @@ if (totalPages <= 5) {
 } else {
   // Show 1, current-1, current, current+1, and last page with ellipses as needed
   pagesToShow = [1];
-  
+
   if (currentPage > 3) {
-    pagesToShow.push('...');
+    pagesToShow.push("...");
   }
-  
+
   if (currentPage > 2) {
     pagesToShow.push(currentPage - 1);
   }
-  
+
   if (currentPage !== 1 && currentPage !== totalPages) {
     pagesToShow.push(currentPage);
   }
-  
+
   if (currentPage < totalPages - 1) {
     pagesToShow.push(currentPage + 1);
   }
-  
+
   if (currentPage < totalPages - 2) {
-    pagesToShow.push('...');
+    pagesToShow.push("...");
   }
-  
+
   pagesToShow.push(totalPages);
 }
 ---

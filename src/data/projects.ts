@@ -51,7 +51,8 @@ export const projects: Project[] = [
     active: false,
   },
   {
-    title: "Human Rights, Democracy, and the Rule of Law Assurance Framework (HUDERAF)",
+    title:
+      "Human Rights, Democracy, and the Rule of Law Assurance Framework (HUDERAF)",
     link: "https://www.turing.ac.uk/news/publications/human-rights-democracy-and-rule-law-assurance-framework-ai-systems",
     description:
       "Developed an end-to-end assurance framework for AI lifecycles, submitted to the Council of Europe, integrating risk analysis, stakeholder engagement, impact assessment, and transparent management.",

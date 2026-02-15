@@ -1,11 +1,11 @@
 ---
-import { highlightAuthor } from '@/lib/utils'
-import Icon from './Icon.astro';
-import Heading from './Heading.astro';
+import { highlightAuthor } from "@/lib/utils";
+import Heading from "./Heading.astro";
+import Icon from "./Icon.astro";
 
 interface Props {
-	publications: any[];
-	groupByType?: boolean;
+  publications: any[];
+  groupByType?: boolean;
 }
 
 const { publications, groupByType = false } = Astro.props;
@@ -13,49 +13,57 @@ const { publications, groupByType = false } = Astro.props;
 // Helper function to get appropriate icon for publication type
 function getPublicationIcon(itemType: string): string {
   switch (itemType) {
-    case 'journalArticle':
-      return 'article';
-    case 'bookSection':
-    case 'book':
-      return 'book';
-    case 'report':
-      return 'report';
-    case 'conferencePaper':
-      return 'paper';
-    case 'webpage':
-      return 'webpage';
+    case "journalArticle":
+      return "article";
+    case "bookSection":
+    case "book":
+      return "book";
+    case "report":
+      return "report";
+    case "conferencePaper":
+      return "paper";
+    case "webpage":
+      return "webpage";
     default:
-      return 'document';
+      return "document";
   }
 }
 
 // Function to get appropriate button text based on publication type
 function getButtonText(itemType: string): string {
   switch (itemType) {
-    case 'journalArticle':
-      return 'Read Article';
-    case 'bookSection':
-      return 'Read Chapter';
-    case 'book':
-      return 'View Book';
-    case 'report':
-      return 'Read Report';
-    case 'conferencePaper':
-      return 'Read Paper';
-    case 'webpage':
-      return 'Visit Page';
+    case "journalArticle":
+      return "Read Article";
+    case "bookSection":
+      return "Read Chapter";
+    case "book":
+      return "View Book";
+    case "report":
+      return "Read Report";
+    case "conferencePaper":
+      return "Read Paper";
+    case "webpage":
+      return "Visit Page";
     default:
-      return 'Read Publication';
+      return "Read Publication";
   }
 }
 
 // Define the desired order of publication types
-const typeOrder = ['journalArticle', 'report', 'conferencePaper', 'bookSection', 'book', 'webpage', 'other'];
+const typeOrder = [
+  "journalArticle",
+  "report",
+  "conferencePaper",
+  "bookSection",
+  "book",
+  "webpage",
+  "other",
+];
 
 // Group publications by type and sort by date (newest first)
-let groupedPublications: Record<string, any[]> = {};
-publications.forEach(pub => {
-  const type = pub.itemType || 'other';
+const groupedPublications: Record<string, any[]> = {};
+publications.forEach((pub) => {
+  const type = pub.itemType || "other";
   if (!groupedPublications[type]) {
     groupedPublications[type] = [];
   }
@@ -63,11 +71,15 @@ publications.forEach(pub => {
 });
 
 // Sort each group by date (newest first)
-Object.keys(groupedPublications).forEach(type => {
+Object.keys(groupedPublications).forEach((type) => {
   groupedPublications[type].sort((a, b) => {
     // Extract years from date strings or default to 0 if not available
-    const yearA = a.date ? parseInt(a.date.toString().substring(0, 4)) : 0;
-    const yearB = b.date ? parseInt(b.date.toString().substring(0, 4)) : 0;
+    const yearA = a.date
+      ? Number.parseInt(a.date.toString().substring(0, 4))
+      : 0;
+    const yearB = b.date
+      ? Number.parseInt(b.date.toString().substring(0, 4))
+      : 0;
     return yearB - yearA; // Sort descending (newest first)
   });
 });
@@ -82,13 +94,20 @@ const sortedTypes = Object.keys(groupedPublications).sort((a, b) => {
 // Function to format publication type for display
 function formatPublicationType(type: string): string {
   switch (type) {
-    case 'journalArticle': return 'Journal Articles';
-    case 'bookSection': return 'Book Chapters';
-    case 'book': return 'Books';
-    case 'report': return 'Reports';
-    case 'conferencePaper': return 'Conference Papers';
-    case 'webpage': return 'Web Publications';
-    default: return type.charAt(0).toUpperCase() + type.slice(1);
+    case "journalArticle":
+      return "Journal Articles";
+    case "bookSection":
+      return "Book Chapters";
+    case "book":
+      return "Books";
+    case "report":
+      return "Reports";
+    case "conferencePaper":
+      return "Conference Papers";
+    case "webpage":
+      return "Web Publications";
+    default:
+      return type.charAt(0).toUpperCase() + type.slice(1);
   }
 }
 ---

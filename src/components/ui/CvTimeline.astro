@@ -1,27 +1,27 @@
 ---
+import type { Education, Experience } from "@/types/cv";
 /**
  * CvTimeline Component
- * 
+ *
  * Renders a vertical timeline of experiences or education items.
  * Uses DaisyUI timeline component with custom styling and alternating layout.
  * Supports both experience and education entries through polymorphic typing.
- * 
+ *
  * The component handles:
  * - Alternating timeline entries (left/right in desktop view)
  * - Colored timeline markers and separators when 'colored' prop is true
  * - Different rendering based on item type (Experience vs Education)
  * - Responsive layout that stacks vertically on mobile
  */
-import { isExperience } from '@/types/cv';
-import type { Experience, Education } from '@/types/cv';
-import Icon from './Icon.astro';
+import { isExperience } from "@/types/cv";
+import Icon from "./Icon.astro";
 
 interface Props {
-	elements: (Experience | Education)[]  // Array of either Experience or Education items
-	colored: boolean                      // Whether to apply primary color to timeline elements
+  elements: (Experience | Education)[]; // Array of either Experience or Education items
+  colored: boolean; // Whether to apply primary color to timeline elements
 }
 
-const { elements, colored } = Astro.props
+const { elements, colored } = Astro.props;
 ---
 
 {/* Timeline container with DaisyUI classes for vertical timeline layout */}

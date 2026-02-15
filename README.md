@@ -13,11 +13,11 @@ To run the site locally:
 1.  Clone the repository.
 2.  Install dependencies:
     ```bash
-    npm install
+    bun install
     ```
 3.  Start the development server:
     ```bash
-    npm run dev
+    bun run dev
     ```
     The site will be available at `http://localhost:4321/`.
 
@@ -26,7 +26,7 @@ To run the site locally:
 To build the static site for deployment:
 
 ```bash
-npm run build
+bun run build
 ```
 The output will be generated in the `dist/` directory.
 

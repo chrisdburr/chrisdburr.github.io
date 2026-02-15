@@ -1,13 +1,14 @@
 ---
-import Layout from "@/layouts/Layout.astro";
 import Heading from "@/components/ui/Heading.astro";
 import PublicationsList from "@/components/ui/PublicationsList.astro";
-
 // Import publications from JSON file
 import publicationsData from "@/data/publications.json";
+import Layout from "@/layouts/Layout.astro";
 
 // Get all publications
-const allPublications = publicationsData.items.filter(item => item.inPublications !== false);
+const allPublications = publicationsData.items.filter(
+  (item) => item.inPublications !== false
+);
 ---
 
 <Layout title="Publications">

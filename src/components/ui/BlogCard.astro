@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 interface Props {
   title: string;
@@ -11,7 +11,7 @@ interface Props {
 }
 
 const { title, date, tags, excerpt, slug, image } = Astro.props;
-const postId = slug.split('/').pop();
+const postId = slug.split("/").pop();
 ---
 
 <a href={slug} class="block hover:translate-y-[-4px] transition-all duration-300">

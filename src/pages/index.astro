@@ -1,12 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Heading from "@/components/ui/Heading.astro";
+import Hero from "@/components/ui/Hero.astro";
+import ResearchAreaCards from "@/components/ui/ResearchAreaCards.astro";
+import { profile } from "@/settings";
+import Layout from "../layouts/Layout.astro";
 
-import { profile } from '@/settings'
-import Hero from '@/components/ui/Hero.astro'
-import ResearchAreaCards from '@/components/ui/ResearchAreaCards.astro'
-import Heading from '@/components/ui/Heading.astro'
-
-const { fullName, title, role, institute } = profile
+const { fullName, title, role, institute } = profile;
 ---
 
 <Layout>

@@ -16,8 +16,10 @@ const { presentations } = Astro.props;
 const groupPresentationsByYear = (presentations: Presentation[]) => {
   const grouped: { [year: string]: Presentation[] } = {};
   // Sort presentations newest first based on year
-  const sortedPresentations = [...presentations].sort((a, b) => parseInt(b.year) - parseInt(a.year));
-  sortedPresentations.forEach(p => {
+  const sortedPresentations = [...presentations].sort(
+    (a, b) => Number.parseInt(b.year) - Number.parseInt(a.year)
+  );
+  sortedPresentations.forEach((p) => {
     if (!grouped[p.year]) {
       grouped[p.year] = [];
     }
@@ -27,7 +29,9 @@ const groupPresentationsByYear = (presentations: Presentation[]) => {
 };
 
 const presentationsByYear = groupPresentationsByYear(presentations);
-const years = Object.keys(presentationsByYear).sort((a, b) => parseInt(b) - parseInt(a)); // Sort years descending
+const years = Object.keys(presentationsByYear).sort(
+  (a, b) => Number.parseInt(b) - Number.parseInt(a)
+); // Sort years descending
 ---
 
 <div class="grid gap-8 mb-12">

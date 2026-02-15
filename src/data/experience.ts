@@ -1,52 +1,52 @@
-import { orderElementsByTime } from '../lib/utils';
+import { orderElementsByTime } from "../lib/utils";
 
 // Define raw data array
 const rawExperiences = [
-	{
-		company: "Alan Turing Institute",
-		time: "April 2023 -- Present",
-		title: "Senior Researcher in Trustworthy Systems",
-		location: "London, England",
-		description:
-			"Head of the Innovation and Impact Hub. Principal Investigator for the UKRI Trustworthy and Ethical Assurance of Digital Twins (TEA-DT) project. Co-Investigator for the EPSRC Networks of Cardiovascular Digital Twins (CVD-Net) project. Co-Lead for the Uncertainty and Trust Special Interest Group, UKRI Digital Twins Network+",
-	},
-	{
-		company: "Alan Turing Institute",
-		time: "June 2020 -- March 2023",
-		title: "Research Fellow",
-		location: "London, England",
-		description:
-			"Principal Investigator for the Trustworthy Assurance of Digital Mental Healthcare project (UKRI TAS Hub). Co-founder and project lead for the Turing Commons skills and capabilities building project.",
-	},
-	{
-		company: "Alan Turing Institute",
-		time: "Oct 2019 -- May 2020",
-		title: "Senior Research Associate",
-		location: "London, England",
-		description:
-			"Research Lead for a collaborative project with the Ministry of Justice to co-develop an ethical framework for the use of data science and AI in the criminal justice system",
-	},
-	{
-		company: "Oxford Internet Institute, University of Oxford",
-		time: "Oct 2018 -- Oct 2019",
-		title: "Postdoctoral Researcher",
-		location: "Oxford, England",
-		description: "",
-	},
-	{
-		company: "Department of Computer Science, University of Bristol",
-		time: "Apr 2017 -- Sep 2018",
-		title: "Postdoctoral Research Associate",
-		location: "Bristol, England",
-		description: "",
-	},
-	{
-		company: "Department of Philosophy, University of Bristol",
-		time: "Sep 2014 -- Mar 2018",
-		title: "Teaching Associate",
-		location: "Bristol, England",
-		description: "",
-	},
+  {
+    company: "Alan Turing Institute",
+    time: "April 2023 -- Present",
+    title: "Senior Researcher in Trustworthy Systems",
+    location: "London, England",
+    description:
+      "Head of the Innovation and Impact Hub. Principal Investigator for the UKRI Trustworthy and Ethical Assurance of Digital Twins (TEA-DT) project. Co-Investigator for the EPSRC Networks of Cardiovascular Digital Twins (CVD-Net) project. Co-Lead for the Uncertainty and Trust Special Interest Group, UKRI Digital Twins Network+",
+  },
+  {
+    company: "Alan Turing Institute",
+    time: "June 2020 -- March 2023",
+    title: "Research Fellow",
+    location: "London, England",
+    description:
+      "Principal Investigator for the Trustworthy Assurance of Digital Mental Healthcare project (UKRI TAS Hub). Co-founder and project lead for the Turing Commons skills and capabilities building project.",
+  },
+  {
+    company: "Alan Turing Institute",
+    time: "Oct 2019 -- May 2020",
+    title: "Senior Research Associate",
+    location: "London, England",
+    description:
+      "Research Lead for a collaborative project with the Ministry of Justice to co-develop an ethical framework for the use of data science and AI in the criminal justice system",
+  },
+  {
+    company: "Oxford Internet Institute, University of Oxford",
+    time: "Oct 2018 -- Oct 2019",
+    title: "Postdoctoral Researcher",
+    location: "Oxford, England",
+    description: "",
+  },
+  {
+    company: "Department of Computer Science, University of Bristol",
+    time: "Apr 2017 -- Sep 2018",
+    title: "Postdoctoral Research Associate",
+    location: "Bristol, England",
+    description: "",
+  },
+  {
+    company: "Department of Philosophy, University of Bristol",
+    time: "Sep 2014 -- Mar 2018",
+    title: "Teaching Associate",
+    location: "Bristol, England",
+    description: "",
+  },
 ];
 
 // Export pre-sorted array

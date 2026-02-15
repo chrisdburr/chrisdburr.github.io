@@ -1,11 +1,22 @@
 ---
-import {social} from '../../settings'
-import Icon from './Icon.astro';
+import { social } from "../../settings";
+import Icon from "./Icon.astro";
 
-const activeSocial = Object.keys(social).filter((key) => social[key as keyof typeof social] !== '')
-const calculatedIconSize = activeSocial.length <= 5 ? 'w-6 h-6' : activeSocial.length <= 6 ? 'w-5 h-5' : 'w-4 h-4'
-const calculatedContainerSize = activeSocial.length <= 5 ? 'size-12' : activeSocial.length <= 6 ? 'size-10' : 'size-8'
-
+const activeSocial = Object.keys(social).filter(
+  (key) => social[key as keyof typeof social] !== ""
+);
+const calculatedIconSize =
+  activeSocial.length <= 5
+    ? "w-6 h-6"
+    : activeSocial.length <= 6
+      ? "w-5 h-5"
+      : "w-4 h-4";
+const calculatedContainerSize =
+  activeSocial.length <= 5
+    ? "size-12"
+    : activeSocial.length <= 6
+      ? "size-10"
+      : "size-8";
 ---
 
 <div class='flex flex-wrap justify-between items-center'>

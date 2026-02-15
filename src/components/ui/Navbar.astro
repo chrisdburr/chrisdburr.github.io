@@ -1,14 +1,16 @@
 ---
-import { Image } from 'astro:assets'
-import {profile} from '../../settings'
-import SocialIcons from './SocialIcons.astro'
-import ProfilePictures from '@/assets/profile_pictures.jpg'
-import { getCollection } from 'astro:content'
-import { template } from '@/settings'
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import ProfilePictures from "@/assets/profile_pictures.jpg";
+import { template } from "@/settings";
+import { profile } from "../../settings";
+import SocialIcons from "./SocialIcons.astro";
 
-const isBlogPopulated = await getCollection('blog').then(collection => collection.length > 0)
+const isBlogPopulated = await getCollection("blog").then(
+  (collection) => collection.length > 0
+);
 
-const {fullName, title} = profile
+const { fullName, title } = profile;
 ---
 <aside
 	class='px-4 pt-4 h-screen w-[20rem] bg-base-200 text-base-content flex flex-col'
