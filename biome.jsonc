@@ -6,17 +6,26 @@
     "clientKind": "git",
     "useIgnoreFile": true
   },
+  "files": {
+    "includes": ["!_migrate"]
+  },
   "overrides": [
     {
-      "includes": ["**/*.astro"],
+      "includes": ["src/components/ui/**"],
       "linter": {
         "rules": {
-          "correctness": {
-            "noUnusedImports": "off",
-            "noUnusedVariables": "off"
+          "performance": {
+            "noNamespaceImport": "off"
           },
-          "style": {
-            "useFilenamingConvention": "off"
+          "a11y": {
+            "useSemanticElements": "off",
+            "useKeyWithClickEvents": "off",
+            "noNoninteractiveElementInteractions": "off",
+            "noLabelWithoutControl": "off"
+          },
+          "suspicious": {
+            "noDoubleEquals": "off",
+            "noArrayIndexKey": "off"
           }
         }
       }

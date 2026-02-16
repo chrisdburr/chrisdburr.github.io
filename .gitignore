@@ -1,11 +1,16 @@
-# build output
-dist/
-
-# generated types
-.astro/
-
 # dependencies
 node_modules/
+
+# next.js
+.next/
+/out/
+next-env.d.ts
+
+# typescript
+*.tsbuildinfo
+
+# testing
+/coverage
 
 # logs
 npm-debug.log*
@@ -17,6 +22,7 @@ bun-debug.log*
 # environment variables
 .env
 .env.production
+.env*.local
 
 # macOS-specific files
 .DS_Store
