@@ -3,7 +3,6 @@
 import {
   BookTextIcon,
   FileTextIcon,
-  FlaskConicalIcon,
   HomeIcon,
   PenLineIcon,
   UserIcon,
@@ -22,7 +21,8 @@ import {
 const navItems = [
   { label: "Home", path: "/", icon: HomeIcon },
   { label: "About", path: "/about", icon: UserIcon },
-  { label: "Research", path: "/research", icon: FlaskConicalIcon },
+  // TODO: Re-enable when /research page is ready
+  // { label: "Research", path: "/research", icon: FlaskConicalIcon },
   { label: "Publications", path: "/publications", icon: BookTextIcon },
   { label: "CV", path: "/cv", icon: FileTextIcon },
   { label: "Blog", path: "/blog", icon: PenLineIcon },

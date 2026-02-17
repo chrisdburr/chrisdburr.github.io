@@ -6,6 +6,7 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -31,17 +32,26 @@ export default function Home() {
   return (
     <div className="space-y-10">
       {/* Hero */}
-      <section>
-        <h1 className="mb-2 font-bold text-3xl">{site.profile.fullName}</h1>
-        <p className="mb-4 text-muted-foreground text-sm/relaxed">
-          {site.profile.role} at the {site.profile.institute}
-        </p>
-        <p className="max-w-prose text-sm/relaxed">
-          I research the trustworthiness and ethics of data-driven technologies,
-          with a focus on developing practical assurance methods for AI systems.
-          My work spans responsible innovation, digital twinning, and the
-          philosophical foundations of cognitive science.
-        </p>
+      <section className="flex flex-col-reverse items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex-1">
+          <h1 className="mb-2 font-bold text-3xl">{site.profile.fullName}</h1>
+          <p className="mb-4 text-muted-foreground text-sm/relaxed">
+            {site.profile.role} at the {site.profile.institute}
+          </p>
+          <p className="max-w-prose text-sm/relaxed">
+            I research the trustworthiness and ethics of data-driven
+            technologies, with a focus on developing practical assurance methods
+            for AI systems. My work spans responsible innovation, digital
+            twinning, and the philosophical foundations of cognitive science.
+          </p>
+        </div>
+        <Image
+          alt={site.profile.fullName}
+          className="size-28 shrink-0 rounded-full object-cover sm:size-36"
+          height={144}
+          src="/images/happy.jpg"
+          width={144}
+        />
       </section>
 
       {/* Research Areas */}

@@ -1,6 +1,5 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   SidebarMenu,
   SidebarMenuButton,
@@ -23,10 +22,9 @@ export function SidebarProfile({ profile }: SidebarProfileProps) {
           size="lg"
           tooltip={displayName}
         >
-          <Avatar className="size-8 rounded-lg" size="default">
-            <AvatarImage alt={profile.fullName} src="/images/happy.jpg" />
-            <AvatarFallback className="rounded-lg">CB</AvatarFallback>
-          </Avatar>
+          <div className="flex size-4 shrink-0 items-center justify-center rounded-full bg-primary font-semibold text-[0.5rem] text-primary-foreground group-data-[state=expanded]:size-8 group-data-[state=expanded]:text-sm">
+            CB
+          </div>
           <div className="grid flex-1 text-left leading-tight">
             <span className="truncate font-semibold text-sm">
               {displayName}

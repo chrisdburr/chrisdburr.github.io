@@ -28,8 +28,8 @@ export default function PublicationsPage() {
       </section>
 
       <section className="space-y-4">
-        {publications.map((pub) => (
-          <Card key={pub.title}>
+        {publications.map((pub, index) => (
+          <Card key={`${pub.title}-${pub.type}-${index}`}>
             <CardHeader>
               <CardTitle className="text-base">{pub.title}</CardTitle>
               <CardDescription>{pub.authors}</CardDescription>
