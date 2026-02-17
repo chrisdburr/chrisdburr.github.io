@@ -1,31 +1,25 @@
 [
   {
-    "title": "Trustworthy and Ethical Assurance",
-    "description": "Research into assurance techniques and methods to ensure AI systems are trustworthy and ethical.",
-    "field": "ai-systems",
+    "title": "Trustworthy and Ethical AI Assurance",
+    "description": "Developing practical methodologies and tools for assuring the safety, fairness, and trustworthiness of AI systems throughout their lifecycle. This includes argument-based assurance cases, bias auditing, and governance frameworks that bridge technical and ethical requirements.",
+    "field": "ai-assurance",
     "iconName": "trust"
   },
   {
-    "title": "Digital Twinning",
-    "description": "Designing and governing virtual representations of physical systems, such as cardiac digital twins.",
+    "title": "Agentic Digital Twins",
+    "description": "Designing and governing virtual representations of physical and social systems, from cardiac digital twins to autonomous agents. Investigating how digital twins raise novel questions about control, identity, and responsibility in AI-driven environments.",
     "field": "digital-twins",
     "iconName": "copy"
   },
   {
-    "title": "Participatory Design",
-    "description": "Ensuring responsible research and innovation practices, such as open science and public engagement, are core parts of the scientific process.",
+    "title": "Responsible Research and Innovation",
+    "description": "Embedding responsible practices into the research and innovation process, including open science, participatory design, and meaningful public engagement. Ensuring affected communities have a genuine voice in shaping the technologies that impact them.",
     "field": "responsible-innovation",
     "iconName": "users"
   },
   {
-    "title": "AI and Data Ethics",
-    "description": "Examining the ethical and societal implications of data-driven technologies, such as machine learning and artificial intelligence.",
-    "field": "ai-ethics",
-    "iconName": "scale"
-  },
-  {
-    "title": "Philosophy of Cognitive Science",
-    "description": "Exploring the philosophical foundations of mind and cognition, and applying it to novel areas such as large-language or foundation models.",
+    "title": "Philosophy of Cognitive Science and AI",
+    "description": "Exploring the philosophical foundations of mind, cognition, and intelligence, and applying them to understand the capabilities and limitations of large language models, foundation models, and other AI systems.",
     "field": "cognitive-science",
     "iconName": "brain"
   }
