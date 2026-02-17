@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SidebarLayout } from "@/components/sidebar-layout";
 import { ThemeProvider } from "@/components/theme-provider";
+import { site } from "@/lib/data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,9 +16,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dr Christopher Burr",
-  description:
-    "Senior Researcher in Trustworthy Systems at the Alan Turing Institute",
+  metadataBase: new URL("https://portfolio.chrisdburr.com"),
+  title: {
+    default: site.seo.defaultTitle,
+    template: `%s — ${site.seo.defaultTitle}`,
+  },
+  description: site.seo.defaultDescription,
+  openGraph: {
+    title: site.seo.defaultTitle,
+    description: site.seo.defaultDescription,
+    images: [site.seo.defaultImage],
+    siteName: site.seo.defaultTitle,
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    types: { "application/rss+xml": "/feed.xml" },
+  },
 };
 
 export default function RootLayout({
