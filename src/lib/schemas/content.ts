@@ -23,6 +23,15 @@ export const publicationSchema = z.object({
   abstract: z.string().optional(),
 });
 
+export const blogFrontmatterSchema = z.object({
+  title: z.string(),
+  date: z.string(),
+  excerpt: z.string(),
+  tags: z.array(z.string()),
+  image: z.string().optional(),
+});
+
 export type ResearchArea = z.infer<typeof researchAreaSchema>;
 export type Project = z.infer<typeof projectSchema>;
 export type Publication = z.infer<typeof publicationSchema>;
+export type BlogFrontmatter = z.infer<typeof blogFrontmatterSchema>;
