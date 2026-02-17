@@ -10,7 +10,8 @@
     "lint": "ultracite check",
     "lint:fix": "ultracite fix",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "^1.2.0",
