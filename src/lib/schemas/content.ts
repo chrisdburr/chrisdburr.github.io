@@ -17,8 +17,10 @@ export const projectSchema = z.object({
 export const publicationSchema = z.object({
   title: z.string(),
   authors: z.string(),
-  journal: z.string(),
-  time: z.string(),
+  editors: z.string().optional(),
+  venue: z.string(),
+  date: z.string(),
+  type: z.string(),
   link: z.string().url().optional(),
   abstract: z.string().optional(),
 });

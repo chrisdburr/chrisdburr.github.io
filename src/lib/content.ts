@@ -6,6 +6,7 @@ const contentDirectory = path.join(process.cwd(), "src/content");
 const MDX_EXTENSION = /\.mdx$/;
 
 interface ContentItem<T> {
+  slug: string;
   metadata: T;
   content: string;
 }
@@ -19,9 +20,23 @@ export function getContentBySlug<T>(
   const { data, content } = matter(fileContents);
 
   return {
+    slug,
     metadata: data as T,
     content,
   };
+}
+
+export function getAllSlugs(directory: string): string[] {
+  const dirPath = path.join(contentDirectory, directory);
+
+  if (!fs.existsSync(dirPath)) {
+    return [];
+  }
+
+  return fs
+    .readdirSync(dirPath)
+    .filter((file) => file.endsWith(".mdx"))
+    .map((file) => file.replace(MDX_EXTENSION, ""));
 }
 
 export function getAllContent<T>(directory: string): ContentItem<T>[] {

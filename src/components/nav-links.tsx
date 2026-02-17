@@ -39,7 +39,11 @@ export function NavLinks() {
           {navItems.map((item) => (
             <SidebarMenuItem key={item.path}>
               <SidebarMenuButton
-                isActive={pathname === item.path}
+                isActive={
+                  item.path === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(item.path)
+                }
                 render={<Link href={item.path} />}
                 tooltip={item.label}
               >
