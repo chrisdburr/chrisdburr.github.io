@@ -18,11 +18,11 @@ export function SidebarProfile({ profile }: SidebarProfileProps) {
     <SidebarMenu>
       <SidebarMenuItem>
         <SidebarMenuButton
-          className="data-[slot=sidebar-menu-button]:!h-auto data-[slot=sidebar-menu-button]:!p-2"
+          className="data-[slot=sidebar-menu-button]:!h-auto group-data-[collapsible=icon]:!p-0.5 group-data-[collapsible=icon]:!pl-[3px]"
           size="lg"
           tooltip={displayName}
         >
-          <div className="flex size-4 shrink-0 items-center justify-center rounded-full bg-primary font-semibold text-[0.5rem] text-primary-foreground group-data-[state=expanded]:size-8 group-data-[state=expanded]:text-sm">
+          <div className="flex size-7 shrink-0 items-center justify-center rounded-full bg-primary font-semibold text-primary-foreground text-xs group-data-[state=expanded]:size-8 group-data-[state=expanded]:text-sm">
             CB
           </div>
           <div className="grid flex-1 text-left leading-tight">

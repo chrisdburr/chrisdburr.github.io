@@ -13,6 +13,17 @@ import { getAllContent } from "@/lib/content";
 import { researchAreas, site } from "@/lib/data";
 import type { BlogFrontmatter } from "@/lib/schemas/content";
 
+function formatDateUK(dateStr: string) {
+  const d = new Date(dateStr);
+  const day = d.getUTCDate().toString().padStart(2, "0");
+  const month = (d.getUTCMonth() + 1).toString().padStart(2, "0");
+  return `${day}-${month}-${d.getUTCFullYear()}`;
+}
+
+function formatTag(tag: string) {
+  return `#${tag.replace(/\s+/g, "-")}`;
+}
+
 const iconMap: Record<string, React.ReactNode> = {
   trust: <ShieldCheck className="size-5 text-muted-foreground" />,
   copy: <Copy className="size-5 text-muted-foreground" />,
@@ -32,7 +43,7 @@ export default function Home() {
           alt={site.profile.fullName}
           className="size-28 shrink-0 rounded-full object-cover sm:size-32"
           height={128}
-          src="/images/happy.jpg"
+          src="/images/profile.jpeg"
           width={128}
         />
         <div>
@@ -96,9 +107,11 @@ export default function Home() {
               )}
               <div className="flex flex-col gap-4 py-4">
                 <CardHeader>
-                  <CardTitle>{featuredPost.metadata.title}</CardTitle>
+                  <CardTitle className="font-semibold">
+                    {featuredPost.metadata.title}
+                  </CardTitle>
                   <CardDescription>
-                    {featuredPost.metadata.date}
+                    {formatDateUK(featuredPost.metadata.date)}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3">
@@ -108,7 +121,7 @@ export default function Home() {
                   <div className="flex flex-wrap items-center gap-2">
                     {featuredPost.metadata.tags.map((tag) => (
                       <Badge key={tag} variant="secondary">
-                        {tag}
+                        {formatTag(tag)}
                       </Badge>
                     ))}
                     <span className="ml-auto text-muted-foreground text-sm">

@@ -1,0 +1,49 @@
+---
+title: "Assurance as Infrastructure: What's Still Missing"
+date: "2026-02-18"
+excerpt: "AI ethics has matured, but something is still missing. The discourse remains largely diagnostic. What we haven't built is the infrastructure that helps people actually do the work. That's what the TEA ecosystem is for."
+tags: ["ai ethics", "assurance", "trustworthy ai", "tea platform"]
+image: "/images/blog/assurance-as-infrastructure.png"
+---
+
+AI ethics has matured. The field moved past speculative anxieties about superintelligence, got serious about practical problems like bias and explainability, and recognised that high-level principles don't implement themselves. Each wave of work has been valuable but something is still missing.
+
+The discourse remains largely diagnostic. We're good at identifying what's wrong and increasingly good at articulating what should be true. What we haven't built is the infrastructure that helps people actually do the work.
+
+That's what the [Trustworthy and Ethical Assurance](https://assuranceplatform.azurewebsites.net/) ecosystem is for.
+
+## From compliance to capability
+
+A common objection to assurance is that it impedes innovation. More governance, more bureaucracy, more forms to fill in before you can do the real work.
+
+This objection mistakes the symptom for the disease. When assurance feels like bureaucracy, it's because documentation has been retrofitted. Decisions get made, then someone scrambles to justify them after the fact. That _is_ slow. You're reconstructing reasoning rather than capturing it as it happens. You're retreading over old ground and often struggling to remember why you made the choices you did.
+
+But assurance done well is different. It's disciplined thinking. You make claims explicit, identify what evidence would support them, and notice where the argument is thin. The goal isn't to satisfy external requirements. It's to achieve your own goals more reliably.
+
+This reframes what assurance is for, and moves us away from compliance towards capabilities.
+
+## Why this accelerates innovation
+
+When deliberation is built into how you work, documentation becomes a byproduct rather than a separate task. The assurance case emerges as a trace of your reasoning process. It's useful for regulators and auditors, but it's produced in the course of doing the work rather than bolted on afterwards.
+
+This is how assurance, when done well, speeds things up. You're not accumulating debt that has to be paid down later when someone asks awkward questions. The thinking and the accountability are aligned from the start. Teams that treat assurance as an afterthought end up doing the work twice. Once to build, once to justify. Teams that deliberate as they go do it once, and the justification comes free.
+
+## The TEA ecosystem
+
+Bridging principles and practice requires more than good intentions. You need to know what options exist, how to evaluate them, and how to structure the reasoning that connects choices to goals.
+
+The TEA ecosystem provides this scaffolding through three integrated components:
+
+1. **[The TEA Platform](https://assuranceplatform.azurewebsites.net/)** is where assurance cases are built. It provides the conceptual foundation and the tools to construct cases. What does assurance mean? How do argument structures work? How do claims connect to evidence? This is the hub where deliberation happens and artefacts are produced.
+2. **[TEA Techniques](https://alan-turing-institute.github.io/tea-techniques)** is a curated library of methods for achieving different assurance goals, from [explainability](https://alan-turing-institute.github.io/tea-techniques/techniques?goals=explainability) to [fairness](https://alan-turing-institute.github.io/tea-techniques/techniques?goals=fairness) to [security](https://alan-turing-institute.github.io/tea-techniques/techniques?goals=security) to [robustness](https://alan-turing-institute.github.io/tea-techniques/techniques?goals=robustness). Each entry explains what a technique does, when it's appropriate, and where to find implementations. You can't choose well if you don't know what's available.
+3. **TEA Evidence** makes a subset of these techniques _executable_. You can run experiments on your own models and datasets, comparing [SHAP](https://shap.readthedocs.io/), [LIME](https://github.com/marcotcr/lime), and [partial dependence plots](https://scikit-learn.org/stable/modules/partial_dependence.html) side by side, and feed the results back into the Platform as dynamic evidence within your assurance case.
+
+The first of these two components are already live, and the third is in development. Together, our goal is to support the full arc from orientation through evaluation to structured reasoning. Scaffolding for disciplined science and innovation.
+
+## Building what's missing
+
+AI ethics has done important work. But frameworks for critique are not the same as infrastructure for practice.
+
+What's still missing is the capability layer. We need systems and tools that help researchers and practitioners develop the judgement to build well, not just the vocabulary to evaluate afterwards.
+
+That's what we're building.

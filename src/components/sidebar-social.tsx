@@ -50,7 +50,7 @@ export function SidebarSocial({ social }: SidebarSocialProps) {
   );
 
   return (
-    <div className="flex flex-wrap items-center gap-1 px-2 py-1 group-data-[collapsible=icon]/sidebar-wrapper:flex-col">
+    <div className="flex flex-wrap items-center justify-center gap-1 px-2 py-1 group-data-[collapsible=icon]:flex-col group-data-[collapsible=icon]:px-0">
       {entries.map(([key, value]) => {
         const Icon = iconMap[key];
         const label = labelMap[key] ?? key;
@@ -83,7 +83,7 @@ export function SidebarSocial({ social }: SidebarSocialProps) {
         );
       })}
 
-      <span className="mx-1 h-4 w-px bg-border group-data-[collapsible=icon]/sidebar-wrapper:mx-0 group-data-[collapsible=icon]/sidebar-wrapper:h-px group-data-[collapsible=icon]/sidebar-wrapper:w-4" />
+      <span className="group-data-[collapsible=icon]:!w-4 mx-1 h-4 w-px bg-border group-data-[collapsible=icon]:mx-0 group-data-[collapsible=icon]:h-px" />
 
       <Tooltip>
         <TooltipTrigger

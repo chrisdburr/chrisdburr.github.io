@@ -18,6 +18,17 @@ export const metadata: Metadata = {
     "Blog posts on AI ethics, trustworthy systems, and responsible innovation.",
 };
 
+function formatDateUK(dateStr: string) {
+  const d = new Date(dateStr);
+  const day = d.getUTCDate().toString().padStart(2, "0");
+  const month = (d.getUTCMonth() + 1).toString().padStart(2, "0");
+  return `${day}-${month}-${d.getUTCFullYear()}`;
+}
+
+function formatTag(tag: string) {
+  return `#${tag.replace(/\s+/g, "-")}`;
+}
+
 export default function BlogIndexPage() {
   const posts = getAllContent<BlogFrontmatter>("blog");
 
@@ -31,7 +42,7 @@ export default function BlogIndexPage() {
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section className="grid gap-6">
         {posts.length === 0 ? (
           <p className="text-muted-foreground text-sm">No posts yet.</p>
         ) : (
@@ -51,8 +62,12 @@ export default function BlogIndexPage() {
                 )}
                 <div className="flex flex-col gap-4 py-4">
                   <CardHeader>
-                    <CardTitle>{post.metadata.title}</CardTitle>
-                    <CardDescription>{post.metadata.date}</CardDescription>
+                    <CardTitle className="font-semibold">
+                      {post.metadata.title}
+                    </CardTitle>
+                    <CardDescription>
+                      {formatDateUK(post.metadata.date)}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-3">
                     <p className="text-muted-foreground text-sm/relaxed">
@@ -61,7 +76,7 @@ export default function BlogIndexPage() {
                     <div className="flex flex-wrap items-center gap-2">
                       {post.metadata.tags.map((tag) => (
                         <Badge key={tag} variant="secondary">
-                          {tag}
+                          {formatTag(tag)}
                         </Badge>
                       ))}
                       <span className="ml-auto text-muted-foreground text-sm">
