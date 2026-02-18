@@ -74,6 +74,14 @@ function getLink(item: ZoteroItem): string | undefined {
   return item.url ?? undefined;
 }
 
+function parseDateValue(date: string): number {
+  const ms = Date.parse(date);
+  if (!Number.isNaN(ms)) {
+    return ms;
+  }
+  return 0;
+}
+
 const items = (rawData as { items: ZoteroItem[] }).items
   .filter((item) => !EXCLUDED_TYPES.has(item.itemType))
   .map((item) => {
@@ -89,6 +97,6 @@ const items = (rawData as { items: ZoteroItem[] }).items
       abstract: item.abstractNote,
     };
   })
-  .sort((a, b) => b.date.localeCompare(a.date));
+  .sort((a, b) => parseDateValue(b.date) - parseDateValue(a.date));
 
 export const publications = z.array(publicationSchema).parse(items);
