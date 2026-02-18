@@ -80,7 +80,7 @@ export function PublicationsTabs({
 
   return (
     <Tabs defaultValue="all">
-      <TabsList className="h-auto overflow-x-auto">
+      <TabsList className="h-auto overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <TabsTrigger value="all">All ({publications.length})</TabsTrigger>
         {tabs.map((type) => (
           <TabsTrigger key={type} value={type}>

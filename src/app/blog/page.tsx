@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -36,23 +37,39 @@ export default function BlogIndexPage() {
         ) : (
           posts.map((post) => (
             <Link href={`/blog/${post.slug}`} key={post.slug}>
-              <Card className="transition-colors hover:bg-muted/50">
-                <CardHeader>
-                  <CardTitle>{post.metadata.title}</CardTitle>
-                  <CardDescription>{post.metadata.date}</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-2">
-                  <p className="text-muted-foreground text-sm/relaxed">
-                    {post.metadata.excerpt}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {post.metadata.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">
-                        {tag}
-                      </Badge>
-                    ))}
+              <Card className="gap-0 overflow-hidden p-0 transition-colors hover:bg-muted/50 md:flex-row">
+                {post.metadata.image && (
+                  <div className="relative aspect-[2/1] md:aspect-auto md:w-72 md:shrink-0">
+                    <Image
+                      alt={post.metadata.title}
+                      className="object-cover"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 288px"
+                      src={post.metadata.image}
+                    />
                   </div>
-                </CardContent>
+                )}
+                <div className="flex flex-col gap-4 py-4">
+                  <CardHeader>
+                    <CardTitle>{post.metadata.title}</CardTitle>
+                    <CardDescription>{post.metadata.date}</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-3">
+                    <p className="text-muted-foreground text-sm/relaxed">
+                      {post.metadata.excerpt}
+                    </p>
+                    <div className="flex flex-wrap items-center gap-2">
+                      {post.metadata.tags.map((tag) => (
+                        <Badge key={tag} variant="secondary">
+                          {tag}
+                        </Badge>
+                      ))}
+                      <span className="ml-auto text-muted-foreground text-sm">
+                        Read more &rarr;
+                      </span>
+                    </div>
+                  </CardContent>
+                </div>
               </Card>
             </Link>
           ))

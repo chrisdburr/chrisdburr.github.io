@@ -3,11 +3,9 @@ import {
   BriefcaseIcon,
   Code2Icon,
   GraduationCapIcon,
-  MicIcon,
   UsersIcon,
 } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -20,7 +18,6 @@ import {
   awards,
   education,
   experiences,
-  presentations,
   professionalService,
   skills,
 } from "@/lib/data";
@@ -169,43 +166,6 @@ export default function CVPage() {
                 <CardDescription>{skill.description}</CardDescription>
               </CardContent>
             </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* Presentations */}
-      <section>
-        <div className="mb-4 flex items-center gap-2">
-          <MicIcon className="size-5 text-muted-foreground" />
-          <h2 className="font-semibold text-xl">Presentations</h2>
-        </div>
-        <div className="space-y-2">
-          {presentations.map((pres) => (
-            <div
-              className="flex flex-col gap-1 border-b py-3 last:border-b-0 sm:flex-row sm:items-baseline sm:gap-3"
-              key={`${pres.title}-${pres.venue}`}
-            >
-              <span className="shrink-0 font-mono text-muted-foreground text-xs">
-                {pres.year}
-              </span>
-              <div className="min-w-0">
-                {pres.link ? (
-                  <Link
-                    className="text-sm underline underline-offset-4"
-                    href={pres.link}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    {pres.title}
-                  </Link>
-                ) : (
-                  <span className="text-sm">{pres.title}</span>
-                )}
-                <span className="ml-1 text-muted-foreground text-xs">
-                  — {pres.venue}
-                </span>
-              </div>
-            </div>
           ))}
         </div>
       </section>
