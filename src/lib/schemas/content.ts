@@ -9,9 +9,12 @@ export const researchAreaSchema = z.object({
 
 export const projectSchema = z.object({
   title: z.string(),
-  link: z.string().url(),
   description: z.string(),
   active: z.boolean(),
+  role: z.string().optional(),
+  image: z.string().optional(),
+  websiteUrl: z.string().url().optional(),
+  githubUrl: z.string().url().optional(),
 });
 
 export const publicationSchema = z.object({
