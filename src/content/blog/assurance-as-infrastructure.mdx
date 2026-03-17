@@ -6,25 +6,23 @@ tags: ["ai ethics", "assurance", "trustworthy ai", "tea platform"]
 image: "/images/blog/assurance-as-infrastructure.png"
 ---
 
-AI ethics has matured. The field moved past speculative anxieties about superintelligence, got serious about practical problems like bias and explainability, and recognised that high-level principles don't implement themselves. Each wave of work has been valuable but something is still missing.
+AI ethics has matured. The field moved past speculative anxieties about superintelligence, got serious about practical problems like bias and explainability, and recognised that high-level principles don't implement themselves. Each wave of work has been valuable, but it is clear to many who work in the field that something is still missing.
 
-The discourse remains largely diagnostic. We're good at identifying what's wrong and increasingly good at articulating what should be true. What we haven't built is the infrastructure that helps people actually do the work.
-
-That's what the [Trustworthy and Ethical Assurance](https://assuranceplatform.azurewebsites.net/) ecosystem is for.
+I believe a significant problem is that the discourse remains largely *diagnostic*. That is, we're good at identifying what's wrong and increasingly good at articulating what should be true. What we haven't built is the infrastructure that helps people actually do the work. That's what the [Trustworthy and Ethical Assurance](https://assuranceplatform.azurewebsites.net/) ecosystem is for.
 
 ## From compliance to capability
 
 A common objection to assurance is that it impedes innovation. More governance, more bureaucracy, more forms to fill in before you can do the real work.
 
-This objection mistakes the symptom for the disease. When assurance feels like bureaucracy, it's because documentation has been retrofitted. Decisions get made, then someone scrambles to justify them after the fact. That _is_ slow. You're reconstructing reasoning rather than capturing it as it happens. You're retreading over old ground and often struggling to remember why you made the choices you did.
+While I can sympathise with this objection, it also mistakes the symptom for the disease. When assurance feels like bureaucracy, it's probably because documentation has been retrofitted or left too late. Decisions get made, then someone scrambles to justify them after the fact. That _is_ slow, and does get in the way of innovation, but it's because you're reconstructing reasoning rather than capturing it as it happens.
 
-But assurance done well is different. It's disciplined thinking. You make claims explicit, identify what evidence would support them, and notice where the argument is thin. The goal isn't to satisfy external requirements. It's to achieve your own goals more reliably.
+But assurance done well is different. It's a process of disciplined thinking, which is both intrinsically rewarding and also has significant practical benefits. You make claims explicit, identify what evidence would support them, and notice where the argument is thin. The goal isn't to satisfy external regulatory requirements or compliance checklists. It's to achieve your own goals more reliably.
 
-This reframes what assurance is for, and moves us away from compliance towards capabilities.
+This reframes what assurance is for, and moves us away from mere compliance towards building capabilities.
 
 ## Why this accelerates innovation
 
-When deliberation is built into how you work, documentation becomes a byproduct rather than a separate task. The assurance case emerges as a trace of your reasoning process. It's useful for regulators and auditors, but it's produced in the course of doing the work rather than bolted on afterwards.
+If teams build deliberation into how they work, documentation can become a byproduct rather than a separate task. An assurance case could emerge as a *trace* of your reasoning process. It will still be useful for regulators and auditors, but it will also be produced in the course of doing the work rather than bolted on afterwards.
 
 This is how assurance, when done well, speeds things up. You're not accumulating debt that has to be paid down later when someone asks awkward questions. The thinking and the accountability are aligned from the start. Teams that treat assurance as an afterthought end up doing the work twice. Once to build, once to justify. Teams that deliberate as they go do it once, and the justification comes free.
 
@@ -39,6 +37,63 @@ The TEA ecosystem provides this scaffolding through three integrated components:
 3. **TEA Evidence** makes a subset of these techniques _executable_. You can run experiments on your own models and datasets, comparing [SHAP](https://shap.readthedocs.io/), [LIME](https://github.com/marcotcr/lime), and [partial dependence plots](https://scikit-learn.org/stable/modules/partial_dependence.html) side by side, and feed the results back into the Platform as dynamic evidence within your assurance case.
 
 The first of these two components are already live, and the third is in development. Together, our goal is to support the full arc from orientation through evaluation to structured reasoning. Scaffolding for disciplined science and innovation.
+
+### The TEA Platform in action
+
+The TEA Platform provides a structured workspace for building assurance cases. Here you can create claims, link evidence, and visualise the argument structure that connects your project goals to the practices that support them.
+
+<figure style={{margin: '1.5rem 0'}}>
+  <video autoPlay muted loop playsInline style={{width: '100%', borderRadius: '0.5rem'}}>
+    <source src="/videos/blog/tea-platform-demo.mp4" type="video/mp4" />
+  </video>
+  <figcaption style={{marginTop: '0.5rem', fontSize: '0.875rem', color: 'var(--color-muted-foreground)'}}>
+    New features are being developed that will enhance the user experience, making it easier to create, edit, and share assurance cases.
+  </figcaption>
+</figure>
+
+### Browsing TEA Techniques
+
+TEA Techniques provides a searchable library of methods, filterable by assurance goal. Each technique entry explains what it does, when to use it, and links to implementations and further reading.
+
+<figure style={{margin: '1.5rem 0'}}>
+  <video autoPlay muted loop playsInline style={{width: '100%', borderRadius: '0.5rem'}}>
+    <source src="/videos/blog/tea-techniques-demo.mp4" type="video/mp4" />
+  </video>
+  <figcaption style={{marginTop: '0.5rem', fontSize: '0.875rem', color: 'var(--color-muted-foreground)'}}>
+    Our repository of ML/AI assurance techniques is improving and growing, allowing users and teams to more readily find the right technique to help them evidence a claim about their model or system.
+  </figcaption>
+</figure>
+
+## Roadmap
+
+The TEA ecosystem is under active development. Here's where we're headed.
+
+<div style={{display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1.5rem'}}>
+  <div style={{borderLeft: '4px solid var(--color-primary)', borderRadius: '0.5rem', padding: '1.25rem 1.5rem', background: 'var(--color-card)', border: '1px solid var(--color-border)', borderLeftWidth: '4px', borderLeftColor: 'var(--color-primary)'}}>
+    <div style={{display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem'}}>
+      <span style={{fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-primary-foreground)', background: 'var(--color-primary)', padding: '0.125rem 0.5rem', borderRadius: '9999px'}}>Q2 2026</span>
+    </div>
+    <p style={{fontWeight: 600, fontSize: '1.125rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}><RocketIcon size={18} /> Version 1.0 — TEA Platform</p>
+    <p style={{color: 'var(--color-muted-foreground)', margin: 0}}>Bringing the TEA Platform out of research preview. This release will include a new set of UX improvements, including more-focused collaborative tools, a cleaner UI, and a new plugin ecosystem that will allow the community to extend the platform to suit their own use cases.</p>
+  </div>
+</div>
+
+<p style={{fontWeight: 600, fontSize: '1rem', marginTop: '2rem', marginBottom: '0.75rem', color: 'var(--color-muted-foreground)', textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.8rem'}}>Q2 2026 onwards</p>
+
+<div style={{display: 'flex', flexDirection: 'column', gap: '0.75rem'}}>
+  <div style={{borderRadius: '0.5rem', padding: '1rem 1.25rem', border: '1px solid var(--color-border)', borderLeftWidth: '4px', borderLeftColor: 'var(--color-accent)'}}>
+    <p style={{fontWeight: 600, marginBottom: '0.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}><BlocksIcon size={16} /> Techniques integration</p>
+    <p style={{color: 'var(--color-muted-foreground)', margin: 0, fontSize: '0.9rem'}}>Integrating the TEA Techniques dataset directly into the TEA Platform, allowing users to find a technique to help them evidence a claim from within the assurance case builder.</p>
+  </div>
+  <div style={{borderRadius: '0.5rem', padding: '1rem 1.25rem', border: '1px solid var(--color-border)', borderLeftWidth: '4px', borderLeftColor: 'var(--color-accent)'}}>
+    <p style={{fontWeight: 600, marginBottom: '0.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}><LayoutTemplateIcon size={16} /> Argument pattern library</p>
+    <p style={{color: 'var(--color-muted-foreground)', margin: 0, fontSize: '0.9rem'}}>Building out a repository of argument patterns for goals like explainability, fairness, security, and safety. This will help teams build skills and knowledge around best practices, using templates that have been designed by AI assurance experts.</p>
+  </div>
+  <div style={{borderRadius: '0.5rem', padding: '1rem 1.25rem', border: '1px solid var(--color-border)', borderLeftWidth: '4px', borderLeftColor: 'var(--color-accent)'}}>
+    <p style={{fontWeight: 600, marginBottom: '0.25rem', display: 'flex', alignItems: 'center', gap: '0.5rem'}}><UsersIcon size={16} /> Community case studies</p>
+    <p style={{color: 'var(--color-muted-foreground)', margin: 0, fontSize: '0.9rem'}}>Growing a collection of community case studies, helping users showcase how they have assured their own models or systems.</p>
+  </div>
+</div>
 
 ## Building what's missing
 
