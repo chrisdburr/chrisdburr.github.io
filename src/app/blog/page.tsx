@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { getAllContent } from "@/lib/content";
 import type { BlogFrontmatter } from "@/lib/schemas/content";
+import { formatTag } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: "Blog — Dr Christopher Burr",
@@ -23,10 +24,6 @@ function formatDateUK(dateStr: string) {
   const day = d.getUTCDate().toString().padStart(2, "0");
   const month = (d.getUTCMonth() + 1).toString().padStart(2, "0");
   return `${day}-${month}-${d.getUTCFullYear()}`;
-}
-
-function formatTag(tag: string) {
-  return `#${tag.replace(/\s+/g, "-")}`;
 }
 
 export default function BlogIndexPage() {

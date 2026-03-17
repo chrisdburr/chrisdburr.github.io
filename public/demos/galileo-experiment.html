@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galileo's Inclined Plane</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: transparent;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  /* Zone A: Apparatus */
+  .apparatus-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  canvas#apparatus {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  /* Zone B: Controls */
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    flex-wrap: wrap;
+  }
+  .angle-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 200px;
+  }
+  .angle-control label {
+    font-size: 13px;
+    color: #555;
+    white-space: nowrap;
+  }
+  .angle-control .angle-value {
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 32px;
+    text-align: right;
+  }
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    flex: 1;
+    height: 4px;
+    background: #ccc;
+    border-radius: 2px;
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #8b6914;
+    cursor: pointer;
+    border: 2px solid #faf9f6;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #8b6914;
+    cursor: pointer;
+    border: 2px solid #faf9f6;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+  .preset-angles {
+    display: flex;
+    gap: 4px;
+    margin-top: 2px;
+  }
+  .preset-angles button {
+    font-size: 11px;
+    color: #888;
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 1px 5px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .preset-angles button:hover {
+    color: #333;
+    border-color: #999;
+  }
+  .preset-angles button.active {
+    color: #8b6914;
+    border-color: #8b6914;
+  }
+  .btn-release {
+    font-size: 14px;
+    padding: 7px 20px;
+    background: transparent;
+    border: 1.5px solid #555;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.15s;
+  }
+  .btn-release:hover {
+    border-color: #8b6914;
+    color: #8b6914;
+  }
+  .btn-release:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+  .btn-clear {
+    font-size: 13px;
+    color: #999;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .btn-clear:hover { color: #555; }
+
+  /* Zone C: Data & Chart */
+  .data-zone {
+    display: flex;
+    gap: 20px;
+    min-height: 320px;
+  }
+  .chart-panel {
+    flex: 1.4;
+    min-width: 0;
+  }
+  .chart-panel svg {
+    width: 100%;
+    height: 300px;
+  }
+  .table-panel {
+    flex: 1;
+    min-width: 160px;
+  }
+  .table-panel h3 {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  .table-explainer {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  table.interval-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  }
+  table.interval-table th {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #888;
+    text-align: right;
+    padding: 4px 6px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  table.interval-table th:first-child { text-align: left; }
+  table.interval-table td {
+    padding: 3px 6px;
+    text-align: right;
+    color: #333;
+  }
+  table.interval-table td:first-child {
+    text-align: left;
+    color: #888;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  /* Messages */
+  .message-area {
+    margin-top: 12px;
+    min-height: 24px;
+  }
+  .message {
+    font-size: 13px;
+    font-style: italic;
+    color: #777;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    line-height: 1.6;
+  }
+  .message.visible { opacity: 1; }
+  .message a {
+    color: #555;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .message a:hover { color: #333; }
+
+  .btn-replay {
+    display: none;
+    font-size: 12px;
+    color: #777;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 3px 10px;
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .btn-replay:hover { color: #333; border-color: #999; }
+  .btn-replay.visible { display: inline-block; }
+
+  /* Chart styling */
+  .axis-label {
+    font-size: 12px;
+    fill: #777;
+  }
+  .tick text {
+    font-size: 11px;
+    fill: #888;
+  }
+  .tick line {
+    stroke: #e0e0e0;
+  }
+  .domain {
+    stroke: #ccc;
+  }
+  .chart-annotation {
+    font-size: 12px;
+    font-style: italic;
+    fill: #999;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .chart-annotation.visible { opacity: 1; }
+  .equation-label {
+    font-size: 11px;
+    fill: #777;
+    font-family: "SF Mono", "Menlo", monospace;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .equation-label.visible { opacity: 1; }
+
+  /* Legend */
+  .chart-legend {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+    min-height: 20px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: #777;
+  }
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  /* Responsive */
+  @media (max-width: 500px) {
+    .data-zone { flex-direction: column; }
+    .table-panel { min-width: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="apparatus-container">
+  <canvas id="apparatus"></canvas>
+</div>
+
+<div class="controls">
+  <div class="angle-control">
+    <label>Angle</label>
+    <input type="range" id="angle-slider" min="5" max="90" value="15" step="1">
+    <span class="angle-value" id="angle-display">15&deg;</span>
+  </div>
+  <div class="preset-angles" id="presets"></div>
+  <button class="btn-release" id="btn-release">Release</button>
+  <button class="btn-clear" id="btn-clear">Clear</button>
+</div>
+
+<div class="data-zone">
+  <div class="chart-panel">
+    <svg id="chart"></svg>
+    <div class="chart-legend" id="chart-legend"></div>
+  </div>
+  <div class="table-panel" id="table-panel">
+    <h3>Measurements</h3>
+    <p class="table-explainer">Distance travelled in each equal time interval (0.25s).</p>
+    <table class="interval-table">
+      <thead>
+        <tr>
+          <th>Time (s)</th>
+          <th>Interval (m)</th>
+          <th>Total (m)</th>
+        </tr>
+      </thead>
+      <tbody id="interval-tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="message-area">
+  <div class="message" id="msg-narrative"></div>
+  <button class="btn-replay" id="btn-replay">Replay at &frac14; speed</button>
+</div>
+
+<script>
+// ============================================================
+// PHYSICS
+// ============================================================
+const G = 9.81;
+const PLANE_LENGTH = 2.0; // metres
+const INTERVAL_DT = 0.25; // seconds between data recordings
+
+function calcAcceleration(angleDeg) {
+  return (5 / 7) * G * Math.sin(angleDeg * Math.PI / 180);
+}
+
+function calcPosition(a, t) {
+  return 0.5 * a * t * t;
+}
+
+function calcTotalTime(a) {
+  // s = 0.5*a*t^2 => t = sqrt(2*s/a)
+  return Math.sqrt(2 * PLANE_LENGTH / a);
+}
+
+// ============================================================
+// STATE
+// ============================================================
+const RUN_COLORS = ['#2166ac', '#b2182b', '#1b7837', '#762a83', '#e08214'];
+
+const state = {
+  angleDeg: 15,
+  runs: [],          // array of { angleDeg, color, dataPoints: [{t, s}], intervals: [{n, dist, cumDist}] }
+  animating: false,
+  currentRun: null,   // active run during animation
+  phase: 1,
+  completedAngles: new Set(),
+  replaySpeed: 1,
+};
+
+// ============================================================
+// CANVAS RENDERER
+// ============================================================
+const canvas = document.getElementById('apparatus');
+const ctx = canvas.getContext('2d');
+let canvasW, canvasH, dpr;
+const CANVAS_ASPECT = 0.55; // height/width ratio
+const BALL_RADIUS_M = 0.04; // metres
+const PLANE_MARGIN = 0.15; // fraction of canvas for margins
+
+function resizeCanvas() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  dpr = window.devicePixelRatio || 1;
+  canvasW = rect.width;
+  canvasH = canvasW * CANVAS_ASPECT;
+  canvas.width = canvasW * dpr;
+  canvas.height = canvasH * dpr;
+  canvas.style.height = canvasH + 'px';
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+
+function getPlaneGeometry(angleDeg) {
+  const angle = angleDeg * Math.PI / 180;
+  const margin = canvasW * PLANE_MARGIN;
+  const availW = canvasW - 2 * margin;
+  const availH = canvasH - 2 * margin;
+
+  // Plane starts at bottom-left, extends up-right
+  // Scale so the plane fits within available space
+  const planePixelLen = Math.min(
+    availW / Math.cos(angle),
+    availH / Math.sin(angle),
+    availW * 1.2 // don't let shallow angles make it too wide
+  );
+  const scale = planePixelLen / PLANE_LENGTH; // pixels per metre
+
+  const baseX = margin;
+  const baseY = canvasH - margin;
+  const topX = baseX + planePixelLen * Math.cos(angle);
+  const topY = baseY - planePixelLen * Math.sin(angle);
+
+  return { baseX, baseY, topX, topY, scale, planePixelLen, angle };
+}
+
+function drawApparatus(ballPosMetres, ballRotation, intervalMarkers) {
+  ctx.clearRect(0, 0, canvasW, canvasH);
+
+  const geo = getPlaneGeometry(state.angleDeg);
+  const { baseX, baseY, topX, topY, scale, angle } = geo;
+  const ballR = BALL_RADIUS_M * scale;
+
+  // Ground line
+  ctx.strokeStyle = '#ccc';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(baseX - 20, baseY + 2);
+  ctx.lineTo(canvasW - baseX + 20, baseY + 2);
+  ctx.stroke();
+
+  // Triangular support
+  if (state.angleDeg < 85) {
+    ctx.strokeStyle = '#aaa';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(baseX, baseY);
+    ctx.lineTo(topX, baseY);
+    ctx.lineTo(topX, topY);
+    ctx.closePath();
+    ctx.stroke();
+  }
+
+  // Interval bands on the plane (after run completes)
+  // Bands are measured from the top of the plane (where ball starts).
+  // We draw in a coordinate system anchored at baseX,baseY rotated by -angle,
+  // so +x runs uphill from base to top. A band at distance s from the top
+  // is at pixel position (PLANE_LENGTH - s) * scale from the base.
+  if (intervalMarkers && intervalMarkers.length > 0) {
+    const runColor = state.runs.length > 0 ? state.runs[state.runs.length - 1].color : RUN_COLORS[0];
+    ctx.save();
+    ctx.translate(baseX, baseY);
+    ctx.rotate(-angle);
+    for (let i = 0; i < intervalMarkers.length; i++) {
+      const startS = i === 0 ? 0 : intervalMarkers[i - 1].cumDist;
+      const endS = intervalMarkers[i].cumDist;
+      if (endS > PLANE_LENGTH) break;
+      // Convert from "distance from top" to "distance from base" (pixels)
+      const startPxFromBase = (PLANE_LENGTH - endS) * scale;
+      const bandWidth = (endS - startS) * scale;
+
+      ctx.fillStyle = runColor;
+      ctx.globalAlpha = 0.12;
+      ctx.fillRect(startPxFromBase, -6, bandWidth, 12);
+      ctx.globalAlpha = 1;
+    }
+    ctx.restore();
+  }
+
+  // Plane surface — drawn from base going uphill
+  const planeThickness = 6;
+  ctx.save();
+  ctx.translate(baseX, baseY);
+  ctx.rotate(-angle);
+  // Wood-tone fill
+  ctx.fillStyle = '#d4c5a9';
+  ctx.fillRect(-2, -planeThickness / 2, geo.planePixelLen + 4, planeThickness);
+  // Groove
+  ctx.fillStyle = '#c4b599';
+  ctx.fillRect(-2, -1, geo.planePixelLen + 4, 2);
+  // Edges
+  ctx.strokeStyle = '#b0a080';
+  ctx.lineWidth = 0.5;
+  ctx.strokeRect(-2, -planeThickness / 2, geo.planePixelLen + 4, planeThickness);
+  ctx.restore();
+
+  // Ball — starts at top (ballPosMetres=0) and rolls down toward base
+  const ballS = Math.min(ballPosMetres, PLANE_LENGTH);
+  // Distance from base in pixels
+  const distFromBasePx = (PLANE_LENGTH - ballS) * scale;
+  const bx = baseX + distFromBasePx * Math.cos(angle);
+  const by = baseY - distFromBasePx * Math.sin(angle);
+
+  // Shadow
+  ctx.beginPath();
+  ctx.arc(bx + 2, by + 2, ballR, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(0,0,0,0.1)';
+  ctx.fill();
+
+  // Ball body
+  const grad = ctx.createRadialGradient(bx - ballR * 0.3, by - ballR * 0.3, ballR * 0.1, bx, by, ballR);
+  grad.addColorStop(0, '#c49520');
+  grad.addColorStop(0.7, '#8b6914');
+  grad.addColorStop(1, '#6b4f10');
+  ctx.beginPath();
+  ctx.arc(bx, by, ballR, 0, Math.PI * 2);
+  ctx.fillStyle = grad;
+  ctx.fill();
+
+  // Rotation indicator
+  ctx.save();
+  ctx.translate(bx, by);
+  ctx.rotate(-ballRotation);
+  ctx.beginPath();
+  ctx.arc(ballR * 0.5, 0, 2, 0, Math.PI * 2);
+  ctx.fillStyle = 'rgba(255,255,255,0.5)';
+  ctx.fill();
+  ctx.restore();
+
+  // Interval ratio labels on plane
+  if (intervalMarkers && intervalMarkers.length > 0) {
+    ctx.font = '11px system-ui, sans-serif';
+    ctx.fillStyle = '#8b6914';
+    ctx.textAlign = 'center';
+    for (let i = 0; i < intervalMarkers.length; i++) {
+      const startS = i === 0 ? 0 : intervalMarkers[i - 1].cumDist;
+      const endS = intervalMarkers[i].cumDist;
+      if (endS > PLANE_LENGTH) break;
+      const midS = (startS + endS) / 2;
+      // midS is distance from top; convert to distance from base
+      const midFromBase = (PLANE_LENGTH - midS) * scale;
+      const mx = baseX + midFromBase * Math.cos(angle);
+      const my = baseY - midFromBase * Math.sin(angle);
+      // Offset perpendicular to plane (away from surface, upward-left)
+      const offX = -Math.sin(angle) * 16;
+      const offY = -Math.cos(angle) * 16;
+      const ratio = Math.round(intervalMarkers[i].dist / intervalMarkers[0].dist);
+      if (isFinite(ratio) && ratio > 0) {
+        ctx.fillText(ratio, mx + offX, my + offY);
+      }
+    }
+  }
+}
+
+// ============================================================
+// D3 CHART
+// ============================================================
+const svgEl = document.getElementById('chart');
+let chartMargin, chartW, chartH, xScale, yScale, svg, chartG;
+
+function initChart() {
+  const rect = svgEl.getBoundingClientRect();
+  chartMargin = { top: 16, right: 16, bottom: 36, left: 44 };
+  chartW = rect.width - chartMargin.left - chartMargin.right;
+  chartH = rect.height - chartMargin.top - chartMargin.bottom;
+
+  d3.select(svgEl).selectAll('*').remove();
+  svg = d3.select(svgEl);
+
+  chartG = svg.append('g')
+    .attr('transform', `translate(${chartMargin.left},${chartMargin.top})`);
+
+  xScale = d3.scaleLinear().domain([0, 1.5]).range([0, chartW]);
+  yScale = d3.scaleLinear().domain([0, PLANE_LENGTH]).range([chartH, 0]);
+
+  // X axis
+  chartG.append('g')
+    .attr('class', 'x-axis')
+    .attr('transform', `translate(0,${chartH})`)
+    .call(d3.axisBottom(xScale).ticks(6).tickSize(-chartH))
+    .call(g => g.select('.domain').attr('stroke', '#ccc'))
+    .call(g => g.selectAll('.tick line').attr('stroke', '#eee'));
+
+  // Y axis
+  chartG.append('g')
+    .attr('class', 'y-axis')
+    .call(d3.axisLeft(yScale).ticks(5).tickSize(-chartW))
+    .call(g => g.select('.domain').attr('stroke', '#ccc'))
+    .call(g => g.selectAll('.tick line').attr('stroke', '#eee'));
+
+  // Axis labels
+  svg.append('text')
+    .attr('class', 'axis-label')
+    .attr('x', chartMargin.left + chartW / 2)
+    .attr('y', chartMargin.top + chartH + 32)
+    .attr('text-anchor', 'middle')
+    .text('Time (s)');
+
+  svg.append('text')
+    .attr('class', 'axis-label')
+    .attr('x', -(chartMargin.top + chartH / 2))
+    .attr('y', 14)
+    .attr('text-anchor', 'middle')
+    .attr('transform', 'rotate(-90)')
+    .text('Distance (m)');
+
+  // Equation label (hidden initially)
+  chartG.append('text')
+    .attr('class', 'equation-label')
+    .attr('id', 'equation-label')
+    .attr('x', chartW - 4)
+    .attr('y', 14)
+    .attr('text-anchor', 'end');
+}
+
+function updateChartAxes() {
+  // Auto-scale x axis based on data
+  let maxT = 1.5;
+  for (const run of state.runs) {
+    for (const dp of run.dataPoints) {
+      if (dp.t > maxT) maxT = dp.t;
+    }
+  }
+  maxT = Math.ceil(maxT * 4) / 4; // round up to nearest 0.25
+  maxT = Math.max(maxT, 1.0);
+
+  xScale.domain([0, maxT]);
+  chartG.select('.x-axis')
+    .transition().duration(200)
+    .call(d3.axisBottom(xScale).ticks(6).tickSize(-chartH))
+    .call(g => g.select('.domain').attr('stroke', '#ccc'))
+    .call(g => g.selectAll('.tick line').attr('stroke', '#eee'));
+}
+
+function renderRuns() {
+  updateChartAxes();
+
+  // Remove old run groups
+  chartG.selectAll('.run-group').remove();
+
+  for (const run of state.runs) {
+    const g = chartG.append('g').attr('class', 'run-group');
+
+    // Data points
+    g.selectAll('circle')
+      .data(run.dataPoints)
+      .enter()
+      .append('circle')
+      .attr('cx', d => xScale(d.t))
+      .attr('cy', d => yScale(d.s))
+      .attr('r', 4)
+      .attr('fill', run.color)
+      .attr('opacity', 0.8);
+
+    // Fit curve (phase 3+)
+    if (state.phase >= 3 && run.dataPoints.length > 1) {
+      const a = calcAcceleration(run.angleDeg);
+      const tMax = run.dataPoints[run.dataPoints.length - 1].t;
+      const curveData = d3.range(0, tMax + 0.01, 0.01).map(t => ({
+        t, s: Math.min(calcPosition(a, t), PLANE_LENGTH)
+      }));
+
+      const line = d3.line()
+        .x(d => xScale(d.t))
+        .y(d => yScale(d.s));
+
+      g.append('path')
+        .datum(curveData)
+        .attr('d', line)
+        .attr('fill', 'none')
+        .attr('stroke', run.color)
+        .attr('stroke-width', 1.5)
+        .attr('stroke-dasharray', '5,3')
+        .attr('opacity', 0.6);
+    }
+  }
+
+  // Legend
+  const legendEl = document.getElementById('chart-legend');
+  legendEl.innerHTML = '';
+  for (const run of state.runs) {
+    const item = document.createElement('div');
+    item.className = 'legend-item';
+    item.innerHTML = `<span class="legend-dot" style="background:${run.color}"></span>${run.angleDeg}&deg;`;
+    legendEl.appendChild(item);
+  }
+}
+
+function renderLivePoint(t, s, color) {
+  chartG.append('circle')
+    .attr('class', 'live-point')
+    .attr('cx', xScale(t))
+    .attr('cy', yScale(s))
+    .attr('r', 0)
+    .attr('fill', color)
+    .attr('opacity', 0.8)
+    .transition().duration(150)
+    .attr('r', 4);
+}
+
+// ============================================================
+// INTERVAL TABLE
+// ============================================================
+function updateIntervalTable(intervals) {
+  const tbody = document.getElementById('interval-tbody');
+  tbody.innerHTML = '';
+
+  for (let i = 0; i < intervals.length; i++) {
+    const row = document.createElement('tr');
+    const tStart = (i * INTERVAL_DT).toFixed(2);
+    const tEnd = ((i + 1) * INTERVAL_DT).toFixed(2);
+    const timeLabel = `${tStart}\u2013${tEnd}`;
+
+    row.innerHTML = `
+      <td>${timeLabel}</td>
+      <td>${intervals[i].dist.toFixed(3)}</td>
+      <td>${intervals[i].cumDist.toFixed(3)}</td>
+    `;
+    tbody.appendChild(row);
+  }
+}
+
+// ============================================================
+// NARRATIVE CAPTIONS
+// ============================================================
+const NARRATIVES = {
+  initial:
+    'Release the ball at 15\u00B0 and watch it accelerate down the plane.',
+
+  afterFirst:
+    'Look at the interval distances in the table. Each one is larger than the last. '
+    + 'The numbers on the plane show how many times larger, and they follow the odd-number sequence, 1, 3, 5, 7\u2026 '
+    + 'That means the <em>total</em> distance grows as 1, 4, 9, 16, the perfect squares. '
+    + 'Distance is proportional to time squared. <strong>Now increase the angle to 30\u00B0 and try again.</strong>',
+
+  afterSecond:
+    'The same 1, 3, 5, 7 pattern appears at a steeper angle. '
+    + 'The ball moves faster, but the mathematical form is identical. Distance still grows as t\u00B2. '
+    + '<strong>Try 45\u00B0 or 60\u00B0.</strong>',
+
+  afterThird:
+    'Every angle produces the same t\u00B2 curve. Only the steepness changes. '
+    + 'The dashed lines show the theoretical fit, d\u2009=\u2009\u00BD\u2009\u00B7\u2009a\u2009\u00B7\u2009t\u00B2, where acceleration depends on the angle. '
+    + '<strong>What happens at 90\u00B0, pure freefall?</strong>',
+
+  afterFreefall:
+    'Too fast to observe. This is why Galileo needed the inclined plane. '
+    + 'He slowed nature down to reveal the pattern, then <em>reasoned</em> that freefall must follow the same law. '
+    + 'The extrapolation from data to law required not just observation, but a theoretical concept, uniform acceleration.',
+};
+
+function setNarrative(html) {
+  const el = document.getElementById('msg-narrative');
+  el.innerHTML = html;
+  el.classList.add('visible');
+}
+
+function getDistinctAngleCount() {
+  return new Set([...state.completedAngles].map(a => Math.round(a / 5) * 5)).size;
+}
+
+function updateNarrative() {
+  const distinctAngles = getDistinctAngleCount();
+  const triedFreefall = state.completedAngles.has(90);
+
+  if (triedFreefall && state.phase < 4) {
+    state.phase = 4;
+    setNarrative(NARRATIVES.afterFreefall);
+    return;
+  }
+
+  if (distinctAngles >= 3 && state.phase < 3) {
+    state.phase = 3;
+    setNarrative(NARRATIVES.afterThird);
+
+    // Show fit curves and equation
+    const eqLabel = document.getElementById('equation-label');
+    if (eqLabel) {
+      eqLabel.textContent = 'd = \u00BD \u00B7 a \u00B7 t\u00B2';
+      eqLabel.classList.add('visible');
+    }
+    renderRuns();
+    return;
+  }
+
+  if (distinctAngles >= 2 && state.phase < 2) {
+    state.phase = 2;
+    setNarrative(NARRATIVES.afterSecond);
+    return;
+  }
+
+  if (distinctAngles >= 1 && state.phase < 1.5) {
+    state.phase = 1.5; // intermediate: first run done
+    setNarrative(NARRATIVES.afterFirst);
+    return;
+  }
+}
+
+// ============================================================
+// ANIMATION CONTROLLER
+// ============================================================
+const PHYSICS_DT = 1 / 120; // fixed physics timestep
+
+let animStartTime = null;
+let animPhysicsTime = 0;
+let animAccumulator = 0;
+let animBallPos = 0; // metres along plane
+let animBallRotation = 0;
+let animNextIntervalIndex = 0;
+let animAcceleration = 0;
+let animLastIntervalMarkers = null;
+let animReplaySpeed = 1;
+
+function startRun(replaySpeed = 1) {
+  if (state.animating) return;
+
+  const angleDeg = state.angleDeg;
+  animAcceleration = calcAcceleration(angleDeg);
+  const color = RUN_COLORS[state.runs.length % RUN_COLORS.length];
+
+  state.currentRun = {
+    angleDeg,
+    color,
+    dataPoints: [{ t: 0, s: 0 }],
+    intervals: [],
+  };
+
+  animBallPos = 0;
+  animBallRotation = 0;
+  animPhysicsTime = 0;
+  animAccumulator = 0;
+  animNextIntervalIndex = 1;
+  animStartTime = null;
+  animReplaySpeed = replaySpeed;
+  animLastIntervalMarkers = null;
+  state.animating = true;
+
+  document.getElementById('btn-release').disabled = true;
+
+  // Initial live point at t=0
+  updateChartAxes();
+  renderLivePoint(0, 0, color);
+
+  requestAnimationFrame(animationFrame);
+}
+
+function animationFrame(timestamp) {
+  if (!state.animating) return;
+
+  if (animStartTime === null) {
+    animStartTime = timestamp;
+    requestAnimationFrame(animationFrame);
+    return;
+  }
+
+  const realDt = (timestamp - animStartTime) / 1000;
+  animStartTime = timestamp;
+
+  // Apply replay speed
+  const scaledDt = realDt * animReplaySpeed;
+  animAccumulator += scaledDt;
+
+  // Step physics
+  while (animAccumulator >= PHYSICS_DT) {
+    animPhysicsTime += PHYSICS_DT;
+    animBallPos = calcPosition(animAcceleration, animPhysicsTime);
+    animAccumulator -= PHYSICS_DT;
+
+    // Record data at interval boundaries
+    const nextIntervalTime = animNextIntervalIndex * INTERVAL_DT;
+    if (animPhysicsTime >= nextIntervalTime && animBallPos <= PLANE_LENGTH) {
+      const s = calcPosition(animAcceleration, nextIntervalTime);
+      state.currentRun.dataPoints.push({ t: nextIntervalTime, s });
+
+      const prevS = animNextIntervalIndex > 1
+        ? calcPosition(animAcceleration, (animNextIntervalIndex - 1) * INTERVAL_DT)
+        : 0;
+      state.currentRun.intervals.push({
+        n: animNextIntervalIndex,
+        dist: s - prevS,
+        cumDist: s,
+      });
+
+      // Render live point
+      renderLivePoint(nextIntervalTime, s, state.currentRun.color);
+
+      // Update table
+      updateIntervalTable(state.currentRun.intervals);
+
+      animNextIntervalIndex++;
+    }
+
+    // Check if ball reached end
+    if (animBallPos >= PLANE_LENGTH) {
+      animBallPos = PLANE_LENGTH;
+      finishRun();
+      return;
+    }
+  }
+
+  // Ball rotation (circumference-based) — no rotation at 90° (freefall, no contact)
+  if (state.angleDeg < 90) {
+    const ballCircumference = 2 * Math.PI * BALL_RADIUS_M;
+    animBallRotation = (animBallPos / ballCircumference) * 2 * Math.PI;
+  } else {
+    animBallRotation = 0;
+  }
+
+  drawApparatus(animBallPos, animBallRotation, null);
+  requestAnimationFrame(animationFrame);
+}
+
+function finishRun() {
+  state.animating = false;
+  document.getElementById('btn-release').disabled = false;
+
+  const run = state.currentRun;
+  state.currentRun = null;
+
+  // Cap at 5 runs
+  if (state.runs.length >= 5) {
+    state.runs.shift();
+  }
+  state.runs.push(run);
+  state.completedAngles.add(run.angleDeg);
+
+  // Remove live points and re-render all runs
+  chartG.selectAll('.live-point').remove();
+  renderRuns();
+
+  animLastIntervalMarkers = run.intervals;
+  drawApparatus(PLANE_LENGTH, animBallRotation, animLastIntervalMarkers);
+
+  // Update table with final data
+  updateIntervalTable(run.intervals);
+
+  // Show replay button for steep angles
+  if (run.angleDeg >= 75 && animReplaySpeed >= 1) {
+    document.getElementById('btn-replay').classList.add('visible');
+  } else {
+    document.getElementById('btn-replay').classList.remove('visible');
+  }
+
+  updateNarrative();
+}
+
+function replayLastRun() {
+  if (state.animating || state.runs.length === 0) return;
+  const lastRun = state.runs[state.runs.length - 1];
+
+  // Set angle to match the last run
+  state.angleDeg = lastRun.angleDeg;
+  document.getElementById('angle-slider').value = lastRun.angleDeg;
+  document.getElementById('angle-display').innerHTML = lastRun.angleDeg + '&deg;';
+
+  // Animate the ball only, no new data or chart points
+  animAcceleration = calcAcceleration(lastRun.angleDeg);
+  animBallPos = 0;
+  animBallRotation = 0;
+  animPhysicsTime = 0;
+  animAccumulator = 0;
+  animStartTime = null;
+  animReplaySpeed = 0.25;
+  state.animating = true;
+  state.currentRun = null; // no data recording
+
+  document.getElementById('btn-release').disabled = true;
+  requestAnimationFrame(replayFrame);
+}
+
+function replayFrame(timestamp) {
+  if (!state.animating) return;
+
+  if (animStartTime === null) {
+    animStartTime = timestamp;
+    requestAnimationFrame(replayFrame);
+    return;
+  }
+
+  const realDt = (timestamp - animStartTime) / 1000;
+  animStartTime = timestamp;
+
+  const scaledDt = realDt * animReplaySpeed;
+  animAccumulator += scaledDt;
+
+  while (animAccumulator >= PHYSICS_DT) {
+    animPhysicsTime += PHYSICS_DT;
+    animBallPos = calcPosition(animAcceleration, animPhysicsTime);
+    animAccumulator -= PHYSICS_DT;
+
+    if (animBallPos >= PLANE_LENGTH) {
+      animBallPos = PLANE_LENGTH;
+      state.animating = false;
+      document.getElementById('btn-release').disabled = false;
+      const lastRun = state.runs[state.runs.length - 1];
+      animLastIntervalMarkers = lastRun.intervals;
+      drawApparatus(PLANE_LENGTH, animBallRotation, animLastIntervalMarkers);
+      return;
+    }
+  }
+
+  if (state.angleDeg < 90) {
+    const ballCircumference = 2 * Math.PI * BALL_RADIUS_M;
+    animBallRotation = (animBallPos / ballCircumference) * 2 * Math.PI;
+  } else {
+    animBallRotation = 0;
+  }
+
+  drawApparatus(animBallPos, animBallRotation, null);
+  requestAnimationFrame(replayFrame);
+}
+
+// ============================================================
+// UI CONTROLLER
+// ============================================================
+function init() {
+  resizeCanvas();
+  initChart();
+  drawApparatus(0, 0, null);
+
+  // Show initial instruction
+  setNarrative(NARRATIVES.initial);
+
+  // Angle slider
+  const slider = document.getElementById('angle-slider');
+  const display = document.getElementById('angle-display');
+
+  slider.addEventListener('input', () => {
+    state.angleDeg = parseInt(slider.value);
+    display.innerHTML = state.angleDeg + '&deg;';
+    updatePresetHighlight();
+    if (!state.animating) {
+      drawApparatus(0, 0, null);
+    }
+  });
+
+  // Presets
+  const presetsEl = document.getElementById('presets');
+  [15, 30, 45, 60, 90].forEach(a => {
+    const btn = document.createElement('button');
+    btn.textContent = a + '\u00B0';
+    btn.dataset.angle = a;
+    btn.addEventListener('click', () => {
+      slider.value = a;
+      state.angleDeg = a;
+      display.innerHTML = a + '&deg;';
+      updatePresetHighlight();
+      if (!state.animating) {
+        drawApparatus(0, 0, null);
+      }
+    });
+    presetsEl.appendChild(btn);
+  });
+  updatePresetHighlight();
+
+  // Release button
+  document.getElementById('btn-release').addEventListener('click', () => {
+    if (!state.animating) startRun(1);
+  });
+
+  // Clear button
+  document.getElementById('btn-clear').addEventListener('click', clearAll);
+
+  // Replay button
+  document.getElementById('btn-replay').addEventListener('click', () => {
+    document.getElementById('btn-replay').classList.remove('visible');
+    replayLastRun();
+  });
+
+  // Keyboard
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Space' && !state.animating) {
+      e.preventDefault();
+      startRun(1);
+    }
+    if (e.code === 'ArrowRight' || e.code === 'ArrowUp') {
+      e.preventDefault();
+      const newAngle = Math.min(90, state.angleDeg + 5);
+      slider.value = newAngle;
+      state.angleDeg = newAngle;
+      display.innerHTML = newAngle + '&deg;';
+      updatePresetHighlight();
+      if (!state.animating) drawApparatus(0, 0, null);
+    }
+    if (e.code === 'ArrowLeft' || e.code === 'ArrowDown') {
+      e.preventDefault();
+      const newAngle = Math.max(5, state.angleDeg - 5);
+      slider.value = newAngle;
+      state.angleDeg = newAngle;
+      display.innerHTML = newAngle + '&deg;';
+      updatePresetHighlight();
+      if (!state.animating) drawApparatus(0, 0, null);
+    }
+  });
+
+  // Resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      resizeCanvas();
+      initChart();
+      renderRuns();
+      drawApparatus(state.animating ? animBallPos : 0, animBallRotation, animLastIntervalMarkers);
+    }, 200);
+  });
+}
+
+function updatePresetHighlight() {
+  document.querySelectorAll('.preset-angles button').forEach(btn => {
+    btn.classList.toggle('active', parseInt(btn.dataset.angle) === state.angleDeg);
+  });
+}
+
+function clearAll() {
+  state.runs = [];
+  state.completedAngles.clear();
+  state.phase = 1;
+  state.animating = false;
+  state.currentRun = null;
+  animLastIntervalMarkers = null;
+
+  document.getElementById('btn-release').disabled = false;
+  document.getElementById('btn-replay').classList.remove('visible');
+  document.getElementById('interval-tbody').innerHTML = '';
+  document.getElementById('chart-legend').innerHTML = '';
+  setNarrative(NARRATIVES.initial);
+
+  const eqLabel = document.getElementById('equation-label');
+  if (eqLabel) {
+    eqLabel.textContent = '';
+    eqLabel.classList.remove('visible');
+  }
+
+  chartG.selectAll('.run-group').remove();
+  chartG.selectAll('.live-point').remove();
+
+  drawApparatus(0, 0, null);
+}
+
+// ============================================================
+// INIT
+// ============================================================
+init();
+</script>
+</body>
+</html>

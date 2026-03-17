@@ -1,0 +1,88 @@
+---
+title: "Governing the Laboratory"
+date: "2026-03-20"
+excerpt: "If agentic digital twins are virtual scientists, they need the equivalent of research governance. This post grounds assurance cases in the safety case tradition and Toulmin's model of argument, and situates them within the broader governance landscape."
+tags: ["ai", "scientific reasoning", "governance", "digital twins", "assurance"]
+image: "/images/blog/governing-the-laboratory.jpeg"
+---
+
+<Callout>
+  <CalloutTitle>Part 4 of 4</CalloutTitle>
+  <CalloutDescription>A series on scientific reasoning, world models, and agentic digital twins.</CalloutDescription>
+</Callout>
+
+*Doveria esser* — "ought to be."
+
+When Galileo wrote those words on folio 116v, he meant something precise — given my theory of uniform acceleration, the ball *ought to land* at this distance. He was comparing prediction to measurement. The phrase was a descriptive statement about what the world should look like if the theory is correct.
+
+But "ought to be" carries a second meaning, one that has been quietly building throughout this series. If agentic digital twins are virtual scientists, if they are systems that observe, hypothesise, experiment, and learn, then we face a question that Galileo never had to answer for his inclined plane. What *ought* these systems to be, if they are to be worthy of our trust?
+
+This is not a question about whether AI should be regulated. It is a question about what kind of infrastructure makes trustworthy reasoning possible, for humans and machines alike.
+
+## Why scientists need governance
+
+The research governance structures we take for granted today (ethics review boards, peer review, reproducibility standards, professional codes of conduct) did not emerge because scientists are inherently untrustworthy — although many did emerge reactively, in response to specific harms, such as the [Nuremberg Code](https://en.wikipedia.org/wiki/Nuremberg_Code) after Nazi experimentation, the [Belmont Report](https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html) after the Tuskegee syphilis study. The underlying rationale is broader — science *intervenes in the world under uncertainty*, and good intentions are not sufficient to ensure that those interventions are justified.
+
+A clinical trial tests a hypothesis by administering a *potential* treatment to *real* patients. An environmental study deploys sensors that shape what counts as evidence for policy decisions. A physics experiment at sufficient scale consumes public resources and carries physical risks. In each case, the scientist is not just observing, they are *acting* and their actions have consequences for others. The governance infrastructure exists to ensure that these actions are proportionate, accountable, trustworthy, and ethical.
+
+Agentic digital twins, as described in [post 3](virtual-scientists-for-real-infrastructure.md), do the same thing. An energy-balancing twin that adjusts grid parameters is intervening in a system that millions of people depend on. A water network twin that modifies flow rates is acting on physical infrastructure. A cardiovascular twin that proposes treatment adjustments is contributing to decisions about a patient's body. The interventions may be bounded, the authority constrained, and human oversight maintained, but the twin is nonetheless a cognitive agent exercising judgement under uncertainty, and that demands accountability.
+
+What form should that accountability take?
+
+## Reasoning as argument
+
+In [post 2](world-models-need-scientists.md), I drew on the work of [Hugo Mercier and Dan Sperber](https://doi.org/10.1017/S0140525X10000968) to argue that human reasoning is fundamentally argumentative (i.e. it evolved not as a general-purpose truth-finding mechanism but as a social capacity for producing and evaluating arguments in dialogic contexts). If that's right, then it suggests something about the form that accountability should take.
+
+[Argument-based assurance](https://assuranceplatform.azurewebsites.net/) presents claims, evidence, and inferential links in exactly that format. An [assurance case](https://scsc.uk/gsn) is a structured argument that a system has some desirable property, such as safety, fairness, explainability, or reliability. The methodology has its roots in [safety-critical systems engineering](https://doi.org/10.1007/978-1-84996-086-1_4), and its structure draws on [Toulmin's](https://en.wikipedia.org/wiki/Stephen_Toulmin) model of argumentation (claim, grounds, warrant, backing, qualifier, rebuttal).
+
+An assurance case begins with a top-level goal ("The digital twin is safe to operate at autonomy level 2 in the energy sector"), decomposes that goal into strategies and claims, and traces each claim to specific evidence. The argument is not hidden in documentation or implied by compliance with a checklist. It is explicit, structured, and open to scrutiny.
+
+The connection to Mercier and Sperber is suggestive rather than entailed. Their theory concerns evolved cognitive capacities, not institutional design. But the analogy is productive. If humans reason well by evaluating arguments, then assurance cases are well-matched to how human reviewers actually think. They make the twin's reasoning (or its designers' reasoning about the twin) legible in the form that human cognition handles best — as an argument that can be interrogated, challenged, and improved through dialogue.
+
+## Assurance as infrastructure
+
+But here a common objection arises (one I've heard a lot): assurance sounds like bureaucracy. More governance, more paperwork, more friction between researchers and the work they're trying to do.
+
+This objection mistakes the symptom for the disease. When assurance feels like bureaucracy, it's because documentation has been retrofitted. Decisions get made, then someone scrambles to justify them after the fact. That *is* slow, because you're reconstructing reasoning rather than capturing it as it happens.
+
+Assurance done well is different. It is [disciplined thinking](https://portfolio.chrisdburr.com/blog/assurance-as-infrastructure). You make claims explicit, identify what evidence would support them, and notice where the argument is thin *before* the system is deployed, not after something goes wrong. The assurance case emerges as a *trace of the reasoning process*, useful for regulators and auditors but produced in the course of doing the work rather than bolted on afterwards.
+
+This is the approach behind the [Trustworthy and Ethical Assurance (TEA) ecosystem](https://assuranceplatform.azurewebsites.net/), which we have been building at the Alan Turing Institute (described in detail in our [report on assurance of digital twins](https://www.turing.ac.uk/sites/default/files/2024-12/dthub-report-corrections.pdf)). The ecosystem provides scaffolding for exactly this kind of structured deliberation: a [platform](https://assuranceplatform.azurewebsites.net/) for constructing assurance cases, a [curated library](https://alan-turing-institute.github.io/tea-techniques) of techniques for achieving different assurance goals (from explainability to fairness to robustness), and (in development) the capacity to execute those techniques and feed the results back as dynamic evidence.
+
+The goal is not compliance, but rather capability — the infrastructure that helps teams develop the judgement to build well, not merely the vocabulary to evaluate afterwards.
+
+For agentic digital twins operating on critical national infrastructure, this infrastructure is not optional. An energy-balancing twin needs an assurance case that articulates *why* its interventions are safe, *what evidence* supports that claim, and *where the argument is weakest*. A cardiovascular twin proposing treatment adjustments needs to show not just that its predictions are accurate, but that the reasoning connecting its predictions to its recommendations is sound. The assurance case is, in effect, the twin's *doveria esser* made institutional — a structured statement of what the system claims ought to be, open to comparison with what actually is.
+
+Assurance cases are, of course, only one element of a broader governance picture. Agentic digital twins operating on critical national infrastructure would also fall within the scope of regulatory frameworks such as the [EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj), which classifies AI systems in critical infrastructure as high-risk, and would need to engage with emerging standards (e.g. [ISO/IEC 42001](https://www.iso.org/standard/81230.html) for AI management systems), liability regimes, and public engagement. Assurance cases complement these mechanisms, providing the structured reasoning that sits beneath regulatory compliance and makes it substantive rather than performative.
+
+## The inscrutability challenge
+
+There is, however, a harder problem waiting at the frontier.
+
+Throughout this series, I have used Susan Carey's distinction between enrichment (learning within a fixed framework) and radical conceptual change (restructuring the framework itself) to characterise the deepest capacity an agentic digital twin might possess. A reconstructive twin (i.e. one that can generate new representational categories, move from Ontology A to Ontology B) would be the computational analogue of Galileo inventing uniform acceleration.
+
+But Galileo could explain his new concept to others. He could write it down, argue for it, subject it to the scrutiny of correspondents and the structured dialogue of the *Discorsi*. A reconstructive digital twin, operating with concepts it has generated for itself, may not be able to do this. Its reasoning may be *epistemically inscrutable* — effective but opaque, operating with a vocabulary that has no natural translation into ours.
+
+How do you write an assurance case for a system whose explanatory framework you don't share?
+
+I don't have a full answer to this question yet. But I think the direction lies in something close to what philosophers call [structural realism](https://plato.stanford.edu/entries/structural-realism/) — the position, introduced by [Worrall (1989)](https://doi.org/10.1111/j.1746-8361.1989.tb00933.x), that what science gets right is relational structure rather than ontology. Worrall's original argument concerned the preservation of mathematical structure across theory change in physics, not the assurance of opaque AI systems. But the structural insight may extend. You may not be able to interpret the twin's concepts, but you can assess whether the *structure* of its model (e.g. the relationships it posits, the predictions it derives, the interventions it recommends) is reliable, consistent, and safe. Assurance at the reconstructive frontier would focus not on whether the twin's categories are the "right" ones, but on whether the relational structure it has built produces trustworthy outcomes across the conditions it will encounter.
+
+This remains an open research problem that sits at the intersection of philosophy of science, AI safety, and systems engineering. It is, I suspect, a challenge that will define the next decade of work on trustworthy AI.
+
+It is telling that recent work diagnosing AI's reasoning limitations — including [Zahavy's](https://philsci-archive.pitt.edu/28024/) (2026) analysis of abduction as the "missing jump" — stops at the capability question and says nothing about governance. This silence is typical: the field focuses on what AI systems should be able to *do* without asking what infrastructure would make their reasoning *trustworthy*. The same epistemological structure that makes the agentic digital twin capable — the *doveria esser* loop of prediction, intervention, and comparison — is also what makes it governable.
+
+## Back to Padua
+
+This series began in a workshop in Padua, with a bronze ball rolling down a grooved plank. It has ended with the governance of autonomous systems operating on national infrastructure. The distance between those two scenes is smaller than it appears.
+
+Galileo's achievement was not the $t^2$ pattern. It was the *method* and the tight loop between explanatory hypothesis and empirical test, disciplined by the *doveria esser* — the explicit comparison of what ought to be with what is. That method is what made his science trustworthy, not in the sense of being infallible, but in the sense of being *reasoned* and *accountable*. That is, his reasoning was open to inspection, and his predictions were open to test. But just as importantly, his failures — the blank bottom half of folio 81r — were honest about the limits of his understanding.
+
+If we are building systems that reason, hypothesise, and intervene in the world, then we owe them the same infrastructure that has made human science trustworthy. We need to equip them with capabilities of structured argumentation, explicit evidence, disciplined comparison of prediction with reality, and the institutional scaffolding that makes all of this sustainable.
+
+The virtual scientist needs a laboratory. But it also needs a community of practice, standards of evidence, the ability to learn from the discrepancies, and the humility to write *doveria esser* next to its predictions.
+
+---
+
+&larr; **Previous:** [Virtual Scientists for Real Infrastructure](/blog/virtual-scientists-for-real-infrastructure)
+
+**Start from the beginning:** [What Galileo Knew That AI Doesn't (Yet)](/blog/what-galileo-knew)

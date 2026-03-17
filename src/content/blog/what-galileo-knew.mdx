@@ -1,0 +1,105 @@
+---
+title: "What Galileo Knew That AI Doesn't (Yet)"
+date: "2026-03-17"
+excerpt: "Galileo's route from inclined plane experiments to a universal law of falling bodies reveals a three-phase structure of scientific reasoning: exploration, abduction, and testing. This structure explains why genuine scientific generalisation is something more than sophisticated curve-fitting."
+tags: ["ai", "scientific reasoning", "world models", "digital twins"]
+image: "/images/blog/what-galileo-knew.jpeg"
+---
+
+<Callout>
+  <CalloutTitle>Part 1 of 4</CalloutTitle>
+  <CalloutDescription>A series on scientific reasoning, world models, and agentic digital twins.</CalloutDescription>
+</Callout>
+
+Imagine yourself in Padua, around 1604. You're in a workshop with wooden benches, brass instruments, and the faint smell of lamp oil. In front of you is a long plank of wood with a smooth groove cut down its centre — ["a little more than one finger in breadth"](https://archive.org/details/B-001-015-427), as Galileo later described it (*Two New Sciences*, Third Day; trans. Drake). The groove is lined with parchment to reduce friction, and the plank is propped up at a gentle angle to form a ramp.
+
+You place a polished bronze ball in the groove at the top of the ramp, release it, and watch it roll. You need to time how far it travels, but you don't have a stopwatch... they won't exist for another fifty years! So you use a water clock — a vessel with a thin pipe at the bottom, collecting water in a cup that you weigh after each run. The weight of the water is your measure of elapsed time.
+
+This is not a thought experiment. This is what [Galileo Galilei](https://plato.stanford.edu/entries/galileo/) actually did. You're rolling a ball down an inclined plane, measuring the time taken, and trying to discern the mathematical structure of nature from the results. However, there's no guarantee that nature *has* a mathematical structure at this scale, that your plank is straight enough, or that your water clock is consistent enough to reveal it.
+
+<div style={{ maxWidth: "720px", margin: "2rem auto", borderRadius: "12px", boxShadow: "0 2px 12px rgba(0,0,0,0.08)", overflow: "hidden" }}>
+  <iframe
+    src="/demos/galileo-experiment.html"
+    title="Interactive demo: Galileo's inclined plane experiment"
+    style={{ width: "100%", height: "950px", border: "none", display: "block" }}
+  />
+</div>
+
+But something remarkable shows up in the data.
+
+You divide the ball's journey into equal time intervals and measure how far it travels in each one. The distances in successive intervals follow the odd numbers — 1, 3, 5, 7 — which means the *total* distance goes as 1, 4, 9, 16. Distance is proportional to the square of the elapsed time. Galileo himself [wrote to Paolo Sarpi in 1604](https://www.cambridge.org/core/journals/british-journal-for-the-history-of-science/article/abs/galileos-1604-fragment-on-falling-bodies-galileo-gleanings-xviii/8C3C236DD4C9D570A1D22C4359434445) that "the spaces passed in natural motion are in proportion to the squares of the times taken."
+
+You vary the angle of the plank and the pattern holds. Steeper angles produce faster motion, but the *form* of the relationship is identical. That is, distance always goes as $t^2$. You try different balls and get the same result.
+
+Most accounts of scientific discovery stop here. A pattern is found, science progresses, and on we go to Newton. But this misses what separates genuine scientific generalisation from mere pattern recognition.
+
+Galileo's problem was that he didn't just want to record patterns. Rather, he wanted to say something about a body dropped vertically (in "freefall"), with no inclined plane to slow it down. But freefall was too fast to measure with a water clock. He couldn't observe it directly. How do you get from a pattern observed on inclined planes to a law about freefall?
+
+Back in your workshop, you've seen the pattern at 15°, 30°, 45°, 60°, and every angle you've tested. So you extrapolate, to conclude that it probably holds at 90° too. But this would be a surprisingly weak argument, which is why philosophers of science have so many [problems](https://plato.stanford.edu/entries/induction-problem/) with 'enumerative induction'. As [Hume](https://plato.stanford.edu/entries/hume/) recognised, past regularities provide no logical guarantee of future ones. And as [Goodman](https://en.wikipedia.org/wiki/New_riddle_of_induction) later showed, any finite set of data points is consistent with infinitely many patterns that agree on the observed range but diverge beyond it.
+
+What Galileo actually did was more sophisticated. He introduced a *theoretical concept* that sat between the data and the generalisation. The concept was **uniform acceleration**, and his hypothesis was that a falling body gains equal increments of speed in equal intervals of time.
+
+This is an important move. If acceleration is constant, then it follows mathematically that distance must go as the square of time—you can derive it. If velocity increases linearly with time ($v = at$), then distance is the integral of velocity, which gives you $s = \tfrac{1}{2}at^2$. The $t^2$ pattern isn't just an empirical regularity anymore, but a *consequence* of a deeper principle.
+
+And now the inclined plane experiments do different work. Sitting on your wooden bench in Padua, you realise that they're helping you test a mechanism. At every angle you try, acceleration is constant (though its value changes with the angle). So the question about freefall transforms from "does the pattern continue?", which is unanswerable by induction, to "is there any reason to think constant acceleration would fail at the vertical?"
+
+And the answer is, 'no'. The acceleration varies smoothly with the angle of incline, and freefall is simply the endpoint of a continuum. The *form* of the motion — constant acceleration producing distance proportional to $t^2$ — should be invariant across that continuum, even though the *magnitude* of the acceleration changes.
+
+## "Doveria esser"—ought to be
+
+We know all this not just from the polished account Galileo published decades later in his [*Discorsi*](https://plato.stanford.edu/entries/galileo/) (1638), but from his unpublished working papers, such as the [folios of Codex 72](http://www.imss.fi.it/ms72/INDEX.HTM), preserved in Florence, which record his experiments as they actually happened. (The standard scholarly account of these folios is [Stillman Drake's](https://openlibrary.org/books/OL4718449M/Galileo_at_work) *Galileo at Work*; the mathematical reconstruction I draw on here is [Hahn's](https://math.nd.edu/assets/20636/ahes.pdf).)
+
+One folio in particular (116v) reveals the three-phase structure of scientific reasoning with extraordinary clarity.
+
+![Galileo's folio 116v, Codex 72, Biblioteca Nazionale Centrale, Florence.](/images/blog/galileo-series/folio-116v.png)
+*Galileo's folio 116v, Codex 72, Biblioteca Nazionale Centrale, Florence.*
+
+In another experiment, Galileo placed an inclined plane on a table 828 *punti* high (a *punto* being his unit of length, slightly less than one millimetre). He fixed the angle, released a bronze ball from various heights — 300, 600, 800, 828, and 1,000 *punti* above the table — and let it roll down the plane, across the table, and off the edge. He then measured where the ball landed on the floor, recording the horizontal distance from the base of the table to the point of impact.
+
+This is where the theoretical layer does its work. From his hypothesis of uniform acceleration, combined with his principles of inertia and the superposition of motions, Galileo could derive a precise mathematical relationship (i.e. the square of the horizontal distance should be proportional to the release height). He used his first data point — a release height of 300 *punti* producing a horizontal distance of 800 *punti* — to fix the constant of proportionality, and then *predicted* what the distances should be for each of the remaining release heights.
+
+And here is where we encounter a detail that makes a historian's pulse quicken. Next to his computed predictions, Galileo wrote the phrase *doveria esser* ("ought to be"). He recorded the differences between what his theory said *ought to be* and what his experiment actually measured: 41, 22, 10, and 40 *punti*. The theoretical values fell consistently short of the experimental ones by one to four centimetres. Those four discrepancies are close enough to be encouraging; not so close as to be suspicious. And the systematic shortfall is itself informative. It's consistent with the imperfections of real apparatus that would make the ball land slightly further than the idealised theory predicts (e.g. friction, imperfect roundness, the groove's geometry) .
+
+## When the theory isn't ready
+
+The folio 116v experiment succeeds because Galileo had the right theoretical concepts in place to design an experiment whose results he could interpret. But [not all of his experiments succeeded](https://math.nd.edu/assets/20636/ahes.pdf). Two other folios from the same period, 81r and 114v, record experiments with obliquely projected balls, launched at an angle rather than horizontally. The diagrams are careful, the measurements precise. But Galileo never completed the analysis.
+
+The problem wasn't execution. The problem was that he didn't yet have a general enough grasp of inertia and superposition to handle the oblique case. He could decompose horizontal projection into independent components, but the oblique case required a more general formulation he hadn't yet reached. Cavalieri published a proof that projectile trajectories are parabolic in his *Lo Specchio Ustorio* (1632), a result Galileo already knew but had not yet published, and by his own admission the priority loss caused him considerable dismay.
+
+The empty bottom half of folio 81r — blank space where the analysis should have gone — is a concrete record of what happens when an experimentalist outpaces their own theoretical framework. Galileo had good data and couldn't make it speak, because he lacked the explanatory concepts needed to hear what it was saying.
+
+This is not a minor historical footnote. It is the strongest possible evidence for the claim at the heart of this essay — data alone, no matter how carefully gathered, rarely generates scientific understanding. The explanatory hypothesis and the conceptual invention are not optional refinements, they form the necessary theoretical layer; they make the data *interpretable*.
+
+## Three phases of reasoning
+
+What Galileo's successes and failures together reveal is a structure of scientific reasoning that I want to decompose into three distinct phases, each playing a different epistemic role. This is my own framework for the purposes of this series, and it should be noted that other decompositions exist, such as [Peirce's](https://plato.stanford.edu/entries/abduction/) triadic account of abduction, deduction, and induction, or the [hypothetico-deductive model](https://plato.stanford.edu/entries/scientific-method/). However, the three-phase structure maps most directly onto the AI capabilities I'll discuss in later posts.
+
+First, there an **exploratory** phase, comprising gathering data, running experiments, noticing the $t^2$ regularity. This is where careful observation and measurement do their work.
+
+Second, is an **abductive** phase. That is, positing a deeper structure that *explains* why the data look the way they do (i.e. uniform acceleration). This is a creative act. Galileo didn't derive uniform acceleration from the data; he *invented* it as an explanatory hypothesis and then showed it was consistent with the data.
+
+Third, a **testing** phase: deriving new predictions from the hypothesis and checking them against further experiment. The *doveria esser* — the "ought to be" — is the signature of this phase. Each successful test reinforces the hypothesis; each failure either refines it or, as in the case of folios 81r and 114v, reveals the limits of the current theoretical framework.
+
+The generalisation to a law (i.e. Galileo's law of falling bodies) emerges not from the first phase alone, but from the interaction of all three. And critically, it's the second phase that licences the extrapolation beyond the data. Without the concept of uniform acceleration, Galileo would have had a nice pattern and no principled reason to believe it holds where he can't look. But with it, he has a mechanism that explains the pattern, survives varied testing, and constrains what *must* happen beyond the data. That dual role of explaining and constraining is what makes scientific generalisation something more than sophisticated curve-fitting.
+
+## Why this matters now
+
+So, why this lengthy detour into the history of science?
+
+I've been thinking about Galileo because I've been thinking about [world models](https://ai.meta.com/blog/v-jepa-2-world-model-benchmarks/) — a term that has recently become the centre of a high-stakes debate about the future of AI.
+
+The next post in this series will look at world models in more detail, but the basic idea is that an AI system should learn an internal representation of how the world works. That is, not just predicting the next word in a sentence, but the next *state* of an environment. It should learn, in effect, to simulate.
+
+There is a genuinely important idea here. But the current debate has fractured into opposing camps (e.g. world models *versus* large language models, spatial intelligence *versus* linguistic reasoning) as if these were competing paradigms rather than complementary capabilities.
+
+Four centuries after Galileo, the AI community is rediscovering his problem, "how do you get from patterns in data to genuine understanding?" And in framing the answer as a choice between world models and language models, I think we're repeating his predecessors' mistake. We're trying to solve it with only half the toolkit.
+
+This is not an isolated observation — the argument that AI needs abductive capacity has been made independently from different starting points, including [Zahavy's](https://philsci-archive.pitt.edu/28024/) (2026) analysis of Einstein's path to general relativity. But the diagnosis alone is not enough. What matters is the architecture that integrates the missing pieces, and for that, we need to look more carefully at what world models can and cannot do.
+
+If Galileo teaches us anything, it's that you need *both*. You need a structured environment in which to observe and intervene, and the capacity to invent explanatory concepts that go beyond what the environment directly shows you. A world model without a theorist is folio 81r — good data, no framework to interpret it. A theorist without a world model is an LLM confabulating about physics it has never observed.
+
+What that means for AI is the subject of my next post.
+
+---
+
+**Next in this series:** [World Models Need Scientists Too](/blog/world-models-need-scientists) &rarr;
