@@ -226,4 +226,19 @@
   .prose img {
     @apply rounded-lg;
   }
+  .prose [data-footnote-ref] {
+    @apply text-primary no-underline;
+  }
+  .prose [data-footnotes] {
+    @apply mt-12 border-border border-t pt-6 text-muted-foreground text-sm;
+  }
+  .prose [data-footnotes] ol {
+    @apply pl-4;
+  }
+  .prose [data-footnotes] li {
+    @apply my-1;
+  }
+  .prose [data-footnote-backref] {
+    @apply ml-1 text-muted-foreground no-underline;
+  }
 }
