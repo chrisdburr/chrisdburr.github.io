@@ -36,7 +36,14 @@ export function getAllSlugs(directory: string): string[] {
   return fs
     .readdirSync(dirPath)
     .filter((file) => file.endsWith(".mdx"))
-    .map((file) => file.replace(MDX_EXTENSION, ""));
+    .map((file) => file.replace(MDX_EXTENSION, ""))
+    .filter((slug) => {
+      const { metadata } = getContentBySlug<Record<string, unknown>>(
+        directory,
+        slug
+      );
+      return metadata.published !== false;
+    });
 }
 
 export function getAllContent<T>(directory: string): ContentItem<T>[] {
@@ -48,10 +55,14 @@ export function getAllContent<T>(directory: string): ContentItem<T>[] {
 
   const files = fs.readdirSync(dirPath).filter((file) => file.endsWith(".mdx"));
 
-  const items = files.map((file) => {
-    const slug = file.replace(MDX_EXTENSION, "");
-    return getContentBySlug<T>(directory, slug);
-  });
+  const items = files
+    .map((file) => {
+      const slug = file.replace(MDX_EXTENSION, "");
+      return getContentBySlug<T>(directory, slug);
+    })
+    .filter(
+      (item) => (item.metadata as Record<string, unknown>).published !== false
+    );
 
   return items.sort((a, b) => {
     const dateA = (a.metadata as Record<string, string>).date ?? "";

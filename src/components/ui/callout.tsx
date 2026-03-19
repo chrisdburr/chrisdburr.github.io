@@ -30,7 +30,10 @@ function CalloutDescription({
 }: React.ComponentProps<"p">) {
   return (
     <p
-      className={cn("mt-1 text-muted-foreground text-sm", className)}
+      className={cn(
+        "mt-1 text-muted-foreground text-sm [&_a]:text-primary [&_a]:underline",
+        className
+      )}
       {...props}
     />
   );

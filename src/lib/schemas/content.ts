@@ -34,6 +34,7 @@ export const blogFrontmatterSchema = z.object({
   excerpt: z.string(),
   tags: z.array(z.string()),
   image: z.string().optional(),
+  published: z.boolean().default(true),
 });
 
 export type ResearchArea = z.infer<typeof researchAreaSchema>;
