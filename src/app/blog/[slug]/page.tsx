@@ -95,7 +95,7 @@ export default async function BlogPostPage({ params }: BlogPostProps) {
         </div>
       </header>
 
-      <div className="prose max-w-none">
+      <div className="prose dark:prose-invert max-w-none">
         <MDXContent components={mdxComponents} />
       </div>
     </article>

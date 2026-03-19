@@ -83,7 +83,7 @@ function parseDateValue(date: string): number {
 }
 
 const items = (rawData as { items: ZoteroItem[] }).items
-  .filter((item) => !EXCLUDED_TYPES.has(item.itemType))
+  .filter((item) => !EXCLUDED_TYPES.has(item.itemType) && item.title)
   .map((item) => {
     const { authors, editors } = formatCreators(item.creators ?? []);
     return {

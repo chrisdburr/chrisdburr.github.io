@@ -7,7 +7,9 @@ interface ProseProps {
 
 export function Prose({ children, className }: ProseProps) {
   return (
-    <div className={cn("prose prose-lg max-w-prose", className)}>
+    <div
+      className={cn("prose dark:prose-invert prose-lg max-w-prose", className)}
+    >
       {children}
     </div>
   );

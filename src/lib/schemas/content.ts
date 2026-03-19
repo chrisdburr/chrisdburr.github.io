@@ -24,7 +24,7 @@ export const publicationSchema = z.object({
   venue: z.string(),
   date: z.string(),
   type: z.string(),
-  link: z.string().url().optional(),
+  link: z.string().optional(),
   abstract: z.string().optional(),
 });
 
