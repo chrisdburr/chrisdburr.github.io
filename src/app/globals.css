@@ -224,7 +224,10 @@
     --tw-prose-td-borders: var(--border);
   }
   .prose img {
-    @apply rounded-lg;
+    @apply mx-auto rounded-lg;
+  }
+  .prose figure {
+    @apply text-center;
   }
   .prose [data-footnote-ref] {
     @apply text-primary no-underline;

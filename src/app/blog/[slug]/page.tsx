@@ -31,6 +31,7 @@ const mdxComponents = {
   Callout,
   CalloutTitle,
   CalloutDescription,
+  Image,
   RocketIcon,
   BlocksIcon,
   LayoutTemplateIcon,

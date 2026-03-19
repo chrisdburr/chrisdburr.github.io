@@ -28,8 +28,10 @@ The mirror metaphor has led many astray. Much of what is marketed today as a "di
 
 A genuine digital twin is something more. The [definition](https://doi.org/10.17226/26894) increasingly adopted by the research community requires *bidirectional interaction*, so that a digital twin is dynamically updated with data from its physical counterpart, has predictive capability, and informs decisions that realise value.
 
-![Elements of the digital twin ecosystem, showing bidirectional information flows between a physical counterpart and a virtual representation, with human-in-the-loop decision-making at the centre.](/images/blog/galileo-series/digital-twin.png)
-*Elements of the digital twin ecosystem. Source: [National Academies of Sciences, Engineering, and Medicine](https://doi.org/10.17226/26894) (2024).*
+<figure>
+  <Image src="/images/blog/galileo-series/digital-twin.png" alt="Elements of the digital twin ecosystem, showing bidirectional information flows between a physical counterpart and a virtual representation, with human-in-the-loop decision-making at the centre." width={700} height={410} />
+  <figcaption>Elements of the digital twin ecosystem. Source: <a href="https://doi.org/10.17226/26894">National Academies of Sciences, Engineering, and Medicine</a> (2024).</figcaption>
+</figure>
 
 But even a true digital twin, with its bidirectional loop, is not yet a laboratory. The loop may be present, but the *reasoning* within it can vary enormously. A digital twin that feeds back optimised setpoints based on a fixed model is closing the loop, but it isn't doing science. So what happens when you enrich the reasoning capacity within that loop? When the system can not only predict and control, but hypothesise, experiment, and learn?
 
@@ -39,8 +41,10 @@ In a [recent paper](https://arxiv.org/abs/2601.18799), my co-authors and I propo
 
 As Figure 1 shows, at the **loose** end we have something close to the conventional mirror. Data is sampled periodically, updates flow in batches, and the twin's relationship to the physical system is arm's-length. Loose coupling can support monitoring and retrospective analysis—Galileo's exploration phase—but little else. The twin can detect patterns, but it can't test hypotheses because it has no way to intervene.
 
-![Figure 1: The tightness of coupling dimension, ranging from loose (periodic data exchange) through tight (real-time bidirectional feedback) to constitutive (mutual ontological entanglement).](/images/blog/galileo-series/tightness-of-coupling.png)
-*Figure 1: The tightness of coupling dimension, ranging from loose (periodic data exchange) through tight (real-time bidirectional feedback) to constitutive (mutual ontological entanglement).*
+<figure>
+  <Image src="/images/blog/galileo-series/tightness-of-coupling.png" alt="Figure 1: The tightness of coupling dimension, ranging from loose (periodic data exchange) through tight (real-time bidirectional feedback) to constitutive (mutual ontological entanglement)." width={550} height={630} />
+  <figcaption>Figure 1: The tightness of coupling dimension, ranging from loose (periodic data exchange) through tight (real-time bidirectional feedback) to constitutive (mutual ontological entanglement).</figcaption>
+</figure>
 
 **Tightly coupled** systems are where the twin and physical system are connected in real time (or with sufficiently high frequency). Continuous feedback flows in both directions (i.e. the twin sends control signals, the system responds, and the twin observes the response and adjusts). Such a regime enables *experimentation*. For instance, the twin can derive a prediction ("if I adjust the valve pressure by 5%, flow rate should increase by 12%"), execute it, measure the result, and learn from the discrepancy. Tight loops like this are what support and justify abductive leaps like Galileos' "doveria esser" (ought to be).
 
@@ -54,15 +58,19 @@ Coupling determines whether the system can close the perception-action loop, and
 
 **Agency** (Figure 2) determines who or what is doing the reasoning within that laboratory. In the simplest case from our taxonomy, the agency is *external* — a human operator uses the twin as a tool, much as Galileo used his inclined plane. The twin provides the environment, but the human does the cognitive labour and provides the hypotheses. In more advanced configurations, agency is *internal* (e.g. an AI system embedded within the twin that can autonomously generate hypotheses, design experiments, and interpret results). And in the most advanced (and speculative) configurations, agency is *distributed*. That is, it emerges from the interaction between multiple twins in a network, with no single locus of control.
 
-![Figure 2: The locus of agency dimension, from external (human-directed) through internal (AI-directed) to distributed (emergent from networked twins).](/images/blog/galileo-series/locus-of-agency.png)
-*Figure 2: The locus of agency dimension, from external (human-directed) through internal (AI-directed) to distributed (emergent from networked twins).*
+<figure>
+  <Image src="/images/blog/galileo-series/locus-of-agency.png" alt="Figure 2: The locus of agency dimension, from external (human-directed) through internal (AI-directed) to distributed (emergent from networked twins)." width={600} height={527} />
+  <figcaption>Figure 2: The locus of agency dimension, from external (human-directed) through internal (AI-directed) to distributed (emergent from networked twins).</figcaption>
+</figure>
 
 **Model evolution** determines the depth of learning the system can achieve. This is where Susan Carey's distinction from [Post 2](/blog/world-models-need-scientists) connects.
 
 A **static** twin has fixed parameters ($\theta$ = fixed in Figure 3). It makes predictions based on an unchanging model, which is useful for well-understood systems where the physics doesn't change, but would be incapable of learning. An **adaptive** twin updates its parameters in response to feedback — this is Carey's enrichment (see [Post 2](/blog/world-models-need-scientists)). The twin gets better at predicting within a fixed representational vocabulary (e.g. it can learn that the acceleration on this particular incline is 3.2 m/s² rather than 3.0, but it can't invent the concept of acceleration itself).
 
-![Figure 3: The model evolution dimension, from static (fixed parameters) through adaptive (parameter updating) to reconstructive (ontological restructuring).](/images/blog/galileo-series/model-evolution.png)
-*Figure 3: The model evolution dimension, from static (fixed parameters) through adaptive (parameter updating) to reconstructive (ontological restructuring).*
+<figure>
+  <Image src="/images/blog/galileo-series/model-evolution.png" alt="Figure 3: The model evolution dimension, from static (fixed parameters) through adaptive (parameter updating) to reconstructive (ontological restructuring)." width={600} height={598} />
+  <figcaption>Figure 3: The model evolution dimension, from static (fixed parameters) through adaptive (parameter updating) to reconstructive (ontological restructuring).</figcaption>
+</figure>
 
 A **reconstructive** twin can restructure its own representational categories. It can move from Ontology A to Ontology B (Carey's radical conceptual change), and it is the computational analogue of Galileo's deepest move.
 
