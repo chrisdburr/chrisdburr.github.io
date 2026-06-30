@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About — Dr Christopher Burr",
   description:
-    "Senior Researcher in Trustworthy Systems at the Alan Turing Institute.",
+    "Principal Research Scientist and lead of the Trustworthy and Assured AI theme at the Alan Turing Institute.",
 };
 
 export default function AboutPage() {
@@ -13,13 +13,14 @@ export default function AboutPage() {
       <section>
         <h1 className="mb-2 font-bold text-3xl">About</h1>
         <p className="text-muted-foreground text-sm/relaxed">
-          Senior Researcher in Trustworthy Systems at the Alan Turing Institute.
+          Principal Research Scientist and lead of the Trustworthy and Assured
+          AI theme at the Alan Turing Institute.
         </p>
       </section>
 
       <section className="max-w-prose space-y-4">
         <p className="text-muted-foreground text-sm/relaxed">
-          I am a Senior Researcher in Trustworthy Systems at the{" "}
+          I am a Principal Research Scientist at the{" "}
           <Link
             className="text-foreground underline underline-offset-4 hover:text-foreground/80"
             href="https://www.turing.ac.uk/people/researchers/christopher-burr"
@@ -28,16 +29,10 @@ export default function AboutPage() {
           >
             Alan Turing Institute
           </Link>
-          . I lead the Innovation and Impact Hub for the{" "}
-          <Link
-            className="text-foreground underline underline-offset-4 hover:text-foreground/80"
-            href="https://www.turing.ac.uk/research/research-projects/tric-dt"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Turing Research and Innovation Cluster in Digital Twins
-          </Link>
-          .
+          , where I lead the Trustworthy and Assured AI theme. My work focuses
+          on the assurance of AI systems: the evidence, methods, and tools that
+          let us show, and not merely assert, that an AI system is safe, fair,
+          and fit for the decisions it informs.
         </p>
         <p className="text-muted-foreground text-sm/relaxed">
           In general, I think of myself as an interdisciplinary researcher who
@@ -90,10 +85,10 @@ export default function AboutPage() {
             Trustworthy and Ethical Assurance (TEA) Platform
           </Link>
           . This methodology is now integral to major initiatives such as the
-          £8.8M EPSRC-funded{" "}
+          ~£8M EPSRC-funded{" "}
           <Link
             className="text-foreground underline underline-offset-4 hover:text-foreground/80"
-            href="https://cvdnet.org.uk/"
+            href="https://cvd-net.com/"
             rel="noopener noreferrer"
             target="_blank"
           >

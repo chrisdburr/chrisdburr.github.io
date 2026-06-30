@@ -25,7 +25,7 @@ import {
 export const metadata: Metadata = {
   title: "CV — Dr Christopher Burr",
   description:
-    "Academic curriculum vitae for Dr Christopher Burr, Senior Researcher at the Alan Turing Institute.",
+    "Academic curriculum vitae for Dr Christopher Burr, Principal Research Scientist at the Alan Turing Institute.",
 };
 
 export default function CVPage() {

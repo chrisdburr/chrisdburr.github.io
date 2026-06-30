@@ -18,6 +18,19 @@
     "githubUrl": "https://github.com/alan-turing-institute/tea-techniques"
   },
   {
+    "title": "Project DARTER",
+    "description": "Principal Investigator developing the safety case for AI decision-support in air traffic management. A five-partner consortium with NATS and the Digital Catapult, extending the Turing–NATS Project Bluebird collaboration to take AI from research prototype toward assured operational use.",
+    "active": true,
+    "role": "Principal Investigator"
+  },
+  {
+    "title": "Burden of Proof",
+    "description": "Founder and author of Burden of Proof, a publication on AI assurance and the evidence needed to justify trust in high-stakes AI systems.",
+    "active": true,
+    "role": "Author",
+    "websiteUrl": "https://substack.com/@theburdenofproof"
+  },
+  {
     "title": "Digital Twin Network+ (DTNet+)",
     "description": "Lead of the Uncertainty and Trust Special Interest Group (SIG) for the UKRI Digital Twin Network+, and member of the DT Policy Working Group.",
     "active": true,
@@ -36,7 +49,7 @@
   {
     "title": "Turing Commons",
     "description": "Co-founder and co-lead of the online skills and training platform for responsible data-driven technology practices.",
-    "active": true,
+    "active": false,
     "role": "Co-founder, Co-lead",
     "image": "/images/projects/turing-commons.png",
     "websiteUrl": "https://alan-turing-institute.github.io/turing-commons/",

@@ -1,10 +1,29 @@
 [
   {
     "company": "Alan Turing Institute",
-    "time": "April 2023 -- Present",
+    "time": "2026 -- Present",
+    "title": "Principal Research Scientist",
+    "location": "London, England",
+    "description": "Lead of the Trustworthy and Assured AI theme (Fundamental Research). Principal Investigator for Project DARTER, developing the safety case for AI decision-support in air traffic management with NATS and a five-partner consortium. Research spanning the Institute's missions in health, environment and sustainability, and defence and national security."
+  },
+  {
+    "company": "University of York, Centre for Assuring Autonomy",
+    "time": "2026 -- Present",
+    "title": "Visiting Fellow",
+    "location": "York, England"
+  },
+  {
+    "company": "University of Sheffield",
+    "time": "2026 -- Present",
+    "title": "Honorary Senior Research Fellow",
+    "location": "Sheffield, England"
+  },
+  {
+    "company": "Alan Turing Institute",
+    "time": "April 2023 -- 2026",
     "title": "Senior Researcher in Trustworthy Systems",
     "location": "London, England",
-    "description": "Head of the Innovation and Impact Hub. Principal Investigator for the UKRI Trustworthy and Ethical Assurance of Digital Twins (TEA-DT) project. Co-Investigator for the EPSRC Networks of Cardiovascular Digital Twins (CVD-Net) project. Co-Lead for the Uncertainty and Trust Special Interest Group, UKRI Digital Twins Network+"
+    "description": "Head of the Innovation and Impact Hub for the Turing Research and Innovation Cluster in Digital Twins. Principal Investigator for the UKRI Trustworthy and Ethical Assurance of Digital Twins (TEA-DT) project. Co-Investigator for the EPSRC Networks of Cardiovascular Digital Twins (CVD-Net) project. Co-Lead for the Uncertainty and Trust Special Interest Group, UKRI Digital Twins Network+"
   },
   {
     "company": "Alan Turing Institute",

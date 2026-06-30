@@ -54,11 +54,12 @@ export default function Home() {
             {site.profile.role} at the {site.profile.institute}
           </p>
           <p className="mx-auto max-w-prose text-sm/relaxed">
-            I specialise in AI assurance — developing practical methods to
-            evaluate and demonstrate the trustworthiness of AI systems. My
-            research connects ethical principles with actionable governance
-            frameworks, spanning responsible innovation, agentic digital twins,
-            and the philosophy of cognitive science.
+            I specialise in AI assurance: developing practical methods and tools
+            to evaluate and demonstrate the trustworthiness of AI systems where
+            the stakes are highest. As lead of the Trustworthy and Assured AI
+            theme at the Turing, my work spans the Institute&apos;s missions in
+            health, environment and sustainability, and defence and national
+            security, with a growing focus on agentic systems and digital twins.
           </p>
         </div>
       </section>
