@@ -3,8 +3,9 @@ import rawData from "@/data/publications.json";
 import { publicationSchema } from "@/lib/schemas/content";
 
 interface ZoteroCreator {
-  firstName: string;
-  lastName: string;
+  firstName?: string;
+  lastName?: string;
+  name?: string;
   creatorType: string;
 }
 
@@ -26,6 +27,16 @@ interface ZoteroItem {
 }
 
 const EXCLUDED_TYPES = new Set(["attachment", "note"]);
+
+// The Zotero export is the full reference library; the Publications page should
+// show only items authored or edited by the site owner, not the reading list.
+const OWNER_SURNAME = "burr";
+
+function isOwnAuthored(item: ZoteroItem): boolean {
+  return (item.creators ?? []).some(
+    (c) => (c.lastName ?? "").toLowerCase() === OWNER_SURNAME
+  );
+}
 
 const TYPE_LABELS: Record<string, string> = {
   journalArticle: "Journal Article",
@@ -83,7 +94,10 @@ function parseDateValue(date: string): number {
 }
 
 const items = (rawData as { items: ZoteroItem[] }).items
-  .filter((item) => !EXCLUDED_TYPES.has(item.itemType) && item.title)
+  .filter(
+    (item) =>
+      !EXCLUDED_TYPES.has(item.itemType) && item.title && isOwnAuthored(item)
+  )
   .map((item) => {
     const { authors, editors } = formatCreators(item.creators ?? []);
     return {
